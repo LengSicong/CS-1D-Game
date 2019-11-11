@@ -4,6 +4,7 @@
     <src>alu.luc</src>
     <src>boolean.luc</src>
     <src>shifter.luc</src>
+    <src>Game_fsm.luc</src>
     <src>compare.luc</src>
     <src>adder.luc</src>
     <src top="true">mojo_top.luc</src>

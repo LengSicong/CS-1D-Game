@@ -1,0 +1,108 @@
+module game_fsm (
+    input clk,  // clock
+    input rst,  // reset
+    //input counter1[28],
+    input counter2[56],
+    input ra[16],
+    input rb[16],
+    input r1[16],
+    input r2[16],
+    input r3[16],
+    input r4[16],
+    input r5[16],
+    input r6[16],
+    input r7[16],
+    input r8[16],
+    input r9[16],
+    input r10[16],
+    input alufn[6],
+    input start[1],
+    //input r11[16],
+    //input r12[16],
+    output whetherstart[1],
+    output display[8],
+    output out
+  ) {
+    alu alu;     //initializing alu
+    
+    //initializing states of fsm
+    .clk(clk), .rst(rst) {
+      fsm state = {INITIAL,GAME1, WIN, LOSE, COMP };
+  }
+  
+  var expected; //correct answer variable
+  
+  //always block
+  always {
+    out = 0;
+    display = 0;
+    whetherstart = start;
+    
+    //FSM main part
+    case (state.q){
+      
+      //initial state
+      state.INITIAL:
+        alu.a = ra;
+        alu.b = rb;
+        alu.alufn = alufn;
+        display = b0;
+        if(start==b1)
+          state.d = state.GAME1;
+          
+      state.GAME1:
+        alu.a = ra;
+        alu.b = rb;
+        alu.alufn = alufn;
+        state.d = state.WIN;
+        if(counter2[0] == 1)
+          state.d = state.LOSE;
+        
+        
+      state.WIN:
+        alu.a = ra;
+        alu.b = rb;
+        alu.alufn = alufn;
+        display = b11;
+        if(start == b1)
+          state.d = state.INITIAL;
+        
+          
+      state.LOSE:
+        alu.a = ra;
+        alu.b = rb;
+        alu.alufn = alufn;
+        display = b01;
+        if(start == b1)
+          state.d = state.INITIAL;   
+          
+      default:
+        alu.a = 0;
+        alu.b = 0;
+        alu.alufn = 0;
+        state.d = state.INITIAL;
+        display = b0;     
+        
+        
+      
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  }
+}
