@@ -1,0 +1,33 @@
+module adder (
+    input alufn[2],// alufn[1:0] for selecting operation
+    input a[16],
+    input b[16],
+    output sum[16], 
+    output z[1],
+    output v[1],
+    output n[1]    
+  ) {
+  // This module is capable of performing adding, substraction and multiplication.
+  sig ans[16];
+  sig xb[16];
+  always {
+    ans = 0;
+    case(alufn[1:0]){
+      b00:
+        ans = a + b;
+      b01:
+        ans = a - b;
+      b10:
+        ans = a * b;
+      } 
+    sum = ans;
+    z=0;
+    v=0;
+    n=0;
+    z = (ans == 0);
+    xb = b ^ (16 * alufn[0]);
+    v = |{&{a[15], xb[15], ~ans[15]}, &{~a[15], ~xb[15], ans[15]}};
+    n = ans[15];
+
+  }
+}

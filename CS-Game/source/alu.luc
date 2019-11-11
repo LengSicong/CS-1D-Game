@@ -1,0 +1,41 @@
+module alu (
+    input a[16], // first operator
+    input b[16], // second operator 
+    input alufn[6], // ALUFN[5:0]
+    output out[16], // output
+    output z[1],
+    output v[1],
+    output n[1]
+  ) {
+    // feed the input of operators for each modules and instanstiate them
+    .a(a), .b(b){
+      adder adder;
+      boolean boolean;
+      compare compare;
+      shifter shifter;
+    }
+    
+
+  always {
+    out = 0;
+    z = 0;
+    v = 0;
+    n = 0;
+    // feed ALUFN for each module as they need
+    adder.alufn = alufn[1:0];
+    boolean.alufn = alufn[3:0];
+    compare.alufn = alufn[2:1];
+    shifter.alufn = alufn[1:0];
+    
+    // select output depending on ALUFN[5:4]
+    case (alufn[5:4]) {
+      b00: out = adder.sum;
+           z = adder.z;
+           v = adder.v;
+           n = adder.n;    
+      b01: out = boolean.out;
+      b10: out = shifter.ashifted;
+      b11: out = compare.cmp;
+    }
+  }
+}

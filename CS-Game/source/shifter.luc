@@ -1,0 +1,20 @@
+module shifter (
+    input alufn[2], // select operation from alufn[1:0]
+    input a[16],
+    input b[16], // only b[3:0] is used for the number of digits to be shifted
+    output ashifted[16]
+  ){
+  // This module is capable of performing shifting: SHL, SHR and SRA.
+
+  always {
+    ashifted= 16b0;
+    case(alufn[1:0]){
+    b00:
+      ashifted = a<<b[3:0];
+    b01:
+      ashifted = a>>b[3:0];
+    b11:
+      ashifted = $signed(a) >>>b[3:0];
+    }
+  }
+}

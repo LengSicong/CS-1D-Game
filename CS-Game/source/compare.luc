@@ -1,0 +1,22 @@
+module compare (
+    input a[16],
+    input b[16],
+    input alufn[2], // select operation from alufn[2:1]
+    output cmp[16]
+  ) {
+  // This module is capable of performing comparison: CMPEQ, CMPLT and CMPLE.
+  
+  always {
+    
+    cmp=16b0;
+    
+    case(alufn){
+      b01: // CMPEQ
+        cmp[0] = a == b;
+      b10: // CMPLT
+        cmp[0] = a < b;
+      b11: // CMPLE
+        cmp[0] = a <= b;
+      }
+  }
+}
