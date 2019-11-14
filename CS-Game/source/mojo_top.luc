@@ -28,17 +28,6 @@ module mojo_top (
       game_fsm game; //initializing Game_fsm named gmae
       //dff counter1[28];
       dff counter2[56];
-      dff r1[16];
-      dff r2[16];
-      dff r3[16];
-      dff r4[16];
-      dff r5[16];
-      dff r6[16];
-      dff r7[16];
-      dff r8[16];
-      dff r9[16];
-      dff r10[16];
-      dff alufn[6];
       //dff r11[16];
       //dff r12[16];
     }
@@ -53,32 +42,6 @@ module mojo_top (
     spi_channel = bzzzz;    // not using flags
     avr_rx = bz;            // not using serial port
     
-    //random number
-    r1.d = b1;
-    r2.d = b10;
-    r3.d = b11;
-    r4.d = b100;
-    r5.d = b101;
-    r6.d = b110;
-    r7.d = b111;
-    r8.d = b1000;
-    r9.d = b1001;
-    r10.d = b1010;
-    alufn.d = b000000;
-    game.r1 = r1.q;
-    game.r2 = r2.q;
-    game.r3 = r3.q;
-    game.r4 = r4.q;
-    game.r5 = r5.q;
-    game.r6 = r6.q;
-    game.r7 = r7.q;
-    game.r8 = r8.q;
-    game.r9 = r9.q;
-    game.r10 = r10.q; 
-    game.ra = 0;
-    game.rb = 0;
-    
-    game.alufn = alufn.q;
     game.counter2 = counter2.q; //feed the counter1 to game
     
     if(io_dip[0][0]){ //use DIP switch[0][0] to start

@@ -3,20 +3,17 @@ module game_fsm (
     input rst,  // reset
     //input counter1[28],
     input counter2[56],
-    input ra[16],
-    input rb[16],
-    input r1[16],
-    input r2[16],
-    input r3[16],
-    input r4[16],
-    input r5[16],
-    input r6[16],
-    input r7[16],
-    input r8[16],
-    input r9[16],
-    input r10[16],
-    input alufn[6],
     input start[1],
+    input button1,
+    input button2,
+    input button3,
+    input button4,
+    input button5,
+    input button6,
+    input button7,
+    input button8,
+    input button9,
+    input button10,
     //input r11[16],
     //input r12[16],
     output whetherstart[1],
@@ -26,14 +23,76 @@ module game_fsm (
     alu alu;     //initializing alu
     
     //initializing states of fsm
-    .clk(clk), .rst(rst) {
-      fsm state = {INITIAL,GAME1, WIN, LOSE, COMP };
+    .clk(clk){
+     edge_detector edge_detector1(#RISE(1), #FALL(0));
+     edge_detector edge_detector2(#RISE(1), #FALL(0));
+     edge_detector edge_detector3(#RISE(1), #FALL(0));
+     edge_detector edge_detector4(#RISE(1), #FALL(0));
+     edge_detector edge_detector5(#RISE(1), #FALL(0));
+     edge_detector edge_detector6(#RISE(1), #FALL(0));
+     edge_detector edge_detector7(#RISE(1), #FALL(0));
+     edge_detector edge_detector8(#RISE(1), #FALL(0));
+     edge_detector edge_detector9(#RISE(1), #FALL(0));
+     edge_detector edge_detector10(#RISE(1), #FALL(0));
+     button_conditioner button_cond1;
+     button_conditioner button_cond2;
+     button_conditioner button_cond3;
+     button_conditioner button_cond4;
+     button_conditioner button_cond5;
+     button_conditioner button_cond6;
+     button_conditioner button_cond7;
+     button_conditioner button_cond8;
+     button_conditioner button_cond9;
+     button_conditioner button_cond10;
+    
+      .rst(rst) {
+        fsm state = {RANDOM,GAME11,GAME12, WIN, LOSE, COMP };
+        dff targetnumber[16];
+        dff ra[16];
+        dff rb[16];
+        dff r1[16];
+        dff r2[16];
+        dff r3[16];
+        dff r4[16];
+        dff r5[16];
+        dff r6[16];
+        dff r7[16];
+        dff r8[16];
+        dff r9[16];
+        dff r10[16];
+        dff alufn[6];
+    }
   }
   
   var expected; //correct answer variable
   
   //always block
   always {
+    button_cond1.in = button1;       //raw button input
+    button_cond2.in = button2;
+    button_cond3.in = button3;
+    button_cond4.in = button4;
+    button_cond5.in = button5;
+    button_cond6.in = button6;
+    button_cond7.in = button7;
+    button_cond8.in = button8;
+    button_cond9.in = button9;
+    button_cond10.in = button10;
+    
+    edge_detector1.in = button_cond1.out;
+    edge_detector2.in = button_cond2.out;
+    edge_detector3.in = button_cond3.out;
+    edge_detector4.in = button_cond4.out;
+    edge_detector5.in = button_cond5.out;
+    edge_detector6.in = button_cond6.out;
+    edge_detector7.in = button_cond7.out;
+    edge_detector8.in = button_cond8.out;
+    edge_detector9.in = button_cond9.out;
+    edge_detector10.in = button_cond10.out;
+    
+    alu.a = 0;
+    alu.b = 0;
+    alu.alufn = 0;
     out = 0;
     display = 0;
     whetherstart = start;
@@ -42,21 +101,144 @@ module game_fsm (
     case (state.q){
       
       //initial state
-      state.INITIAL:
-        alu.a = ra;
-        alu.b = rb;
-        alu.alufn = alufn;
+      state.RANDOM:
+        alu.a = ra.q;
+        alu.b = rb.q;
+        alu.alufn = alufn.q;
         display = b0;
         if(start==b1)
-          state.d = state.GAME1;
-          
-      state.GAME1:
-        alu.a = ra;
-        alu.b = rb;
-        alu.alufn = alufn;
-        state.d = state.WIN;
+          state.d = state.GAME11;
+      
+      /*GAME11 state里：
+        state.d = state.GAME12 可以合并一下不用写10遍；
+        ra rb应该记得是“1”“2”...这些编号吧，不然一不方便display
+                 二我们没法同时有两个相同的数字在游戏里（我不记得我们允不允许了)；  
+        */      
+      state.GAME11:
+        if(edge_detector1.out)
+          ra.d = r1.q;
+          state.d = state.GAME12;
+        if(edge_detector2.out)
+          ra.d = r2.q;
+          state.d = state.GAME12;
+        if(edge_detector3.out)
+          ra.d = r3.q;
+          state.d = state.GAME12;
+        if(edge_detector4.out)
+          ra.d = r4.q;
+          state.d = state.GAME12;
+        if(edge_detector5.out)
+          ra.d = r5.q;
+          state.d = state.GAME12;
+        if(edge_detector6.out)
+          ra.d = r6.q;
+          state.d = state.GAME12;
+        if(edge_detector7.out)
+          ra.d = r7.q;
+          state.d = state.GAME12;
+        if(edge_detector8.out)
+          ra.d = r8.q;
+          state.d = state.GAME12;
+        if(edge_detector9.out)
+          ra.d = r9.q;
+          state.d = state.GAME12;
+        if(edge_detector10.out)
+          ra.d = r10.q;
+          state.d = state.GAME12;
+        
+        
         if(counter2[0] == 1)
           state.d = state.LOSE;
+      
+            
+      state.GAME12:
+        if(edge_detector1.out && ra.q != r1.q) //ra.q != 1 ,改完上面ra rb存储的类型改这里
+          rb.d = r1.q;
+          state.d = state.COMP;
+        if(edge_detector2.out && ra.q != r2.q)
+          rb.d = r2.q;
+          state.d = state.COMP;
+        if(edge_detector3.out && ra.q != r3.q)
+          rb.d = r3.q;
+          state.d = state.COMP;
+        if(edge_detector4.out && ra.q != r4.q)
+          rb.d = r4.q;
+          state.d = state.COMP;
+        if(edge_detector5.out && ra.q != r5.q)
+          rb.d = r5.q;
+          state.d = state.COMP;
+        if(edge_detector6.out && ra.q != r6.q)
+          rb.d = r6.q;
+          state.d = state.COMP;
+        if(edge_detector7.out && ra.q != r7.q)
+          rb.d = r7.q;
+          state.d = state.COMP;
+        if(edge_detector8.out && ra.q != r8.q)
+          rb.d = r8.q;
+          state.d = state.COMP;
+        if(edge_detector9.out && ra.q != r9.q)
+          rb.d = r9.q;
+          state.d = state.COMP;
+        if(edge_detector10.out && ra.q != r10.q)
+          rb.d = r10.q;
+          state.d = state.COMP;
+        
+        
+        if(counter2[0] == 1)
+          state.d = state.LOSE;
+      
+      state.COMP:
+        alu.a = ra.q;
+        alu.b = ra.q;
+        alu.alufn = alufn.q;
+        if(alu.out == targetnumber.q){
+          if(ra.q == r1.q) //ra.q == 1, 改完ra存储的类型改这里
+            r1.d = hFFFF;
+          if(ra.q == r2.q)
+            r2.d = hFFFF;
+          if(ra.q == r3.q)
+            r3.d = hFFFF;
+          if(ra.q == r4.q)
+            r4.d = hFFFF;
+          if(ra.q == r5.q)
+            r5.d = hFFFF;
+          if(ra.q == r6.q)
+            r6.d = hFFFF;
+          if(ra.q == r7.q)
+            r7.d = hFFFF;
+          if(ra.q == r8.q)
+            r8.d = hFFFF;
+          if(ra.q == r9.q)
+            r9.d = hFFFF;
+          if(ra.q == r10.q)
+            r10.d = hFFFF;
+          if(rb.q == r1.q)
+            r1.d = hFFFF;
+          if(rb.q == r2.q)
+            r2.d = hFFFF;
+          if(rb.q == r3.q)
+            r3.d = hFFFF;
+          if(rb.q == r4.q)
+            r4.d = hFFFF;
+          if(rb.q == r5.q)
+            r5.d = hFFFF;
+          if(rb.q == r6.q)
+            r6.d = hFFFF;
+          if(rb.q == r7.q)
+            r7.d = hFFFF;
+          if(rb.q == r8.q)
+            r8.d = hFFFF;
+          if(rb.q == r9.q)
+            r9.d = hFFFF;
+          if(rb.q == r10.q)
+            r10.d = hFFFF;
+        }      
+        state.d = state.WIN;
+        
+      //最后记得做个简单的test试一下你当前的能不能build再写其他部分
+      //checkoff前大概没时间动，过后我还可以再来帮忙    
+          
+      
         
         
       state.WIN:
