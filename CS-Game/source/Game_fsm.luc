@@ -100,6 +100,7 @@ module game_fsm (
     //FSM main part
     case (state.q){
       
+      
       //initial state
       state.RANDOM:
         alu.a = ra.q;
@@ -109,41 +110,37 @@ module game_fsm (
         if(start==b1)
           state.d = state.GAME11;
       
-      /*GAME11 state里：
-        state.d = state.GAME12 可以合并一下不用写10遍；
-        ra rb应该记得是“1”“2”...这些编号吧，不然一不方便display
-                 二我们没法同时有两个相同的数字在游戏里（我不记得我们允不允许了)；  
-        */      
+
       state.GAME11:
-        if(edge_detector1.out)
-          ra.d = r1.q;
+        if(edge_detector1.out && r1.q != hffff)
+          ra.d = 1;
           state.d = state.GAME12;
-        if(edge_detector2.out)
-          ra.d = r2.q;
+        if(edge_detector2.out && r2.q != hffff)
+          ra.d = 2;
           state.d = state.GAME12;
-        if(edge_detector3.out)
-          ra.d = r3.q;
+        if(edge_detector3.out && r3.q != hffff)
+          ra.d = 3;
           state.d = state.GAME12;
-        if(edge_detector4.out)
-          ra.d = r4.q;
+        if(edge_detector4.out && r4.q != hffff)
+          ra.d = 4;
           state.d = state.GAME12;
-        if(edge_detector5.out)
-          ra.d = r5.q;
+        if(edge_detector5.out && r5.q != hffff)
+          ra.d = 5;
           state.d = state.GAME12;
-        if(edge_detector6.out)
-          ra.d = r6.q;
+        if(edge_detector6.out && r6.q != hffff)
+          ra.d = 6;
           state.d = state.GAME12;
-        if(edge_detector7.out)
-          ra.d = r7.q;
+        if(edge_detector7.out && r7.q != hffff)
+          ra.d = 7;
           state.d = state.GAME12;
-        if(edge_detector8.out)
-          ra.d = r8.q;
+        if(edge_detector8.out && r8.q != hffff)
+          ra.d = 8;
           state.d = state.GAME12;
-        if(edge_detector9.out)
-          ra.d = r9.q;
+        if(edge_detector9.out && r9.q != hffff)
+          ra.d = 9;
           state.d = state.GAME12;
-        if(edge_detector10.out)
-          ra.d = r10.q;
+        if(edge_detector10.out && r10.q != hffff)
+          ra.d = 10;
           state.d = state.GAME12;
         
         
@@ -152,35 +149,35 @@ module game_fsm (
       
             
       state.GAME12:
-        if(edge_detector1.out && ra.q != r1.q) //ra.q != 1 ,改完上面ra rb存储的类型改这里
-          rb.d = r1.q;
+        if(edge_detector1.out && ra.q != 1 && r1.q != hffff) 
+          rb.d = 1;
           state.d = state.COMP;
-        if(edge_detector2.out && ra.q != r2.q)
-          rb.d = r2.q;
+        if(edge_detector2.out && ra.q != 2 && r2.q != hffff)
+          rb.d = 2;
           state.d = state.COMP;
-        if(edge_detector3.out && ra.q != r3.q)
-          rb.d = r3.q;
+        if(edge_detector3.out && ra.q != 3 && r3.q != hffff)
+          rb.d = 3;
           state.d = state.COMP;
-        if(edge_detector4.out && ra.q != r4.q)
-          rb.d = r4.q;
+        if(edge_detector4.out && ra.q != 4 && r4.q != hffff)
+          rb.d = 4;
           state.d = state.COMP;
-        if(edge_detector5.out && ra.q != r5.q)
-          rb.d = r5.q;
+        if(edge_detector5.out && ra.q != 5 && r5.q != hffff)
+          rb.d = 5;
           state.d = state.COMP;
-        if(edge_detector6.out && ra.q != r6.q)
-          rb.d = r6.q;
+        if(edge_detector6.out && ra.q != 6 && r6.q != hffff)
+          rb.d = 6;
           state.d = state.COMP;
-        if(edge_detector7.out && ra.q != r7.q)
-          rb.d = r7.q;
+        if(edge_detector7.out && ra.q != 7 && r7.q != hffff)
+          rb.d = 7;
           state.d = state.COMP;
-        if(edge_detector8.out && ra.q != r8.q)
-          rb.d = r8.q;
+        if(edge_detector8.out && ra.q != 8 && r8.q != hffff)
+          rb.d = 8;
           state.d = state.COMP;
-        if(edge_detector9.out && ra.q != r9.q)
-          rb.d = r9.q;
+        if(edge_detector9.out && ra.q != 9 && r9.q != hffff)
+          rb.d = 9;
           state.d = state.COMP;
-        if(edge_detector10.out && ra.q != r10.q)
-          rb.d = r10.q;
+        if(edge_detector10.out && ra.q != 10 && r10.q != hffff)
+          rb.d =  10;
           state.d = state.COMP;
         
         
@@ -192,77 +189,68 @@ module game_fsm (
         alu.b = ra.q;
         alu.alufn = alufn.q;
         if(alu.out == targetnumber.q){
-          if(ra.q == r1.q) //ra.q == 1, 改完ra存储的类型改这里
+          if(ra.q == 1) 
             r1.d = hFFFF;
-          if(ra.q == r2.q)
+          if(ra.q == 2)
             r2.d = hFFFF;
-          if(ra.q == r3.q)
+          if(ra.q == 3)
             r3.d = hFFFF;
-          if(ra.q == r4.q)
+          if(ra.q == 4)
             r4.d = hFFFF;
-          if(ra.q == r5.q)
+          if(ra.q == 5)
             r5.d = hFFFF;
-          if(ra.q == r6.q)
+          if(ra.q == 6)
             r6.d = hFFFF;
-          if(ra.q == r7.q)
+          if(ra.q == 7)
             r7.d = hFFFF;
-          if(ra.q == r8.q)
+          if(ra.q == 8)
             r8.d = hFFFF;
-          if(ra.q == r9.q)
+          if(ra.q == 9)
             r9.d = hFFFF;
-          if(ra.q == r10.q)
+          if(ra.q == 10)
             r10.d = hFFFF;
-          if(rb.q == r1.q)
+          if(rb.q == 1)
             r1.d = hFFFF;
-          if(rb.q == r2.q)
+          if(rb.q == 2)
             r2.d = hFFFF;
-          if(rb.q == r3.q)
+          if(rb.q == 3)
             r3.d = hFFFF;
-          if(rb.q == r4.q)
+          if(rb.q == 4)
             r4.d = hFFFF;
-          if(rb.q == r5.q)
+          if(rb.q == 5)
             r5.d = hFFFF;
-          if(rb.q == r6.q)
+          if(rb.q == 6)
             r6.d = hFFFF;
-          if(rb.q == r7.q)
+          if(rb.q == 7)
             r7.d = hFFFF;
-          if(rb.q == r8.q)
+          if(rb.q == 8)
             r8.d = hFFFF;
-          if(rb.q == r9.q)
+          if(rb.q == 9)
             r9.d = hFFFF;
-          if(rb.q == r10.q)
+          if(rb.q == 10)
             r10.d = hFFFF;
         }      
         state.d = state.WIN;
-        
-      //最后记得做个简单的test试一下你当前的能不能build再写其他部分
-      //checkoff前大概没时间动，过后我还可以再来帮忙    
-          
+
       
         
         
       state.WIN:
-        alu.a = ra;
-        alu.b = rb;
-        alu.alufn = alufn;
         display = b11;
         if(start == b1)
-          state.d = state.INITIAL;
+          state.d = state.RANDOM;
         
           
       state.LOSE:
-        alu.a = ra;
-        alu.b = rb;
-        alu.alufn = alufn;
         display = b01;
         if(start == b1)
-          state.d = state.INITIAL;   
+          state.d = state.RANDOM;   
           
       default:
         alu.a = 0;
         alu.b = 0;
         alu.alufn = 0;
-        state.d = state.INITIAL;
+        state.d = state.RANDOM;
         display = b0;     
         
         

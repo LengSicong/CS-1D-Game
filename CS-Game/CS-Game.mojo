@@ -11,6 +11,7 @@
     <ucf>Custom.ucf</ucf>
     <ucf>io_shield.ucf</ucf>
     <ucf lib="true">mojo.ucf</ucf>
+    <component>pn_gen.luc</component>
     <component>reset_conditioner.luc</component>
     <component>pipeline.luc</component>
     <component>button_conditioner.luc</component>

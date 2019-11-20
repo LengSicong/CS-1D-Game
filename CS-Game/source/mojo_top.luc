@@ -34,6 +34,17 @@ module mojo_top (
   }
   
   always {
+    game.button1 = 0;
+    game.button2 = 0;
+    game.button3 = 0;
+    game.button4 = 0;
+    game.button5 = 0;
+    game.button6 = 0;
+    game.button7 = 0;
+    game.button8 = 0;
+    game.button9 = 0;
+    game.button10 = 0;
+   
     reset_cond.in = ~rst_n; // input raw inverted reset signal
     rst = reset_cond.out;   // conditioned reset
     
