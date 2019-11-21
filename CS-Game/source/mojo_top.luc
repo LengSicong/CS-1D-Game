@@ -11,7 +11,7 @@ module mojo_top (
     input avr_tx,           // AVR TX (FPGA RX)
     output avr_rx,          // AVR RX (FPGA TX)
     input avr_rx_busy,       // AVR RX buffer full
-    //output io_led [3][8],   // LEDs on IO Shield
+    output io_led [3][8],   // LEDs on IO Shield
     //output io_seg [8],      // 7-segment LEDs on IO Shield
     //output io_sel [4],      // Digit select on IO Shield
     input io_button [5],    // 5 buttons on IO Shield
@@ -25,26 +25,28 @@ module mojo_top (
     // clock. This ensures the entire FPGA comes out of reset at the same time.
     reset_conditioner reset_cond;
     .rst(rst){
+      pn_gen ran;
       game_fsm game; //initializing Game_fsm named gmae
       //dff counter1[28];
       dff counter2[56];
+      dff random[32];
       //dff r11[16];
       //dff r12[16];
     }
   }
-  
+  var i;
   always {
-    game.button1 = 0;
-    game.button2 = 0;
-    game.button3 = 0;
-    game.button4 = 0;
-    game.button5 = 0;
-    game.button6 = 0;
-    game.button7 = 0;
-    game.button8 = 0;
-    game.button9 = 0;
-    game.button10 = 0;
-   
+    
+    io_led[2] = 0;
+    io_led[1] = 0;
+    io_led[0] =0;
+    ran.seed = 1;
+    ran.next = 1;
+    game.ran = ran.num;
+    
+    for (i=0; i<8;i++)
+      game.button[i] = 0;
+    
     reset_cond.in = ~rst_n; // input raw inverted reset signal
     rst = reset_cond.out;   // conditioned reset
     
@@ -55,9 +57,8 @@ module mojo_top (
     
     game.counter2 = counter2.q; //feed the counter1 to game
     
-    if(io_dip[0][0]){ //use DIP switch[0][0] to start
+    if(io_dip[0][0]) //use DIP switch[0][0] to start
       game.start = b1;
-    }
     else
       game.start = b0;
       

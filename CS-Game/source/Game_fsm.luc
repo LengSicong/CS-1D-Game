@@ -1,19 +1,11 @@
 module game_fsm (
     input clk,  // clock
     input rst,  // reset
+    input ran[32],  // random number generator
     //input counter1[28],
     input counter2[56],
     input start[1],
-    input button1,
-    input button2,
-    input button3,
-    input button4,
-    input button5,
-    input button6,
-    input button7,
-    input button8,
-    input button9,
-    input button10,
+    input button[8][1],
     //input r11[16],
     //input r12[16],
     output whetherstart[1],
@@ -24,71 +16,28 @@ module game_fsm (
     
     //initializing states of fsm
     .clk(clk){
-     edge_detector edge_detector1(#RISE(1), #FALL(0));
-     edge_detector edge_detector2(#RISE(1), #FALL(0));
-     edge_detector edge_detector3(#RISE(1), #FALL(0));
-     edge_detector edge_detector4(#RISE(1), #FALL(0));
-     edge_detector edge_detector5(#RISE(1), #FALL(0));
-     edge_detector edge_detector6(#RISE(1), #FALL(0));
-     edge_detector edge_detector7(#RISE(1), #FALL(0));
-     edge_detector edge_detector8(#RISE(1), #FALL(0));
-     edge_detector edge_detector9(#RISE(1), #FALL(0));
-     edge_detector edge_detector10(#RISE(1), #FALL(0));
-     button_conditioner button_cond1;
-     button_conditioner button_cond2;
-     button_conditioner button_cond3;
-     button_conditioner button_cond4;
-     button_conditioner button_cond5;
-     button_conditioner button_cond6;
-     button_conditioner button_cond7;
-     button_conditioner button_cond8;
-     button_conditioner button_cond9;
-     button_conditioner button_cond10;
+     edge_detector edge_detector[8](#RISE(1), #FALL(0));
+     button_conditioner button_cond[8];
     
       .rst(rst) {
-        fsm state = {RANDOM,GAME11,GAME12, WIN, LOSE, COMP };
+        fsm state = {IDLE,RANDOM_TARGET,RANDOM_CARDS1,RANDOM_CARDS2,GAME11,GAME12, WIN, LOSE, COMP };
         dff targetnumber[16];
+        dff opr[1]; // 1 for add or 0 for substract
         dff ra[16];
         dff rb[16];
-        dff r1[16];
-        dff r2[16];
-        dff r3[16];
-        dff r4[16];
-        dff r5[16];
-        dff r6[16];
-        dff r7[16];
-        dff r8[16];
-        dff r9[16];
-        dff r10[16];
+        dff r[8][16];
         dff alufn[6];
+        dff numIncre;
     }
   }
-  
-  var expected; //correct answer variable
-  
+  var i;
+  var validity; //for checking pass purpose
   //always block
   always {
-    button_cond1.in = button1;       //raw button input
-    button_cond2.in = button2;
-    button_cond3.in = button3;
-    button_cond4.in = button4;
-    button_cond5.in = button5;
-    button_cond6.in = button6;
-    button_cond7.in = button7;
-    button_cond8.in = button8;
-    button_cond9.in = button9;
-    button_cond10.in = button10;
-    
-    edge_detector1.in = button_cond1.out;
-    edge_detector2.in = button_cond2.out;
-    edge_detector3.in = button_cond3.out;
-    edge_detector4.in = button_cond4.out;
-    edge_detector5.in = button_cond5.out;
-    edge_detector6.in = button_cond6.out;
-    edge_detector7.in = button_cond7.out;
-    edge_detector8.in = button_cond8.out;
-    edge_detector9.in = button_cond9.out;
-    edge_detector10.in = button_cond10.out;
+    for (i = 0; i<8; i++)
+      button_cond.in[i] = button[i];
+    for (i = 0; i<8; i++)
+      edge_detector.in[i] = button_cond.out[i];
     
     alu.a = 0;
     alu.b = 0;
@@ -100,87 +49,67 @@ module game_fsm (
     //FSM main part
     case (state.q){
       
-      
       //initial state
-      state.RANDOM:
-        alu.a = ra.q;
-        alu.b = rb.q;
-        alu.alufn = alufn.q;
-        display = b0;
-        if(start==b1)
-          state.d = state.GAME11;
+      state.IDLE:
+        if (start == b1) 
+         state.d = state.RANDOM_TARGET;
+        
       
+      state.RANDOM_TARGET:
+        if (ran[4] == 0 && ran[3:0]<=12 && ran[3:0]>=7){
+          targetnumber.d = ran[3:0];
+          for (i=0;i<8;i++)
+           r.d[i] = hfff;
+          numIncre.d = 0;
+          opr.d = 1;
+          state.d = state.RANDOM_CARDS1;
+          }
+        if (ran[4] == 1 && ran[3:0]<=6 && ran[3:0]>=0){
+          targetnumber.d = ran[3:0];
+          for (i=0;i<8;i++)
+           r.d[i] = hfff;
+          numIncre.d = 0;
+          opr.d = 0;
+          state.d = state.RANDOM_CARDS1;
+          }
+             
+          
+      state.RANDOM_CARDS1:
+        if (ran[3:0]>=0 && ran[3:0]<=7 && r.q[ran[3:0]]==hfff)
+          r.d[ran[3:0]] = numIncre.q;
+          numIncre.d = numIncre.q + 1;
+    
+        if (numIncre.q>3)
+          state.d = state.RANDOM_CARDS2;   
+      
+      state.RANDOM_CARDS2:
+        if (ran[3:0]>=0 && ran[3:0]<=7 && r.q[ran[3:0]]==hfff){
+          if (opr.q==1) // if addition, distribute targetnumber-numIncre to a random location
+            r.d[ran[3:0]] = targetnumber.q-numIncre.q; 
+          else          // if substraction, distribute targetnumber+numIncre to a random location 
+            r.d[ran[3:0]] = targetnumber.q+numIncre.q;
+        }  
+        if (r.q[0]!=hfff && r.q[1]!=hfff && r.q[2]!=hfff && r.q[3]!=hfff && r.q[4]!=hfff 
+          && r.q[5]!=hfff && r.q[6]!=hfff && r.q[7]!=hfff)
+          state.d = state.GAME11;
 
       state.GAME11:
-        if(edge_detector1.out && r1.q != hffff)
-          ra.d = 1;
-          state.d = state.GAME12;
-        if(edge_detector2.out && r2.q != hffff)
-          ra.d = 2;
-          state.d = state.GAME12;
-        if(edge_detector3.out && r3.q != hffff)
-          ra.d = 3;
-          state.d = state.GAME12;
-        if(edge_detector4.out && r4.q != hffff)
-          ra.d = 4;
-          state.d = state.GAME12;
-        if(edge_detector5.out && r5.q != hffff)
-          ra.d = 5;
-          state.d = state.GAME12;
-        if(edge_detector6.out && r6.q != hffff)
-          ra.d = 6;
-          state.d = state.GAME12;
-        if(edge_detector7.out && r7.q != hffff)
-          ra.d = 7;
-          state.d = state.GAME12;
-        if(edge_detector8.out && r8.q != hffff)
-          ra.d = 8;
-          state.d = state.GAME12;
-        if(edge_detector9.out && r9.q != hffff)
-          ra.d = 9;
-          state.d = state.GAME12;
-        if(edge_detector10.out && r10.q != hffff)
-          ra.d = 10;
-          state.d = state.GAME12;
+        for (i=0;i<8;i++)
+          if (edge_detector.out[i] && r.q[i]!=hffff){
+            ra.d = i;
+            state.d = state.GAME12;
+          }  
         
-        
-        if(counter2[0] == 1)
+        if(counter2[55] == 1)
           state.d = state.LOSE;
       
             
       state.GAME12:
-        if(edge_detector1.out && ra.q != 1 && r1.q != hffff) 
-          rb.d = 1;
-          state.d = state.COMP;
-        if(edge_detector2.out && ra.q != 2 && r2.q != hffff)
-          rb.d = 2;
-          state.d = state.COMP;
-        if(edge_detector3.out && ra.q != 3 && r3.q != hffff)
-          rb.d = 3;
-          state.d = state.COMP;
-        if(edge_detector4.out && ra.q != 4 && r4.q != hffff)
-          rb.d = 4;
-          state.d = state.COMP;
-        if(edge_detector5.out && ra.q != 5 && r5.q != hffff)
-          rb.d = 5;
-          state.d = state.COMP;
-        if(edge_detector6.out && ra.q != 6 && r6.q != hffff)
-          rb.d = 6;
-          state.d = state.COMP;
-        if(edge_detector7.out && ra.q != 7 && r7.q != hffff)
-          rb.d = 7;
-          state.d = state.COMP;
-        if(edge_detector8.out && ra.q != 8 && r8.q != hffff)
-          rb.d = 8;
-          state.d = state.COMP;
-        if(edge_detector9.out && ra.q != 9 && r9.q != hffff)
-          rb.d = 9;
-          state.d = state.COMP;
-        if(edge_detector10.out && ra.q != 10 && r10.q != hffff)
-          rb.d =  10;
-          state.d = state.COMP;
-        
-        
+        for (i=0;i<8;i++)
+          if (edge_detector.out[i] && r.q[i]!=hffff){
+            rb.d = i;
+            state.d = state.COMP;
+          }  
         if(counter2[0] == 1)
           state.d = state.LOSE;
       
@@ -189,90 +118,28 @@ module game_fsm (
         alu.b = ra.q;
         alu.alufn = alufn.q;
         if(alu.out == targetnumber.q){
-          if(ra.q == 1) 
-            r1.d = hFFFF;
-          if(ra.q == 2)
-            r2.d = hFFFF;
-          if(ra.q == 3)
-            r3.d = hFFFF;
-          if(ra.q == 4)
-            r4.d = hFFFF;
-          if(ra.q == 5)
-            r5.d = hFFFF;
-          if(ra.q == 6)
-            r6.d = hFFFF;
-          if(ra.q == 7)
-            r7.d = hFFFF;
-          if(ra.q == 8)
-            r8.d = hFFFF;
-          if(ra.q == 9)
-            r9.d = hFFFF;
-          if(ra.q == 10)
-            r10.d = hFFFF;
-          if(rb.q == 1)
-            r1.d = hFFFF;
-          if(rb.q == 2)
-            r2.d = hFFFF;
-          if(rb.q == 3)
-            r3.d = hFFFF;
-          if(rb.q == 4)
-            r4.d = hFFFF;
-          if(rb.q == 5)
-            r5.d = hFFFF;
-          if(rb.q == 6)
-            r6.d = hFFFF;
-          if(rb.q == 7)
-            r7.d = hFFFF;
-          if(rb.q == 8)
-            r8.d = hFFFF;
-          if(rb.q == 9)
-            r9.d = hFFFF;
-          if(rb.q == 10)
-            r10.d = hFFFF;
+          r.d[ra.q] = hffff;
+          r.d[rb.q] = hffff;
         }      
-        state.d = state.WIN;
+        validity = 1;
+        for (i=0;i<8;i++)
+          if (r.q[i]!=hffff)
+            validity = 0;
+        if (validity == 1)
+          state.d = state.WIN;
 
-      
-        
-        
       state.WIN:
         display = b11;
-        if(start == b1)
-          state.d = state.RANDOM;
         
-          
       state.LOSE:
         display = b01;
-        if(start == b1)
-          state.d = state.RANDOM;   
           
       default:
         alu.a = 0;
         alu.b = 0;
         alu.alufn = 0;
-        state.d = state.RANDOM;
-        display = b0;     
-        
-        
-      
-      
-    
-      
-      
-      
-      
-      
-      
-      
+        state.d = state.IDLE;
+        display = b0; 
       }
-    
-    
-    
-    
-    
-    
-    
-    
-    
   }
 }

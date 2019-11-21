@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (nt64)
+Release 14.7 Map P.20131013 (nt)
 Xilinx Mapping Report File for Design 'mojo_top_0'
 
 Design Information
@@ -8,7 +8,7 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Tue Nov 19 15:57:09 2019
+Mapped Date    : Thu Nov 21 10:28:16 2019
 
 Design Summary
 --------------
@@ -24,8 +24,8 @@ Slice Logic Distribution:
   Number of LUT Flip Flop pairs used:            0
 
 IO Utilization:
-  Number of bonded IOBs:                        45 out of     102   44%
-    Number of LOCed IOBs:                       45 out of      45  100%
+  Number of bonded IOBs:                        69 out of     102   67%
+    Number of LOCed IOBs:                       69 out of      69  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -52,9 +52,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                0.00
 
-Peak Memory Usage:  4523 MB
-Total REAL time to MAP completion:  7 secs 
-Total CPU time to MAP completion (all processors):   2 secs 
+Peak Memory Usage:  279 MB
+Total REAL time to MAP completion:  5 secs 
+Total CPU time to MAP completion (all processors):   3 secs 
 
 Table of Contents
 -----------------
@@ -132,7 +132,7 @@ The trimmed logic reported below is either:
 
 The signal "spi_miso" is unused and has been removed.
  Unused block "spi_miso_OBUFT" (TRI) removed.
-  The signal "led<0>_inv" is unused and has been removed.
+  The signal "io_led<0>_inv" is unused and has been removed.
    Unused block "XST_VCC" (ONE) removed.
 The signal "spi_channel[3]" is unused and has been removed.
  Unused block "spi_channel_3_OBUFT" (TRI) removed.
@@ -195,6 +195,30 @@ Section 6 - IOB Properties
 | io_dip(21)                         | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
 | io_dip(22)                         | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
 | io_dip(23)                         | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
+| io_led[0]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[1]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[2]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[3]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[4]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[5]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[6]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[7]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[8]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[9]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[10]                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[11]                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[12]                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[13]                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[14]                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[15]                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[16]                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[17]                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[18]                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[19]                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[20]                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[21]                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[22]                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| io_led[23]                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | led[0]                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | led[1]                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | led[2]                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |

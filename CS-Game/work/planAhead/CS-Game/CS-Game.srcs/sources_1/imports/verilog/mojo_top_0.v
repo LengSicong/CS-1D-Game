@@ -17,6 +17,7 @@ module mojo_top_0 (
     input avr_tx,
     output reg avr_rx,
     input avr_rx_busy,
+    output reg [23:0] io_led,
     input [4:0] io_button,
     input [23:0] io_dip
   );
@@ -32,55 +33,51 @@ module mojo_top_0 (
     .in(M_reset_cond_in),
     .out(M_reset_cond_out)
   );
+  wire [32-1:0] M_ran_num;
+  reg [1-1:0] M_ran_next;
+  reg [32-1:0] M_ran_seed;
+  pn_gen_2 ran (
+    .clk(clk),
+    .rst(rst),
+    .next(M_ran_next),
+    .seed(M_ran_seed),
+    .num(M_ran_num)
+  );
   wire [1-1:0] M_game_whetherstart;
   wire [8-1:0] M_game_display;
   wire [1-1:0] M_game_out;
+  reg [32-1:0] M_game_ran;
   reg [56-1:0] M_game_counter2;
   reg [1-1:0] M_game_start;
-  reg [1-1:0] M_game_button1;
-  reg [1-1:0] M_game_button2;
-  reg [1-1:0] M_game_button3;
-  reg [1-1:0] M_game_button4;
-  reg [1-1:0] M_game_button5;
-  reg [1-1:0] M_game_button6;
-  reg [1-1:0] M_game_button7;
-  reg [1-1:0] M_game_button8;
-  reg [1-1:0] M_game_button9;
-  reg [1-1:0] M_game_button10;
-  game_fsm_2 game (
+  reg [8-1:0] M_game_button;
+  game_fsm_3 game (
     .clk(clk),
     .rst(rst),
+    .ran(M_game_ran),
     .counter2(M_game_counter2),
     .start(M_game_start),
-    .button1(M_game_button1),
-    .button2(M_game_button2),
-    .button3(M_game_button3),
-    .button4(M_game_button4),
-    .button5(M_game_button5),
-    .button6(M_game_button6),
-    .button7(M_game_button7),
-    .button8(M_game_button8),
-    .button9(M_game_button9),
-    .button10(M_game_button10),
+    .button(M_game_button),
     .whetherstart(M_game_whetherstart),
     .display(M_game_display),
     .out(M_game_out)
   );
   reg [55:0] M_counter2_d, M_counter2_q = 1'h0;
+  reg [31:0] M_random_d, M_random_q = 1'h0;
+  
+  integer i;
   
   always @* begin
     M_counter2_d = M_counter2_q;
     
-    M_game_button1 = 1'h0;
-    M_game_button2 = 1'h0;
-    M_game_button3 = 1'h0;
-    M_game_button4 = 1'h0;
-    M_game_button5 = 1'h0;
-    M_game_button6 = 1'h0;
-    M_game_button7 = 1'h0;
-    M_game_button8 = 1'h0;
-    M_game_button9 = 1'h0;
-    M_game_button10 = 1'h0;
+    io_led[16+7-:8] = 1'h0;
+    io_led[8+7-:8] = 1'h0;
+    io_led[0+7-:8] = 1'h0;
+    M_ran_seed = 1'h1;
+    M_ran_next = 1'h1;
+    M_game_ran = M_ran_num;
+    for (i = 1'h0; i < 4'h8; i = i + 1) begin
+      M_game_button[(i)*1+0-:1] = 1'h0;
+    end
     M_reset_cond_in = ~rst_n;
     rst = M_reset_cond_out;
     led = 8'h00;
@@ -99,8 +96,10 @@ module mojo_top_0 (
   always @(posedge clk) begin
     if (rst == 1'b1) begin
       M_counter2_q <= 1'h0;
+      M_random_q <= 1'h0;
     end else begin
       M_counter2_q <= M_counter2_d;
+      M_random_q <= M_random_d;
     end
   end
   
