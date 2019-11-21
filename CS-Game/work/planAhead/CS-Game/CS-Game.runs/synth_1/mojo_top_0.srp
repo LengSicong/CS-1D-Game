@@ -3,7 +3,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: mojo_top_0.prj
 
@@ -99,23 +99,24 @@ Elaborating module <boolean_8>.
 Elaborating module <compare_9>.
 
 Elaborating module <shifter_10>.
-WARNING:HDLCompiler:1127 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Game_fsm_3.v" Line 33: Assignment to M_alu_z ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Game_fsm_3.v" Line 34: Assignment to M_alu_v ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Game_fsm_3.v" Line 35: Assignment to M_alu_n ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Game_fsm_3.v" Line 35: Assignment to M_alu_z ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Game_fsm_3.v" Line 36: Assignment to M_alu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Game_fsm_3.v" Line 37: Assignment to M_alu_n ignored, since the identifier is never used
 
 Elaborating module <edge_detector_5>.
 
 Elaborating module <button_conditioner_6>.
 
 Elaborating module <pipeline_11>.
-WARNING:HDLCompiler:634 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Game_fsm_3.v" Line 80: Net <M_alufn_d[5]> does not have a driver.
-WARNING:HDLCompiler:1127 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 60: Assignment to M_game_whetherstart ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 61: Assignment to M_game_display ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 62: Assignment to M_game_out ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 96: Assignment to M_random_q ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Game_fsm_3.v" Line 82: Net <M_alufn_d[5]> does not have a driver.
+WARNING:HDLCompiler:1127 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 62: Assignment to M_game_whetherstart ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 63: Assignment to M_game_display ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 64: Assignment to M_game_out ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 65: Assignment to M_game_s_seg_display ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 66: Assignment to M_game_target_display ignored, since the identifier is never used
 WARNING:Xst:2972 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" line 31. All outputs of instance <reset_cond> of block <reset_conditioner_1> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
 WARNING:Xst:2972 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" line 39. All outputs of instance <ran> of block <pn_gen_2> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
-WARNING:Xst:2972 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" line 53. All outputs of instance <game> of block <game_fsm_3> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
+WARNING:Xst:2972 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" line 55. All outputs of instance <game> of block <game_fsm_3> are unconnected in block <mojo_top_0>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -131,15 +132,17 @@ WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved an
 WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" line 53: Output port <whetherstart> of the instance <game> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" line 53: Output port <display> of the instance <game> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" line 53: Output port <out> of the instance <game> is unconnected or connected to loadless signal.
-    Found 1-bit tristate buffer for signal <spi_miso> created at line 69
-    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 69
-    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 69
-    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 69
-    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 69
-    Found 1-bit tristate buffer for signal <avr_rx> created at line 69
+INFO:Xst:3210 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" line 55: Output port <whetherstart> of the instance <game> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" line 55: Output port <display> of the instance <game> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" line 55: Output port <s_seg_display> of the instance <game> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" line 55: Output port <target_display> of the instance <game> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" line 55: Output port <out> of the instance <game> is unconnected or connected to loadless signal.
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 72
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 72
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 72
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 72
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 72
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 72
     Summary:
 	inferred   6 Tristate(s).
 Unit <mojo_top_0> synthesized.
@@ -361,14 +364,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.28 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.88 secs
  
 --> 
 
-Total memory usage is 236996 kilobytes
+Total memory usage is 239748 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   20 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of warnings :   21 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
 

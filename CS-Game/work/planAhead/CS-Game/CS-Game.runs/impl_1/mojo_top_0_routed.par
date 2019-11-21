@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-LAPTOP-LHLOI6C6::  Thu Nov 21 10:28:23 2019
+LAPTOP-LHLOI6C6::  Thu Nov 21 11:10:45 2019
 
 par -intstyle pa -w -mt on mojo_top_0.ncd mojo_top_0_routed.ncd 
 
@@ -114,7 +114,7 @@ Phase  1  : 32 unrouted;      REAL time: 2 secs
 
 Phase  2  : 32 unrouted;      REAL time: 2 secs 
 
-Phase  3  : 0 unrouted;      REAL time: 5 secs 
+Phase  3  : 0 unrouted;      REAL time: 4 secs 
 
 Phase  4  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 

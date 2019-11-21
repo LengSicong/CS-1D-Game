@@ -46,6 +46,8 @@ module mojo_top_0 (
   wire [1-1:0] M_game_whetherstart;
   wire [8-1:0] M_game_display;
   wire [1-1:0] M_game_out;
+  wire [128-1:0] M_game_s_seg_display;
+  wire [16-1:0] M_game_target_display;
   reg [32-1:0] M_game_ran;
   reg [56-1:0] M_game_counter2;
   reg [1-1:0] M_game_start;
@@ -59,10 +61,11 @@ module mojo_top_0 (
     .button(M_game_button),
     .whetherstart(M_game_whetherstart),
     .display(M_game_display),
-    .out(M_game_out)
+    .out(M_game_out),
+    .s_seg_display(M_game_s_seg_display),
+    .target_display(M_game_target_display)
   );
   reg [55:0] M_counter2_d, M_counter2_q = 1'h0;
-  reg [31:0] M_random_d, M_random_q = 1'h0;
   
   integer i;
   
@@ -96,10 +99,8 @@ module mojo_top_0 (
   always @(posedge clk) begin
     if (rst == 1'b1) begin
       M_counter2_q <= 1'h0;
-      M_random_q <= 1'h0;
     end else begin
       M_counter2_q <= M_counter2_d;
-      M_random_q <= M_random_d;
     end
   end
   

@@ -27,9 +27,8 @@ module mojo_top (
     .rst(rst){
       pn_gen ran;
       game_fsm game; //initializing Game_fsm named gmae
-      //dff counter1[28];
-      dff counter2[56];
-      dff random[32];
+      
+      dff counter2[56]; // for common time count
       //dff r11[16];
       //dff r12[16];
     }
@@ -54,7 +53,6 @@ module mojo_top (
     spi_miso = bz;          // not using SPI
     spi_channel = bzzzz;    // not using flags
     avr_rx = bz;            // not using serial port
-    
     game.counter2 = counter2.q; //feed the counter1 to game
     
     if(io_dip[0][0]) //use DIP switch[0][0] to start

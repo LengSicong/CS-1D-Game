@@ -13,7 +13,9 @@ module game_fsm_3 (
     input [7:0] button,
     output reg [0:0] whetherstart,
     output reg [7:0] display,
-    output reg out
+    output reg out,
+    output reg [127:0] s_seg_display,
+    output reg [15:0] target_display
   );
   
   
@@ -79,6 +81,7 @@ module game_fsm_3 (
   reg [127:0] M_r_d, M_r_q = 1'h0;
   reg [5:0] M_alufn_d, M_alufn_q = 1'h0;
   reg M_numIncre_d, M_numIncre_q = 1'h0;
+  reg [27:0] M_counter1_d, M_counter1_q = 1'h0;
   
   integer i;
   
@@ -90,14 +93,20 @@ module game_fsm_3 (
     M_r_d = M_r_q;
     M_numIncre_d = M_numIncre_q;
     M_targetnumber_d = M_targetnumber_q;
+    M_counter1_d = M_counter1_q;
     M_opr_d = M_opr_q;
     M_rb_d = M_rb_q;
     
+    s_seg_display = 128'h00000000000000000000000000000000;
+    target_display = M_targetnumber_q;
     for (i = 1'h0; i < 4'h8; i = i + 1) begin
       M_button_cond_in[(i)*1+0-:1] = button[(i)*1+0-:1];
     end
     for (i = 1'h0; i < 4'h8; i = i + 1) begin
       M_edge_detector_in[(i)*1+0-:1] = M_button_cond_out[(i)*1+0-:1];
+    end
+    if (start == 1'h1) begin
+      M_counter1_d = M_counter1_q + 1'h1;
     end
     M_alu_a = 1'h0;
     M_alu_b = 1'h0;
@@ -115,18 +124,14 @@ module game_fsm_3 (
       RANDOM_TARGET_state: begin
         if (ran[4+0-:1] == 1'h0 && ran[0+3-:4] <= 4'hc && ran[0+3-:4] >= 3'h7) begin
           M_targetnumber_d = ran[0+3-:4];
-          for (i = 1'h0; i < 4'h8; i = i + 1) begin
-            M_r_d[(i)*16+15-:16] = 12'hfff;
-          end
+          M_r_d = 128'h0fff0fff0fff0fff0fff0fff0fff0fff;
           M_numIncre_d = 1'h0;
           M_opr_d = 1'h1;
           M_state_d = RANDOM_CARDS1_state;
         end
         if (ran[4+0-:1] == 1'h1 && ran[0+3-:4] <= 3'h6 && ran[0+3-:4] >= 1'h0) begin
           M_targetnumber_d = ran[0+3-:4];
-          for (i = 1'h0; i < 4'h8; i = i + 1) begin
-            M_r_d[(i)*16+15-:16] = 12'hfff;
-          end
+          M_r_d = 128'h0fff0fff0fff0fff0fff0fff0fff0fff;
           M_numIncre_d = 1'h0;
           M_opr_d = 1'h0;
           M_state_d = RANDOM_CARDS1_state;
@@ -166,12 +171,13 @@ module game_fsm_3 (
       end
       GAME12_state: begin
         for (i = 1'h0; i < 4'h8; i = i + 1) begin
-          if (M_edge_detector_out[(i)*1+0-:1] && M_r_q[(i)*16+15-:16] != 16'hffff) begin
+          if (M_edge_detector_out[(i)*1+0-:1] && M_r_q[(i)*16+15-:16] != 16'hffff && M_ra_q != i) begin
             M_rb_d = i;
             M_state_d = COMP_state;
+            M_counter1_d = 1'h0;
           end
         end
-        if (counter2[0+0-:1] == 1'h1) begin
+        if (counter2[55+0-:1] == 1'h1) begin
           M_state_d = LOSE_state;
         end
       end
@@ -191,6 +197,12 @@ module game_fsm_3 (
         end
         if (validity == 1'h1) begin
           M_state_d = WIN_state;
+        end
+        if (M_counter1_q[27+0-:1] == 1'h1) begin
+          M_state_d = GAME11_state;
+        end else begin
+          s_seg_display[(M_ra_q)*16+15-:16] = M_r_q[(M_ra_q)*16+15-:16];
+          s_seg_display[(M_rb_q)*16+15-:16] = M_r_q[(M_rb_q)*16+15-:16];
         end
       end
       WIN_state: begin
@@ -218,6 +230,7 @@ module game_fsm_3 (
       M_r_q <= 1'h0;
       M_alufn_q <= 1'h0;
       M_numIncre_q <= 1'h0;
+      M_counter1_q <= 1'h0;
       M_state_q <= 1'h0;
     end else begin
       M_targetnumber_q <= M_targetnumber_d;
@@ -227,6 +240,7 @@ module game_fsm_3 (
       M_r_q <= M_r_d;
       M_alufn_q <= M_alufn_d;
       M_numIncre_q <= M_numIncre_d;
+      M_counter1_q <= M_counter1_d;
       M_state_q <= M_state_d;
     end
   end
