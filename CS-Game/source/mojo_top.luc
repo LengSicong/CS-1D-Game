@@ -15,7 +15,8 @@ module mojo_top (
     //output io_seg [8],      // 7-segment LEDs on IO Shield
     //output io_sel [4],      // Digit select on IO Shield
     input io_button [5],    // 5 buttons on IO Shield
-    input io_dip [3][8]     // DIP switches on IO Shield
+    input io_dip [3][8],     // DIP switches on IO Shield
+    output target[2][7]  // target numbersDisplay
   ) {
   
   sig rst;                  // reset signal
@@ -27,13 +28,14 @@ module mojo_top (
     .rst(rst){
       pn_gen ran;
       game_fsm game; //initializing Game_fsm named gmae
-      
+      multi_seven_seg numbersDisplay; // 7 segment display of the 8 numbers
       dff counter2[56]; // for common time count
       //dff r11[16];
       //dff r12[16];
     }
   }
   var i;
+  
   always {
     
     io_led[2] = 0;
@@ -49,12 +51,23 @@ module mojo_top (
     reset_cond.in = ~rst_n; // input raw inverted reset signal
     rst = reset_cond.out;   // conditioned reset
     
-    led = 8h00;             // turn LEDs off
+    led = 8h00;            // turn LEDs off
     spi_miso = bz;          // not using SPI
     spi_channel = bzzzz;    // not using flags
     avr_rx = bz;            // not using serial port
     game.counter2 = counter2.q; //feed the counter1 to game
     
+    for (i=0;i<8;i++)
+      numbersDisplay.values[i] = game.target_display[i];
+    
+    if (game.target_display>=9){
+      target[0] = game.target_display-10;
+      target[1] = 1;
+      } else{
+      target[0] = game.target_display;
+      target[1] = 0;
+    }  
+      
     if(io_dip[0][0]) //use DIP switch[0][0] to start
       game.start = b1;
     else

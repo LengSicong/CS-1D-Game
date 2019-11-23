@@ -4,6 +4,8 @@
     <src>boolean.luc</src>
     <src>alu.luc</src>
     <src>shifter.luc</src>
+    <src>seven_seg.luc</src>
+    <src>multi_seven_seg.luc</src>
     <src>adder.luc</src>
     <src>compare.luc</src>
     <src>Game_fsm.luc</src>
@@ -15,6 +17,7 @@
     <component>reset_conditioner.luc</component>
     <component>pipeline.luc</component>
     <component>button_conditioner.luc</component>
+    <component>counter.luc</component>
     <component>edge_detector.luc</component>
   </files>
 </project>
