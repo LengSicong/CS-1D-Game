@@ -1,11 +1,11 @@
 module multi_seven_seg #(
-    DIGITS = 7 : DIGITS > 0,
+    DIGITS = 8 : DIGITS > 0,
     DIV = 16 : DIV >= 0
   )(
     input clk,                // clock
     input rst,                // reset
     input values [DIGITS][4], // values to show
-    output seg [7],           // LED segments
+    output seg [8],           // LED segments
     output sel [3]       // Digit select
   ) {
  
