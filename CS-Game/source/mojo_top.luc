@@ -17,6 +17,7 @@ module mojo_top (
     input io_button [5],    // 5 buttons on IO Shield
     input io_dip [3][8],     // DIP switches on IO Shield
     
+    input button[8], // button press from game player  
     output target[2][7],  // target numbersDisplay
     output display_seg[8], // 8 numbers' segment display
     output display_sel[3]  // 8 numbers' digit select
@@ -47,7 +48,7 @@ module mojo_top (
     ran.seed = 1;
     ran.next = 1;
     game.ran = ran.num;
-    
+    game.button = button;
     for (i=0; i<8;i++)
       game.button[i] = 0;
     

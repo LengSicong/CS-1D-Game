@@ -5,7 +5,7 @@ module game_fsm (
     //input counter1[28],
     input counter2[56],
     input start[1],
-    input button[8][1],
+    input button[8],
     //input r11[16],
     //input r12[16],
     output whetherstart[1],
