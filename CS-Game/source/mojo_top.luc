@@ -64,8 +64,8 @@ module mojo_top (
     for (i=0;i<8;i++)
       numbersDisplay.values[i] = game.target_display[i];
     
-    display_seg = numbersDisplay.seg;
-    display_sel = numbersDisplay.sel;  
+    display_seg = ~numbersDisplay.seg;
+    display_sel = ~numbersDisplay.sel;  
     if (game.target_display>=9){
       target[0] = game.target_display-10;
       target[1] = 1;
