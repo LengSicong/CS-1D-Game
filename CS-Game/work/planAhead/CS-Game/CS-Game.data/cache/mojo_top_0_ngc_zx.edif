@@ -4,7 +4,7 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timestamp 2019 11 25 13 20 22)
+      (timestamp 2019 11 25 17 1 6)
       (program "Xilinx ngc2edif" (version "P.20131013"))
       (author "Xilinx. Inc ")
       (comment "This EDIF netlist is to be used within supported synthesis tools")
@@ -835,7 +835,7 @@
               (viewRef view_1 (cellRef VCC (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
-            (net target_13_OBUF
+            (net display_seg_OBUF
               (joined
                 (portRef G (instanceRef XST_GND))
                 (portRef CI (instanceRef Mcount_M_ctr_q_cy_0__))
@@ -859,7 +859,7 @@
                 (portRef DI (instanceRef Mcount_M_ctr_q_cy_17__))
               )
             )
-            (net display_seg_OBUF
+            (net target_9_OBUF
               (joined
                 (portRef P (instanceRef XST_VCC))
                 (portRef DI (instanceRef Mcount_M_ctr_q_cy_0__))
@@ -1741,7 +1741,7 @@
                 (portRef Q (instanceRef M_state_q_FSM_FFd1_renamed_40))
               )
             )
-            (net display_seg_OBUF
+            (net target_9_OBUF
               (joined
                 (portRef P (instanceRef CC))
                 (portRef D (instanceRef M_state_q_FSM_FFd2_renamed_41))
@@ -4631,7 +4631,7 @@
                 (portRef Q (instanceRef M_stage_q_0))
               )
             )
-            (net target_13_OBUF
+            (net display_seg_OBUF
               (joined
                 (portRef G (instanceRef XST_GND))
                 (portRef D (instanceRef M_stage_q_0))
@@ -4878,15 +4878,15 @@
               (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
-            (instance display_sel_2_OBUF
+            (instance (rename display_sel_2_OBUF_renamed_99 "display_sel_2_OBUF")
               (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
-            (instance display_sel_1_OBUF
+            (instance (rename display_sel_1_OBUF_renamed_100 "display_sel_1_OBUF")
               (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
-            (instance display_sel_0_OBUF
+            (instance (rename display_sel_0_OBUF_renamed_101 "display_sel_0_OBUF")
               (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
@@ -4902,11 +4902,23 @@
               (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
-            (instance (rename clk_BUFGP_renamed_99 "clk_BUFGP")
+            (instance (rename clk_BUFGP_renamed_102 "clk_BUFGP")
               (viewRef view_1 (cellRef BUFGP (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
             (instance M_reset_cond_in1_INV_0
+              (viewRef view_1 (cellRef INV (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename display_sel_2_1_INV_0 "display_sel<2>1_INV_0")
+              (viewRef view_1 (cellRef INV (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename display_sel_1_1_INV_0 "display_sel<1>1_INV_0")
+              (viewRef view_1 (cellRef INV (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename display_sel_0_1_INV_0 "display_sel<0>1_INV_0")
               (viewRef view_1 (cellRef INV (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
@@ -4937,7 +4949,7 @@
             )
             (net clk_BUFGP
               (joined
-                (portRef O (instanceRef clk_BUFGP_renamed_99))
+                (portRef O (instanceRef clk_BUFGP_renamed_102))
                 (portRef clk (instanceRef reset_cond))
                 (portRef clk (instanceRef ran))
                 (portRef clk (instanceRef game))
@@ -5039,35 +5051,21 @@
                 (portRef ran_0__ (instanceRef game))
               )
             )
-            (net M_ran_next
+            (net (rename M_numbersDisplay_sel_2_ "M_numbersDisplay_sel<2>")
               (joined
-                (portRef P (instanceRef XST_VCC))
-                (portRef T (instanceRef spi_channel_3_OBUFT))
-                (portRef T (instanceRef spi_channel_2_OBUFT))
-                (portRef T (instanceRef spi_channel_1_OBUFT))
-                (portRef T (instanceRef spi_channel_0_OBUFT))
-                (portRef I (instanceRef target_9_OBUF))
-                (portRef I (instanceRef target_8_OBUF))
-                (portRef T (instanceRef spi_miso_OBUFT))
-                (portRef T (instanceRef avr_rx_OBUFT))
-                (portRef I (instanceRef display_seg_OBUF))
-              )
-            )
-            (net M_ctr_q_18
-              (joined
-                (portRef I (instanceRef display_sel_2_OBUF))
+                (portRef I (instanceRef display_sel_2_1_INV_0))
                 (portRef (member sel 0) (instanceRef numbersDisplay))
               )
             )
-            (net M_ctr_q_17
+            (net (rename M_numbersDisplay_sel_1_ "M_numbersDisplay_sel<1>")
               (joined
-                (portRef I (instanceRef display_sel_1_OBUF))
+                (portRef I (instanceRef display_sel_1_1_INV_0))
                 (portRef (member sel 1) (instanceRef numbersDisplay))
               )
             )
-            (net M_ctr_q_16
+            (net (rename M_numbersDisplay_sel_0_ "M_numbersDisplay_sel<0>")
               (joined
-                (portRef I (instanceRef display_sel_0_OBUF))
+                (portRef I (instanceRef display_sel_0_1_INV_0))
                 (portRef (member sel 2) (instanceRef numbersDisplay))
               )
             )
@@ -5075,6 +5073,45 @@
               (joined
                 (portRef O (instanceRef M_reset_cond_in1_INV_0))
                 (portRef in (instanceRef reset_cond))
+              )
+            )
+            (net (rename M_game_s_seg_display_0_ "M_game_s_seg_display<0>")
+              (joined
+                (portRef G (instanceRef XST_GND))
+                (portRef I (instanceRef led_7_OBUF))
+                (portRef I (instanceRef led_6_OBUF))
+                (portRef I (instanceRef led_5_OBUF))
+                (portRef I (instanceRef led_4_OBUF))
+                (portRef I (instanceRef led_3_OBUF))
+                (portRef I (instanceRef led_2_OBUF))
+                (portRef I (instanceRef led_1_OBUF))
+                (portRef I (instanceRef led_0_OBUF))
+                (portRef I (instanceRef spi_channel_3_OBUFT))
+                (portRef I (instanceRef spi_channel_2_OBUFT))
+                (portRef I (instanceRef spi_channel_1_OBUFT))
+                (portRef I (instanceRef spi_channel_0_OBUFT))
+                (portRef I (instanceRef target_13_OBUF))
+                (portRef I (instanceRef spi_miso_OBUFT))
+                (portRef I (instanceRef avr_rx_OBUFT))
+                (portRef I (instanceRef display_seg_OBUF))
+              )
+            )
+            (net display_sel_2_OBUF
+              (joined
+                (portRef I (instanceRef display_sel_2_OBUF_renamed_99))
+                (portRef O (instanceRef display_sel_2_1_INV_0))
+              )
+            )
+            (net display_sel_1_OBUF
+              (joined
+                (portRef I (instanceRef display_sel_1_OBUF_renamed_100))
+                (portRef O (instanceRef display_sel_1_1_INV_0))
+              )
+            )
+            (net display_sel_0_OBUF
+              (joined
+                (portRef I (instanceRef display_sel_0_OBUF_renamed_101))
+                (portRef O (instanceRef display_sel_0_1_INV_0))
               )
             )
             (net (rename M_seven_seg1_segs_6_ "M_seven_seg1_segs<6>")
@@ -5119,26 +5156,6 @@
                 (portRef I (instanceRef target_0_OBUF))
               )
             )
-            (net (rename M_game_s_seg_display_0_ "M_game_s_seg_display<0>")
-              (joined
-                (portRef G (instanceRef XST_GND))
-                (portRef I (instanceRef led_7_OBUF))
-                (portRef I (instanceRef led_6_OBUF))
-                (portRef I (instanceRef led_5_OBUF))
-                (portRef I (instanceRef led_4_OBUF))
-                (portRef I (instanceRef led_3_OBUF))
-                (portRef I (instanceRef led_2_OBUF))
-                (portRef I (instanceRef led_1_OBUF))
-                (portRef I (instanceRef led_0_OBUF))
-                (portRef I (instanceRef spi_channel_3_OBUFT))
-                (portRef I (instanceRef spi_channel_2_OBUFT))
-                (portRef I (instanceRef spi_channel_1_OBUFT))
-                (portRef I (instanceRef spi_channel_0_OBUFT))
-                (portRef I (instanceRef target_13_OBUF))
-                (portRef I (instanceRef spi_miso_OBUFT))
-                (portRef I (instanceRef avr_rx_OBUFT))
-              )
-            )
             (net (rename M_seven_seg2_segs_0_ "M_seven_seg2_segs<0>")
               (joined
                 (portRef O (instanceRef target_10_11))
@@ -5146,6 +5163,19 @@
                 (portRef I (instanceRef target_11_OBUF))
                 (portRef I (instanceRef target_10_OBUF))
                 (portRef I (instanceRef target_7_OBUF))
+              )
+            )
+            (net M_ran_next
+              (joined
+                (portRef P (instanceRef XST_VCC))
+                (portRef T (instanceRef spi_channel_3_OBUFT))
+                (portRef T (instanceRef spi_channel_2_OBUFT))
+                (portRef T (instanceRef spi_channel_1_OBUFT))
+                (portRef T (instanceRef spi_channel_0_OBUFT))
+                (portRef I (instanceRef target_9_OBUF))
+                (portRef I (instanceRef target_8_OBUF))
+                (portRef T (instanceRef spi_miso_OBUFT))
+                (portRef T (instanceRef avr_rx_OBUFT))
               )
             )
             (net spi_miso
@@ -5187,7 +5217,7 @@
             (net clk
               (joined
                 (portRef clk)
-                (portRef I (instanceRef clk_BUFGP_renamed_99))
+                (portRef I (instanceRef clk_BUFGP_renamed_102))
               )
             )
             (net rst_n
@@ -5331,19 +5361,19 @@
             (net (rename display_sel_2_ "display_sel<2>")
               (joined
                 (portRef (member display_sel 0))
-                (portRef O (instanceRef display_sel_2_OBUF))
+                (portRef O (instanceRef display_sel_2_OBUF_renamed_99))
               )
             )
             (net (rename display_sel_1_ "display_sel<1>")
               (joined
                 (portRef (member display_sel 1))
-                (portRef O (instanceRef display_sel_1_OBUF))
+                (portRef O (instanceRef display_sel_1_OBUF_renamed_100))
               )
             )
             (net (rename display_sel_0_ "display_sel<0>")
               (joined
                 (portRef (member display_sel 2))
-                (portRef O (instanceRef display_sel_0_OBUF))
+                (portRef O (instanceRef display_sel_0_OBUF_renamed_101))
               )
             )
             (net display_seg

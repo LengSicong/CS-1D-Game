@@ -1,8 +1,8 @@
 --------------------------------------------------------------------------------
-Release 14.7 Trace  (nt)
+Release 14.7 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-D:\Software\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -o
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -o
 mojo_top_0.twr -v 30 -l 30 mojo_top_0_routed.ncd mojo_top_0.pcf
 
 Design file:              mojo_top_0_routed.ncd
@@ -30,14 +30,14 @@ For more information, see Period Analysis in the Timing Closure User Guide (UG61
 
  987 paths analyzed, 422 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   4.566ns.
+ Minimum period is   4.554ns.
 --------------------------------------------------------------------------------
-Slack:                  15.434ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  15.446ns (requirement - (data path - clock path skew + uncertainty))
   Source:               reset_cond/M_stage_q_3_2 (FF)
   Destination:          numbersDisplay/ctr/M_ctr_q_12 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.408ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.123ns (0.684 - 0.807)
+  Data Path Delay:      4.391ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.128ns (0.681 - 0.809)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -52,26 +52,26 @@ Slack:                  15.434ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X11Y14.DQ      Tcko                  0.430   M_stage_q_3_2
+    SLICE_X9Y15.DQ       Tcko                  0.430   M_stage_q_3_2
                                                        reset_cond/M_stage_q_3_2
-    SLICE_X17Y40.B5      net (fanout=1)        2.333   M_stage_q_3_2
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+    SLICE_X15Y39.B5      net (fanout=1)        2.290   M_stage_q_3_2
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y43.B1      net (fanout=19)       1.013   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y43.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
+    SLICE_X15Y42.B1      net (fanout=19)       1.039   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
                                                        numbersDisplay/ctr/M_ctr_q_12_rstpot
                                                        numbersDisplay/ctr/M_ctr_q_12
     -------------------------------------------------  ---------------------------
-    Total                                      4.408ns (1.062ns logic, 3.346ns route)
-                                                       (24.1% logic, 75.9% route)
+    Total                                      4.391ns (1.062ns logic, 3.329ns route)
+                                                       (24.2% logic, 75.8% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.568ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  15.516ns (requirement - (data path - clock path skew + uncertainty))
   Source:               numbersDisplay/ctr/M_ctr_q_8 (FF)
   Destination:          numbersDisplay/ctr/M_ctr_q_12 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.389ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.008ns (0.191 - 0.199)
+  Data Path Delay:      4.441ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.008ns (0.188 - 0.196)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -86,131 +86,29 @@ Slack:                  15.568ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y42.BQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
+    SLICE_X15Y41.BQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
                                                        numbersDisplay/ctr/M_ctr_q_8
-    SLICE_X17Y44.D6      net (fanout=2)        0.827   numbersDisplay/ctr/M_ctr_q[8]
-    SLICE_X17Y44.D       Tilo                  0.259   M_ctr_q_18
+    SLICE_X15Y43.D6      net (fanout=2)        0.827   numbersDisplay/ctr/M_ctr_q[8]
+    SLICE_X15Y43.D       Tilo                  0.259   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B2      net (fanout=1)        1.228   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+    SLICE_X15Y39.B2      net (fanout=1)        1.254   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y43.B1      net (fanout=19)       1.013   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y43.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
+    SLICE_X15Y42.B1      net (fanout=19)       1.039   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
                                                        numbersDisplay/ctr/M_ctr_q_12_rstpot
                                                        numbersDisplay/ctr/M_ctr_q_12
     -------------------------------------------------  ---------------------------
-    Total                                      4.389ns (1.321ns logic, 3.068ns route)
-                                                       (30.1% logic, 69.9% route)
+    Total                                      4.441ns (1.321ns logic, 3.120ns route)
+                                                       (29.7% logic, 70.3% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.597ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond/M_stage_q_3_2 (FF)
-  Destination:          numbersDisplay/ctr/M_ctr_q_13 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.245ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.123ns (0.684 - 0.807)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_13
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X11Y14.DQ      Tcko                  0.430   M_stage_q_3_2
-                                                       reset_cond/M_stage_q_3_2
-    SLICE_X17Y40.B5      net (fanout=1)        2.333   M_stage_q_3_2
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
-                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y43.C3      net (fanout=19)       0.850   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y43.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
-                                                       numbersDisplay/ctr/M_ctr_q_13_rstpot
-                                                       numbersDisplay/ctr/M_ctr_q_13
-    -------------------------------------------------  ---------------------------
-    Total                                      4.245ns (1.062ns logic, 3.183ns route)
-                                                       (25.0% logic, 75.0% route)
-
---------------------------------------------------------------------------------
-Slack:                  15.608ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond/M_stage_q_3_2 (FF)
-  Destination:          numbersDisplay/ctr/M_ctr_q_18 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.236ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.121ns (0.686 - 0.807)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_18
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X11Y14.DQ      Tcko                  0.430   M_stage_q_3_2
-                                                       reset_cond/M_stage_q_3_2
-    SLICE_X17Y40.B5      net (fanout=1)        2.333   M_stage_q_3_2
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
-                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y44.C4      net (fanout=19)       0.841   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y44.CLK     Tas                   0.373   M_ctr_q_18
-                                                       numbersDisplay/ctr/M_ctr_q_18_rstpot
-                                                       numbersDisplay/ctr/M_ctr_q_18
-    -------------------------------------------------  ---------------------------
-    Total                                      4.236ns (1.062ns logic, 3.174ns route)
-                                                       (25.1% logic, 74.9% route)
-
---------------------------------------------------------------------------------
-Slack:                  15.609ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond/M_stage_q_3_2 (FF)
-  Destination:          numbersDisplay/ctr/M_ctr_q_7 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.230ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.126ns (0.681 - 0.807)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_7
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X11Y14.DQ      Tcko                  0.430   M_stage_q_3_2
-                                                       reset_cond/M_stage_q_3_2
-    SLICE_X17Y40.B5      net (fanout=1)        2.333   M_stage_q_3_2
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
-                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y42.A1      net (fanout=19)       0.835   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[10]
-                                                       numbersDisplay/ctr/M_ctr_q_7_rstpot
-                                                       numbersDisplay/ctr/M_ctr_q_7
-    -------------------------------------------------  ---------------------------
-    Total                                      4.230ns (1.062ns logic, 3.168ns route)
-                                                       (25.1% logic, 74.9% route)
-
---------------------------------------------------------------------------------
-Slack:                  15.644ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  15.593ns (requirement - (data path - clock path skew + uncertainty))
   Source:               numbersDisplay/ctr/M_ctr_q_16 (FF)
   Destination:          numbersDisplay/ctr/M_ctr_q_12 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.308ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.013ns (0.191 - 0.204)
+  Data Path Delay:      4.359ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.013ns (0.188 - 0.201)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -225,29 +123,29 @@ Slack:                  15.644ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y44.AQ      Tcko                  0.430   M_ctr_q_18
+    SLICE_X15Y43.AQ      Tcko                  0.430   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/M_ctr_q_16
-    SLICE_X17Y44.D2      net (fanout=3)        0.746   M_ctr_q_16
-    SLICE_X17Y44.D       Tilo                  0.259   M_ctr_q_18
+    SLICE_X15Y43.D2      net (fanout=3)        0.745   M_numbersDisplay_sel[0]
+    SLICE_X15Y43.D       Tilo                  0.259   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B2      net (fanout=1)        1.228   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+    SLICE_X15Y39.B2      net (fanout=1)        1.254   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y43.B1      net (fanout=19)       1.013   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y43.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
+    SLICE_X15Y42.B1      net (fanout=19)       1.039   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
                                                        numbersDisplay/ctr/M_ctr_q_12_rstpot
                                                        numbersDisplay/ctr/M_ctr_q_12
     -------------------------------------------------  ---------------------------
-    Total                                      4.308ns (1.321ns logic, 2.987ns route)
-                                                       (30.7% logic, 69.3% route)
+    Total                                      4.359ns (1.321ns logic, 3.038ns route)
+                                                       (30.3% logic, 69.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.678ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  15.609ns (requirement - (data path - clock path skew + uncertainty))
   Source:               reset_cond/M_stage_q_3_2 (FF)
-  Destination:          numbersDisplay/ctr/M_ctr_q_14 (FF)
+  Destination:          numbersDisplay/ctr/M_ctr_q_13 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.164ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.123ns (0.684 - 0.807)
+  Data Path Delay:      4.228ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.128ns (0.681 - 0.809)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -258,30 +156,98 @@ Slack:                  15.678ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_14
+  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_13
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X11Y14.DQ      Tcko                  0.430   M_stage_q_3_2
+    SLICE_X9Y15.DQ       Tcko                  0.430   M_stage_q_3_2
                                                        reset_cond/M_stage_q_3_2
-    SLICE_X17Y40.B5      net (fanout=1)        2.333   M_stage_q_3_2
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+    SLICE_X15Y39.B5      net (fanout=1)        2.290   M_stage_q_3_2
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y43.D4      net (fanout=19)       0.769   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y43.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
-                                                       numbersDisplay/ctr/M_ctr_q_14_rstpot
-                                                       numbersDisplay/ctr/M_ctr_q_14
+    SLICE_X15Y42.C3      net (fanout=19)       0.876   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
+                                                       numbersDisplay/ctr/M_ctr_q_13_rstpot
+                                                       numbersDisplay/ctr/M_ctr_q_13
     -------------------------------------------------  ---------------------------
-    Total                                      4.164ns (1.062ns logic, 3.102ns route)
-                                                       (25.5% logic, 74.5% route)
+    Total                                      4.228ns (1.062ns logic, 3.166ns route)
+                                                       (25.1% logic, 74.9% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.691ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  15.620ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond/M_stage_q_3_2 (FF)
+  Destination:          numbersDisplay/ctr/M_ctr_q_18 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.219ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.126ns (0.683 - 0.809)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y15.DQ       Tcko                  0.430   M_stage_q_3_2
+                                                       reset_cond/M_stage_q_3_2
+    SLICE_X15Y39.B5      net (fanout=1)        2.290   M_stage_q_3_2
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
+    SLICE_X15Y43.C4      net (fanout=19)       0.867   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y43.CLK     Tas                   0.373   M_numbersDisplay_sel[2]
+                                                       numbersDisplay/ctr/M_ctr_q_18_rstpot
+                                                       numbersDisplay/ctr/M_ctr_q_18
+    -------------------------------------------------  ---------------------------
+    Total                                      4.219ns (1.062ns logic, 3.157ns route)
+                                                       (25.2% logic, 74.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  15.622ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond/M_stage_q_3_2 (FF)
+  Destination:          numbersDisplay/ctr/M_ctr_q_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.212ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.131ns (0.678 - 0.809)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y15.DQ       Tcko                  0.430   M_stage_q_3_2
+                                                       reset_cond/M_stage_q_3_2
+    SLICE_X15Y39.B5      net (fanout=1)        2.290   M_stage_q_3_2
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
+    SLICE_X15Y41.A1      net (fanout=19)       0.860   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y41.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[10]
+                                                       numbersDisplay/ctr/M_ctr_q_7_rstpot
+                                                       numbersDisplay/ctr/M_ctr_q_7
+    -------------------------------------------------  ---------------------------
+    Total                                      4.212ns (1.062ns logic, 3.150ns route)
+                                                       (25.2% logic, 74.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  15.661ns (requirement - (data path - clock path skew + uncertainty))
   Source:               reset_cond/M_stage_q_3_2 (FF)
   Destination:          numbersDisplay/ctr/M_ctr_q_4 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.146ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.128ns (0.679 - 0.807)
+  Data Path Delay:      4.171ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.133ns (0.676 - 0.809)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -296,60 +262,26 @@ Slack:                  15.691ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X11Y14.DQ      Tcko                  0.430   M_stage_q_3_2
+    SLICE_X9Y15.DQ       Tcko                  0.430   M_stage_q_3_2
                                                        reset_cond/M_stage_q_3_2
-    SLICE_X17Y40.B5      net (fanout=1)        2.333   M_stage_q_3_2
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+    SLICE_X15Y39.B5      net (fanout=1)        2.290   M_stage_q_3_2
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y41.B1      net (fanout=19)       0.751   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y41.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[6]
+    SLICE_X15Y40.B1      net (fanout=19)       0.819   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y40.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[6]
                                                        numbersDisplay/ctr/M_ctr_q_4_rstpot
                                                        numbersDisplay/ctr/M_ctr_q_4
     -------------------------------------------------  ---------------------------
-    Total                                      4.146ns (1.062ns logic, 3.084ns route)
-                                                       (25.6% logic, 74.4% route)
+    Total                                      4.171ns (1.062ns logic, 3.109ns route)
+                                                       (25.5% logic, 74.5% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.698ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond/M_stage_q_3_2 (FF)
-  Destination:          numbersDisplay/ctr/M_ctr_q_16 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.146ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.121ns (0.686 - 0.807)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_16
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X11Y14.DQ      Tcko                  0.430   M_stage_q_3_2
-                                                       reset_cond/M_stage_q_3_2
-    SLICE_X17Y40.B5      net (fanout=1)        2.333   M_stage_q_3_2
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
-                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y44.A5      net (fanout=19)       0.751   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y44.CLK     Tas                   0.373   M_ctr_q_18
-                                                       numbersDisplay/ctr/M_ctr_q_16_rstpot
-                                                       numbersDisplay/ctr/M_ctr_q_16
-    -------------------------------------------------  ---------------------------
-    Total                                      4.146ns (1.062ns logic, 3.084ns route)
-                                                       (25.6% logic, 74.4% route)
-
---------------------------------------------------------------------------------
-Slack:                  15.731ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  15.679ns (requirement - (data path - clock path skew + uncertainty))
   Source:               numbersDisplay/ctr/M_ctr_q_8 (FF)
   Destination:          numbersDisplay/ctr/M_ctr_q_13 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.226ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.008ns (0.191 - 0.199)
+  Data Path Delay:      4.278ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.008ns (0.188 - 0.196)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -364,29 +296,29 @@ Slack:                  15.731ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y42.BQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
+    SLICE_X15Y41.BQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
                                                        numbersDisplay/ctr/M_ctr_q_8
-    SLICE_X17Y44.D6      net (fanout=2)        0.827   numbersDisplay/ctr/M_ctr_q[8]
-    SLICE_X17Y44.D       Tilo                  0.259   M_ctr_q_18
+    SLICE_X15Y43.D6      net (fanout=2)        0.827   numbersDisplay/ctr/M_ctr_q[8]
+    SLICE_X15Y43.D       Tilo                  0.259   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B2      net (fanout=1)        1.228   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+    SLICE_X15Y39.B2      net (fanout=1)        1.254   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y43.C3      net (fanout=19)       0.850   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y43.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
+    SLICE_X15Y42.C3      net (fanout=19)       0.876   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
                                                        numbersDisplay/ctr/M_ctr_q_13_rstpot
                                                        numbersDisplay/ctr/M_ctr_q_13
     -------------------------------------------------  ---------------------------
-    Total                                      4.226ns (1.321ns logic, 2.905ns route)
-                                                       (31.3% logic, 68.7% route)
+    Total                                      4.278ns (1.321ns logic, 2.957ns route)
+                                                       (30.9% logic, 69.1% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.742ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  15.690ns (requirement - (data path - clock path skew + uncertainty))
   Source:               numbersDisplay/ctr/M_ctr_q_8 (FF)
   Destination:          numbersDisplay/ctr/M_ctr_q_18 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.217ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.006ns (0.193 - 0.199)
+  Data Path Delay:      4.269ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.006ns (0.190 - 0.196)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -401,28 +333,96 @@ Slack:                  15.742ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y42.BQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
+    SLICE_X15Y41.BQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
                                                        numbersDisplay/ctr/M_ctr_q_8
-    SLICE_X17Y44.D6      net (fanout=2)        0.827   numbersDisplay/ctr/M_ctr_q[8]
-    SLICE_X17Y44.D       Tilo                  0.259   M_ctr_q_18
+    SLICE_X15Y43.D6      net (fanout=2)        0.827   numbersDisplay/ctr/M_ctr_q[8]
+    SLICE_X15Y43.D       Tilo                  0.259   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B2      net (fanout=1)        1.228   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+    SLICE_X15Y39.B2      net (fanout=1)        1.254   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y44.C4      net (fanout=19)       0.841   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y44.CLK     Tas                   0.373   M_ctr_q_18
+    SLICE_X15Y43.C4      net (fanout=19)       0.867   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y43.CLK     Tas                   0.373   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/M_ctr_q_18_rstpot
                                                        numbersDisplay/ctr/M_ctr_q_18
     -------------------------------------------------  ---------------------------
-    Total                                      4.217ns (1.321ns logic, 2.896ns route)
-                                                       (31.3% logic, 68.7% route)
+    Total                                      4.269ns (1.321ns logic, 2.948ns route)
+                                                       (30.9% logic, 69.1% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.754ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  15.690ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond/M_stage_q_3_2 (FF)
+  Destination:          numbersDisplay/ctr/M_ctr_q_14 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.147ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.128ns (0.681 - 0.809)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y15.DQ       Tcko                  0.430   M_stage_q_3_2
+                                                       reset_cond/M_stage_q_3_2
+    SLICE_X15Y39.B5      net (fanout=1)        2.290   M_stage_q_3_2
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
+    SLICE_X15Y42.D4      net (fanout=19)       0.795   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
+                                                       numbersDisplay/ctr/M_ctr_q_14_rstpot
+                                                       numbersDisplay/ctr/M_ctr_q_14
+    -------------------------------------------------  ---------------------------
+    Total                                      4.147ns (1.062ns logic, 3.085ns route)
+                                                       (25.6% logic, 74.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  15.701ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond/M_stage_q_3_2 (FF)
+  Destination:          numbersDisplay/ctr/M_ctr_q_15 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.136ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.128ns (0.681 - 0.809)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y15.DQ       Tcko                  0.430   M_stage_q_3_2
+                                                       reset_cond/M_stage_q_3_2
+    SLICE_X15Y39.B5      net (fanout=1)        2.290   M_stage_q_3_2
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
+    SLICE_X17Y42.A5      net (fanout=19)       0.784   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X17Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[15]
+                                                       numbersDisplay/ctr/M_ctr_q_15_rstpot
+                                                       numbersDisplay/ctr/M_ctr_q_15
+    -------------------------------------------------  ---------------------------
+    Total                                      4.136ns (1.062ns logic, 3.074ns route)
+                                                       (25.7% logic, 74.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  15.703ns (requirement - (data path - clock path skew + uncertainty))
   Source:               numbersDisplay/ctr/M_ctr_q_8 (FF)
   Destination:          numbersDisplay/ctr/M_ctr_q_7 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.211ns (Levels of Logic = 3)
+  Data Path Delay:      4.262ns (Levels of Logic = 3)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
@@ -438,29 +438,63 @@ Slack:                  15.754ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y42.BQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
+    SLICE_X15Y41.BQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
                                                        numbersDisplay/ctr/M_ctr_q_8
-    SLICE_X17Y44.D6      net (fanout=2)        0.827   numbersDisplay/ctr/M_ctr_q[8]
-    SLICE_X17Y44.D       Tilo                  0.259   M_ctr_q_18
+    SLICE_X15Y43.D6      net (fanout=2)        0.827   numbersDisplay/ctr/M_ctr_q[8]
+    SLICE_X15Y43.D       Tilo                  0.259   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B2      net (fanout=1)        1.228   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+    SLICE_X15Y39.B2      net (fanout=1)        1.254   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y42.A1      net (fanout=19)       0.835   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[10]
+    SLICE_X15Y41.A1      net (fanout=19)       0.860   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y41.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[10]
                                                        numbersDisplay/ctr/M_ctr_q_7_rstpot
                                                        numbersDisplay/ctr/M_ctr_q_7
     -------------------------------------------------  ---------------------------
-    Total                                      4.211ns (1.321ns logic, 2.890ns route)
-                                                       (31.4% logic, 68.6% route)
+    Total                                      4.262ns (1.321ns logic, 2.941ns route)
+                                                       (31.0% logic, 69.0% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.779ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  15.710ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond/M_stage_q_3_2 (FF)
+  Destination:          numbersDisplay/ctr/M_ctr_q_16 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.129ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.126ns (0.683 - 0.809)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y15.DQ       Tcko                  0.430   M_stage_q_3_2
+                                                       reset_cond/M_stage_q_3_2
+    SLICE_X15Y39.B5      net (fanout=1)        2.290   M_stage_q_3_2
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
+    SLICE_X15Y43.A5      net (fanout=19)       0.777   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y43.CLK     Tas                   0.373   M_numbersDisplay_sel[2]
+                                                       numbersDisplay/ctr/M_ctr_q_16_rstpot
+                                                       numbersDisplay/ctr/M_ctr_q_16
+    -------------------------------------------------  ---------------------------
+    Total                                      4.129ns (1.062ns logic, 3.067ns route)
+                                                       (25.7% logic, 74.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  15.727ns (requirement - (data path - clock path skew + uncertainty))
   Source:               numbersDisplay/ctr/M_ctr_q_7 (FF)
   Destination:          numbersDisplay/ctr/M_ctr_q_12 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.178ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.008ns (0.191 - 0.199)
+  Data Path Delay:      4.230ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.008ns (0.188 - 0.196)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -475,242 +509,29 @@ Slack:                  15.779ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y42.AQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
+    SLICE_X15Y41.AQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
                                                        numbersDisplay/ctr/M_ctr_q_7
-    SLICE_X17Y44.D3      net (fanout=2)        0.616   numbersDisplay/ctr/M_ctr_q[7]
-    SLICE_X17Y44.D       Tilo                  0.259   M_ctr_q_18
+    SLICE_X15Y43.D3      net (fanout=2)        0.616   numbersDisplay/ctr/M_ctr_q[7]
+    SLICE_X15Y43.D       Tilo                  0.259   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B2      net (fanout=1)        1.228   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+    SLICE_X15Y39.B2      net (fanout=1)        1.254   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y43.B1      net (fanout=19)       1.013   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y43.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
+    SLICE_X15Y42.B1      net (fanout=19)       1.039   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
                                                        numbersDisplay/ctr/M_ctr_q_12_rstpot
                                                        numbersDisplay/ctr/M_ctr_q_12
     -------------------------------------------------  ---------------------------
-    Total                                      4.178ns (1.321ns logic, 2.857ns route)
-                                                       (31.6% logic, 68.4% route)
+    Total                                      4.230ns (1.321ns logic, 2.909ns route)
+                                                       (31.2% logic, 68.8% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.785ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond/M_stage_q_3_2 (FF)
-  Destination:          numbersDisplay/ctr/M_ctr_q_17 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.059ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.121ns (0.686 - 0.807)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_17
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X11Y14.DQ      Tcko                  0.430   M_stage_q_3_2
-                                                       reset_cond/M_stage_q_3_2
-    SLICE_X17Y40.B5      net (fanout=1)        2.333   M_stage_q_3_2
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
-                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y44.B6      net (fanout=19)       0.664   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y44.CLK     Tas                   0.373   M_ctr_q_18
-                                                       numbersDisplay/ctr/M_ctr_q_17_rstpot
-                                                       numbersDisplay/ctr/M_ctr_q_17
-    -------------------------------------------------  ---------------------------
-    Total                                      4.059ns (1.062ns logic, 2.997ns route)
-                                                       (26.2% logic, 73.8% route)
-
---------------------------------------------------------------------------------
-Slack:                  15.799ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond/M_stage_q_3_2 (FF)
-  Destination:          numbersDisplay/ctr/M_ctr_q_15 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.043ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.123ns (0.684 - 0.807)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_15
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X11Y14.DQ      Tcko                  0.430   M_stage_q_3_2
-                                                       reset_cond/M_stage_q_3_2
-    SLICE_X17Y40.B5      net (fanout=1)        2.333   M_stage_q_3_2
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
-                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X18Y43.A6      net (fanout=19)       0.672   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X18Y43.CLK     Tas                   0.349   numbersDisplay/ctr/M_ctr_q[15]
-                                                       numbersDisplay/ctr/M_ctr_q_15_rstpot
-                                                       numbersDisplay/ctr/M_ctr_q_15
-    -------------------------------------------------  ---------------------------
-    Total                                      4.043ns (1.038ns logic, 3.005ns route)
-                                                       (25.7% logic, 74.3% route)
-
---------------------------------------------------------------------------------
-Slack:                  15.807ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               numbersDisplay/ctr/M_ctr_q_16 (FF)
-  Destination:          numbersDisplay/ctr/M_ctr_q_13 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.145ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.013ns (0.191 - 0.204)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: numbersDisplay/ctr/M_ctr_q_16 to numbersDisplay/ctr/M_ctr_q_13
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X17Y44.AQ      Tcko                  0.430   M_ctr_q_18
-                                                       numbersDisplay/ctr/M_ctr_q_16
-    SLICE_X17Y44.D2      net (fanout=3)        0.746   M_ctr_q_16
-    SLICE_X17Y44.D       Tilo                  0.259   M_ctr_q_18
-                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B2      net (fanout=1)        1.228   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
-                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y43.C3      net (fanout=19)       0.850   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y43.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
-                                                       numbersDisplay/ctr/M_ctr_q_13_rstpot
-                                                       numbersDisplay/ctr/M_ctr_q_13
-    -------------------------------------------------  ---------------------------
-    Total                                      4.145ns (1.321ns logic, 2.824ns route)
-                                                       (31.9% logic, 68.1% route)
-
---------------------------------------------------------------------------------
-Slack:                  15.812ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               numbersDisplay/ctr/M_ctr_q_8 (FF)
-  Destination:          numbersDisplay/ctr/M_ctr_q_14 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.145ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.008ns (0.191 - 0.199)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: numbersDisplay/ctr/M_ctr_q_8 to numbersDisplay/ctr/M_ctr_q_14
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X17Y42.BQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
-                                                       numbersDisplay/ctr/M_ctr_q_8
-    SLICE_X17Y44.D6      net (fanout=2)        0.827   numbersDisplay/ctr/M_ctr_q[8]
-    SLICE_X17Y44.D       Tilo                  0.259   M_ctr_q_18
-                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B2      net (fanout=1)        1.228   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
-                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y43.D4      net (fanout=19)       0.769   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y43.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
-                                                       numbersDisplay/ctr/M_ctr_q_14_rstpot
-                                                       numbersDisplay/ctr/M_ctr_q_14
-    -------------------------------------------------  ---------------------------
-    Total                                      4.145ns (1.321ns logic, 2.824ns route)
-                                                       (31.9% logic, 68.1% route)
-
---------------------------------------------------------------------------------
-Slack:                  15.812ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond/M_stage_q_3_2 (FF)
-  Destination:          numbersDisplay/ctr/M_ctr_q_11 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.030ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.123ns (0.684 - 0.807)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_11
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X11Y14.DQ      Tcko                  0.430   M_stage_q_3_2
-                                                       reset_cond/M_stage_q_3_2
-    SLICE_X17Y40.B5      net (fanout=1)        2.333   M_stage_q_3_2
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
-                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y43.A6      net (fanout=19)       0.635   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y43.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
-                                                       numbersDisplay/ctr/M_ctr_q_11_rstpot
-                                                       numbersDisplay/ctr/M_ctr_q_11
-    -------------------------------------------------  ---------------------------
-    Total                                      4.030ns (1.062ns logic, 2.968ns route)
-                                                       (26.4% logic, 73.6% route)
-
---------------------------------------------------------------------------------
-Slack:                  15.819ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               numbersDisplay/ctr/M_ctr_q_16 (FF)
-  Destination:          numbersDisplay/ctr/M_ctr_q_7 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.130ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.188 - 0.204)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: numbersDisplay/ctr/M_ctr_q_16 to numbersDisplay/ctr/M_ctr_q_7
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X17Y44.AQ      Tcko                  0.430   M_ctr_q_18
-                                                       numbersDisplay/ctr/M_ctr_q_16
-    SLICE_X17Y44.D2      net (fanout=3)        0.746   M_ctr_q_16
-    SLICE_X17Y44.D       Tilo                  0.259   M_ctr_q_18
-                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B2      net (fanout=1)        1.228   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
-                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y42.A1      net (fanout=19)       0.835   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[10]
-                                                       numbersDisplay/ctr/M_ctr_q_7_rstpot
-                                                       numbersDisplay/ctr/M_ctr_q_7
-    -------------------------------------------------  ---------------------------
-    Total                                      4.130ns (1.321ns logic, 2.809ns route)
-                                                       (32.0% logic, 68.0% route)
-
---------------------------------------------------------------------------------
-Slack:                  15.825ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  15.731ns (requirement - (data path - clock path skew + uncertainty))
   Source:               numbersDisplay/ctr/M_ctr_q_8 (FF)
   Destination:          numbersDisplay/ctr/M_ctr_q_4 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.127ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.013ns (0.186 - 0.199)
+  Data Path Delay:      4.221ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.013ns (0.183 - 0.196)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -725,29 +546,29 @@ Slack:                  15.825ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y42.BQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
+    SLICE_X15Y41.BQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
                                                        numbersDisplay/ctr/M_ctr_q_8
-    SLICE_X17Y44.D6      net (fanout=2)        0.827   numbersDisplay/ctr/M_ctr_q[8]
-    SLICE_X17Y44.D       Tilo                  0.259   M_ctr_q_18
+    SLICE_X15Y43.D6      net (fanout=2)        0.827   numbersDisplay/ctr/M_ctr_q[8]
+    SLICE_X15Y43.D       Tilo                  0.259   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B2      net (fanout=1)        1.228   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+    SLICE_X15Y39.B2      net (fanout=1)        1.254   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y41.B1      net (fanout=19)       0.751   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y41.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[6]
+    SLICE_X15Y40.B1      net (fanout=19)       0.819   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y40.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[6]
                                                        numbersDisplay/ctr/M_ctr_q_4_rstpot
                                                        numbersDisplay/ctr/M_ctr_q_4
     -------------------------------------------------  ---------------------------
-    Total                                      4.127ns (1.321ns logic, 2.806ns route)
-                                                       (32.0% logic, 68.0% route)
+    Total                                      4.221ns (1.321ns logic, 2.900ns route)
+                                                       (31.3% logic, 68.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.828ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond/M_stage_q_3_2 (FF)
-  Destination:          numbersDisplay/ctr/M_ctr_q_9 (FF)
+Slack:                  15.756ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               numbersDisplay/ctr/M_ctr_q_16 (FF)
+  Destination:          numbersDisplay/ctr/M_ctr_q_13 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.011ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.126ns (0.681 - 0.807)
+  Data Path Delay:      4.196ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.013ns (0.188 - 0.201)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -758,29 +579,143 @@ Slack:                  15.828ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_9
+  Maximum Data Path at Slow Process Corner: numbersDisplay/ctr/M_ctr_q_16 to numbersDisplay/ctr/M_ctr_q_13
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X11Y14.DQ      Tcko                  0.430   M_stage_q_3_2
-                                                       reset_cond/M_stage_q_3_2
-    SLICE_X17Y40.B5      net (fanout=1)        2.333   M_stage_q_3_2
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+    SLICE_X15Y43.AQ      Tcko                  0.430   M_numbersDisplay_sel[2]
+                                                       numbersDisplay/ctr/M_ctr_q_16
+    SLICE_X15Y43.D2      net (fanout=3)        0.745   M_numbersDisplay_sel[0]
+    SLICE_X15Y43.D       Tilo                  0.259   M_numbersDisplay_sel[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B2      net (fanout=1)        1.254   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y42.C4      net (fanout=19)       0.616   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[10]
-                                                       numbersDisplay/ctr/M_ctr_q_9_rstpot
-                                                       numbersDisplay/ctr/M_ctr_q_9
+    SLICE_X15Y42.C3      net (fanout=19)       0.876   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
+                                                       numbersDisplay/ctr/M_ctr_q_13_rstpot
+                                                       numbersDisplay/ctr/M_ctr_q_13
     -------------------------------------------------  ---------------------------
-    Total                                      4.011ns (1.062ns logic, 2.949ns route)
-                                                       (26.5% logic, 73.5% route)
+    Total                                      4.196ns (1.321ns logic, 2.875ns route)
+                                                       (31.5% logic, 68.5% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.829ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  15.760ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               numbersDisplay/ctr/M_ctr_q_8 (FF)
+  Destination:          numbersDisplay/ctr/M_ctr_q_14 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.197ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.008ns (0.188 - 0.196)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: numbersDisplay/ctr/M_ctr_q_8 to numbersDisplay/ctr/M_ctr_q_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y41.BQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
+                                                       numbersDisplay/ctr/M_ctr_q_8
+    SLICE_X15Y43.D6      net (fanout=2)        0.827   numbersDisplay/ctr/M_ctr_q[8]
+    SLICE_X15Y43.D       Tilo                  0.259   M_numbersDisplay_sel[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B2      net (fanout=1)        1.254   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
+    SLICE_X15Y42.D4      net (fanout=19)       0.795   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
+                                                       numbersDisplay/ctr/M_ctr_q_14_rstpot
+                                                       numbersDisplay/ctr/M_ctr_q_14
+    -------------------------------------------------  ---------------------------
+    Total                                      4.197ns (1.321ns logic, 2.876ns route)
+                                                       (31.5% logic, 68.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  15.765ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               numbersDisplay/ctr/M_ctr_q_8 (FF)
+  Destination:          numbersDisplay/ctr/M_ctr_q_15 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.186ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.014ns (0.289 - 0.303)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: numbersDisplay/ctr/M_ctr_q_8 to numbersDisplay/ctr/M_ctr_q_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y41.BQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
+                                                       numbersDisplay/ctr/M_ctr_q_8
+    SLICE_X15Y43.D6      net (fanout=2)        0.827   numbersDisplay/ctr/M_ctr_q[8]
+    SLICE_X15Y43.D       Tilo                  0.259   M_numbersDisplay_sel[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B2      net (fanout=1)        1.254   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
+    SLICE_X17Y42.A5      net (fanout=19)       0.784   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X17Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[15]
+                                                       numbersDisplay/ctr/M_ctr_q_15_rstpot
+                                                       numbersDisplay/ctr/M_ctr_q_15
+    -------------------------------------------------  ---------------------------
+    Total                                      4.186ns (1.321ns logic, 2.865ns route)
+                                                       (31.6% logic, 68.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  15.769ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               numbersDisplay/ctr/M_ctr_q_16 (FF)
+  Destination:          numbersDisplay/ctr/M_ctr_q_7 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.180ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.016ns (0.185 - 0.201)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: numbersDisplay/ctr/M_ctr_q_16 to numbersDisplay/ctr/M_ctr_q_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y43.AQ      Tcko                  0.430   M_numbersDisplay_sel[2]
+                                                       numbersDisplay/ctr/M_ctr_q_16
+    SLICE_X15Y43.D2      net (fanout=3)        0.745   M_numbersDisplay_sel[0]
+    SLICE_X15Y43.D       Tilo                  0.259   M_numbersDisplay_sel[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B2      net (fanout=1)        1.254   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
+    SLICE_X15Y41.A1      net (fanout=19)       0.860   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y41.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[10]
+                                                       numbersDisplay/ctr/M_ctr_q_7_rstpot
+                                                       numbersDisplay/ctr/M_ctr_q_7
+    -------------------------------------------------  ---------------------------
+    Total                                      4.180ns (1.321ns logic, 2.859ns route)
+                                                       (31.6% logic, 68.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  15.778ns (requirement - (data path - clock path skew + uncertainty))
   Source:               numbersDisplay/ctr/M_ctr_q_16 (FF)
   Destination:          numbersDisplay/ctr/M_ctr_q_18 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.136ns (Levels of Logic = 3)
+  Data Path Delay:      4.187ns (Levels of Logic = 3)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
@@ -796,29 +731,29 @@ Slack:                  15.829ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y44.AQ      Tcko                  0.430   M_ctr_q_18
+    SLICE_X15Y43.AQ      Tcko                  0.430   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/M_ctr_q_16
-    SLICE_X17Y44.D2      net (fanout=3)        0.746   M_ctr_q_16
-    SLICE_X17Y44.D       Tilo                  0.259   M_ctr_q_18
+    SLICE_X15Y43.D2      net (fanout=3)        0.745   M_numbersDisplay_sel[0]
+    SLICE_X15Y43.D       Tilo                  0.259   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B2      net (fanout=1)        1.228   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+    SLICE_X15Y39.B2      net (fanout=1)        1.254   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y44.C4      net (fanout=19)       0.841   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y44.CLK     Tas                   0.373   M_ctr_q_18
+    SLICE_X15Y43.C4      net (fanout=19)       0.867   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y43.CLK     Tas                   0.373   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/M_ctr_q_18_rstpot
                                                        numbersDisplay/ctr/M_ctr_q_18
     -------------------------------------------------  ---------------------------
-    Total                                      4.136ns (1.321ns logic, 2.815ns route)
-                                                       (31.9% logic, 68.1% route)
+    Total                                      4.187ns (1.321ns logic, 2.866ns route)
+                                                       (31.6% logic, 68.4% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.832ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  15.780ns (requirement - (data path - clock path skew + uncertainty))
   Source:               numbersDisplay/ctr/M_ctr_q_8 (FF)
   Destination:          numbersDisplay/ctr/M_ctr_q_16 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.127ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.006ns (0.193 - 0.199)
+  Data Path Delay:      4.179ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.006ns (0.190 - 0.196)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -833,29 +768,29 @@ Slack:                  15.832ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y42.BQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
+    SLICE_X15Y41.BQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
                                                        numbersDisplay/ctr/M_ctr_q_8
-    SLICE_X17Y44.D6      net (fanout=2)        0.827   numbersDisplay/ctr/M_ctr_q[8]
-    SLICE_X17Y44.D       Tilo                  0.259   M_ctr_q_18
+    SLICE_X15Y43.D6      net (fanout=2)        0.827   numbersDisplay/ctr/M_ctr_q[8]
+    SLICE_X15Y43.D       Tilo                  0.259   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B2      net (fanout=1)        1.228   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+    SLICE_X15Y39.B2      net (fanout=1)        1.254   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y44.A5      net (fanout=19)       0.751   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y44.CLK     Tas                   0.373   M_ctr_q_18
+    SLICE_X15Y43.A5      net (fanout=19)       0.777   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y43.CLK     Tas                   0.373   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/M_ctr_q_16_rstpot
                                                        numbersDisplay/ctr/M_ctr_q_16
     -------------------------------------------------  ---------------------------
-    Total                                      4.127ns (1.321ns logic, 2.806ns route)
-                                                       (32.0% logic, 68.0% route)
+    Total                                      4.179ns (1.321ns logic, 2.858ns route)
+                                                       (31.6% logic, 68.4% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.839ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  15.788ns (requirement - (data path - clock path skew + uncertainty))
   Source:               numbersDisplay/ctr/M_ctr_q_18 (FF)
   Destination:          numbersDisplay/ctr/M_ctr_q_12 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.113ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.013ns (0.191 - 0.204)
+  Data Path Delay:      4.164ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.013ns (0.188 - 0.201)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -870,29 +805,29 @@ Slack:                  15.839ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y44.CQ      Tcko                  0.430   M_ctr_q_18
+    SLICE_X15Y43.CQ      Tcko                  0.430   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/M_ctr_q_18
-    SLICE_X17Y44.D1      net (fanout=3)        0.551   M_ctr_q_18
-    SLICE_X17Y44.D       Tilo                  0.259   M_ctr_q_18
+    SLICE_X15Y43.D1      net (fanout=3)        0.550   M_numbersDisplay_sel[2]
+    SLICE_X15Y43.D       Tilo                  0.259   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B2      net (fanout=1)        1.228   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+    SLICE_X15Y39.B2      net (fanout=1)        1.254   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y43.B1      net (fanout=19)       1.013   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y43.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
+    SLICE_X15Y42.B1      net (fanout=19)       1.039   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
                                                        numbersDisplay/ctr/M_ctr_q_12_rstpot
                                                        numbersDisplay/ctr/M_ctr_q_12
     -------------------------------------------------  ---------------------------
-    Total                                      4.113ns (1.321ns logic, 2.792ns route)
-                                                       (32.1% logic, 67.9% route)
+    Total                                      4.164ns (1.321ns logic, 2.843ns route)
+                                                       (31.7% logic, 68.3% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.854ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  15.797ns (requirement - (data path - clock path skew + uncertainty))
   Source:               reset_cond/M_stage_q_3_2 (FF)
-  Destination:          numbersDisplay/ctr/M_ctr_q_5 (FF)
+  Destination:          numbersDisplay/ctr/M_ctr_q_17 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      3.983ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.128ns (0.679 - 0.807)
+  Data Path Delay:      4.042ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.126ns (0.683 - 0.809)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -903,135 +838,30 @@ Slack:                  15.854ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_5
+  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_17
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X11Y14.DQ      Tcko                  0.430   M_stage_q_3_2
+    SLICE_X9Y15.DQ       Tcko                  0.430   M_stage_q_3_2
                                                        reset_cond/M_stage_q_3_2
-    SLICE_X17Y40.B5      net (fanout=1)        2.333   M_stage_q_3_2
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+    SLICE_X15Y39.B5      net (fanout=1)        2.290   M_stage_q_3_2
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y41.C3      net (fanout=19)       0.588   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y41.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[6]
-                                                       numbersDisplay/ctr/M_ctr_q_5_rstpot
-                                                       numbersDisplay/ctr/M_ctr_q_5
+    SLICE_X15Y43.B6      net (fanout=19)       0.690   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y43.CLK     Tas                   0.373   M_numbersDisplay_sel[2]
+                                                       numbersDisplay/ctr/M_ctr_q_17_rstpot
+                                                       numbersDisplay/ctr/M_ctr_q_17
     -------------------------------------------------  ---------------------------
-    Total                                      3.983ns (1.062ns logic, 2.921ns route)
-                                                       (26.7% logic, 73.3% route)
+    Total                                      4.042ns (1.062ns logic, 2.980ns route)
+                                                       (26.3% logic, 73.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.858ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond/M_stage_q_3_2 (FF)
-  Destination:          numbersDisplay/ctr/M_ctr_q_10 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.981ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.126ns (0.681 - 0.807)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_10
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X11Y14.DQ      Tcko                  0.430   M_stage_q_3_2
-                                                       reset_cond/M_stage_q_3_2
-    SLICE_X17Y40.B5      net (fanout=1)        2.333   M_stage_q_3_2
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
-                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y42.D4      net (fanout=19)       0.586   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[10]
-                                                       numbersDisplay/ctr/M_ctr_q_10_rstpot
-                                                       numbersDisplay/ctr/M_ctr_q_10
-    -------------------------------------------------  ---------------------------
-    Total                                      3.981ns (1.062ns logic, 2.919ns route)
-                                                       (26.7% logic, 73.3% route)
-
---------------------------------------------------------------------------------
-Slack:                  15.878ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reset_cond/M_stage_q_3_2 (FF)
-  Destination:          numbersDisplay/ctr/M_ctr_q_2 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.956ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.131ns (0.676 - 0.807)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X11Y14.DQ      Tcko                  0.430   M_stage_q_3_2
-                                                       reset_cond/M_stage_q_3_2
-    SLICE_X17Y40.B5      net (fanout=1)        2.333   M_stage_q_3_2
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
-                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y40.D2      net (fanout=19)       0.561   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y40.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[2]
-                                                       numbersDisplay/ctr/M_ctr_q_2_rstpot
-                                                       numbersDisplay/ctr/M_ctr_q_2
-    -------------------------------------------------  ---------------------------
-    Total                                      3.956ns (1.062ns logic, 2.894ns route)
-                                                       (26.8% logic, 73.2% route)
-
---------------------------------------------------------------------------------
-Slack:                  15.888ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               numbersDisplay/ctr/M_ctr_q_16 (FF)
-  Destination:          numbersDisplay/ctr/M_ctr_q_14 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.064ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.013ns (0.191 - 0.204)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: numbersDisplay/ctr/M_ctr_q_16 to numbersDisplay/ctr/M_ctr_q_14
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X17Y44.AQ      Tcko                  0.430   M_ctr_q_18
-                                                       numbersDisplay/ctr/M_ctr_q_16
-    SLICE_X17Y44.D2      net (fanout=3)        0.746   M_ctr_q_16
-    SLICE_X17Y44.D       Tilo                  0.259   M_ctr_q_18
-                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B2      net (fanout=1)        1.228   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
-                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y43.D4      net (fanout=19)       0.769   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y43.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
-                                                       numbersDisplay/ctr/M_ctr_q_14_rstpot
-                                                       numbersDisplay/ctr/M_ctr_q_14
-    -------------------------------------------------  ---------------------------
-    Total                                      4.064ns (1.321ns logic, 2.743ns route)
-                                                       (32.5% logic, 67.5% route)
-
---------------------------------------------------------------------------------
-Slack:                  15.901ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  15.808ns (requirement - (data path - clock path skew + uncertainty))
   Source:               numbersDisplay/ctr/M_ctr_q_16 (FF)
   Destination:          numbersDisplay/ctr/M_ctr_q_4 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.046ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.018ns (0.186 - 0.204)
+  Data Path Delay:      4.139ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.018ns (0.183 - 0.201)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -1046,29 +876,205 @@ Slack:                  15.901ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y44.AQ      Tcko                  0.430   M_ctr_q_18
+    SLICE_X15Y43.AQ      Tcko                  0.430   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/M_ctr_q_16
-    SLICE_X17Y44.D2      net (fanout=3)        0.746   M_ctr_q_16
-    SLICE_X17Y44.D       Tilo                  0.259   M_ctr_q_18
+    SLICE_X15Y43.D2      net (fanout=3)        0.745   M_numbersDisplay_sel[0]
+    SLICE_X15Y43.D       Tilo                  0.259   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B2      net (fanout=1)        1.228   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+    SLICE_X15Y39.B2      net (fanout=1)        1.254   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y41.B1      net (fanout=19)       0.751   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y41.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[6]
+    SLICE_X15Y40.B1      net (fanout=19)       0.819   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y40.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[6]
                                                        numbersDisplay/ctr/M_ctr_q_4_rstpot
                                                        numbersDisplay/ctr/M_ctr_q_4
     -------------------------------------------------  ---------------------------
-    Total                                      4.046ns (1.321ns logic, 2.725ns route)
-                                                       (32.6% logic, 67.4% route)
+    Total                                      4.139ns (1.321ns logic, 2.818ns route)
+                                                       (31.9% logic, 68.1% route)
 
 --------------------------------------------------------------------------------
-Slack:                  15.919ns (requirement - (data path - clock path skew + uncertainty))
+Slack:                  15.824ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond/M_stage_q_3_2 (FF)
+  Destination:          numbersDisplay/ctr/M_ctr_q_5 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.008ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.133ns (0.676 - 0.809)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y15.DQ       Tcko                  0.430   M_stage_q_3_2
+                                                       reset_cond/M_stage_q_3_2
+    SLICE_X15Y39.B5      net (fanout=1)        2.290   M_stage_q_3_2
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
+    SLICE_X15Y40.C3      net (fanout=19)       0.656   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y40.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[6]
+                                                       numbersDisplay/ctr/M_ctr_q_5_rstpot
+                                                       numbersDisplay/ctr/M_ctr_q_5
+    -------------------------------------------------  ---------------------------
+    Total                                      4.008ns (1.062ns logic, 2.946ns route)
+                                                       (26.5% logic, 73.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  15.824ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond/M_stage_q_3_2 (FF)
+  Destination:          numbersDisplay/ctr/M_ctr_q_11 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.013ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.128ns (0.681 - 0.809)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y15.DQ       Tcko                  0.430   M_stage_q_3_2
+                                                       reset_cond/M_stage_q_3_2
+    SLICE_X15Y39.B5      net (fanout=1)        2.290   M_stage_q_3_2
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
+    SLICE_X15Y42.A6      net (fanout=19)       0.661   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
+                                                       numbersDisplay/ctr/M_ctr_q_11_rstpot
+                                                       numbersDisplay/ctr/M_ctr_q_11
+    -------------------------------------------------  ---------------------------
+    Total                                      4.013ns (1.062ns logic, 2.951ns route)
+                                                       (26.5% logic, 73.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  15.837ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               numbersDisplay/ctr/M_ctr_q_16 (FF)
+  Destination:          numbersDisplay/ctr/M_ctr_q_14 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.115ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.013ns (0.188 - 0.201)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: numbersDisplay/ctr/M_ctr_q_16 to numbersDisplay/ctr/M_ctr_q_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y43.AQ      Tcko                  0.430   M_numbersDisplay_sel[2]
+                                                       numbersDisplay/ctr/M_ctr_q_16
+    SLICE_X15Y43.D2      net (fanout=3)        0.745   M_numbersDisplay_sel[0]
+    SLICE_X15Y43.D       Tilo                  0.259   M_numbersDisplay_sel[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B2      net (fanout=1)        1.254   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
+    SLICE_X15Y42.D4      net (fanout=19)       0.795   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[14]
+                                                       numbersDisplay/ctr/M_ctr_q_14_rstpot
+                                                       numbersDisplay/ctr/M_ctr_q_14
+    -------------------------------------------------  ---------------------------
+    Total                                      4.115ns (1.321ns logic, 2.794ns route)
+                                                       (32.1% logic, 67.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  15.841ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset_cond/M_stage_q_3_2 (FF)
+  Destination:          numbersDisplay/ctr/M_ctr_q_9 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.993ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.131ns (0.678 - 0.809)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset_cond/M_stage_q_3_2 to numbersDisplay/ctr/M_ctr_q_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y15.DQ       Tcko                  0.430   M_stage_q_3_2
+                                                       reset_cond/M_stage_q_3_2
+    SLICE_X15Y39.B5      net (fanout=1)        2.290   M_stage_q_3_2
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
+    SLICE_X15Y41.C4      net (fanout=19)       0.641   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y41.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[10]
+                                                       numbersDisplay/ctr/M_ctr_q_9_rstpot
+                                                       numbersDisplay/ctr/M_ctr_q_9
+    -------------------------------------------------  ---------------------------
+    Total                                      3.993ns (1.062ns logic, 2.931ns route)
+                                                       (26.6% logic, 73.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  15.842ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               numbersDisplay/ctr/M_ctr_q_16 (FF)
+  Destination:          numbersDisplay/ctr/M_ctr_q_15 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.104ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.019ns (0.289 - 0.308)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: numbersDisplay/ctr/M_ctr_q_16 to numbersDisplay/ctr/M_ctr_q_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y43.AQ      Tcko                  0.430   M_numbersDisplay_sel[2]
+                                                       numbersDisplay/ctr/M_ctr_q_16
+    SLICE_X15Y43.D2      net (fanout=3)        0.745   M_numbersDisplay_sel[0]
+    SLICE_X15Y43.D       Tilo                  0.259   M_numbersDisplay_sel[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B2      net (fanout=1)        1.254   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+                                                       numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
+    SLICE_X17Y42.A5      net (fanout=19)       0.784   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X17Y42.CLK     Tas                   0.373   numbersDisplay/ctr/M_ctr_q[15]
+                                                       numbersDisplay/ctr/M_ctr_q_15_rstpot
+                                                       numbersDisplay/ctr/M_ctr_q_15
+    -------------------------------------------------  ---------------------------
+    Total                                      4.104ns (1.321ns logic, 2.783ns route)
+                                                       (32.2% logic, 67.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  15.867ns (requirement - (data path - clock path skew + uncertainty))
   Source:               numbersDisplay/ctr/M_ctr_q_8 (FF)
   Destination:          numbersDisplay/ctr/M_ctr_q_17 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      4.040ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.006ns (0.193 - 0.199)
+  Data Path Delay:      4.092ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.006ns (0.190 - 0.196)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.035ns
@@ -1083,21 +1089,21 @@ Slack:                  15.919ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X17Y42.BQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
+    SLICE_X15Y41.BQ      Tcko                  0.430   numbersDisplay/ctr/M_ctr_q[10]
                                                        numbersDisplay/ctr/M_ctr_q_8
-    SLICE_X17Y44.D6      net (fanout=2)        0.827   numbersDisplay/ctr/M_ctr_q[8]
-    SLICE_X17Y44.D       Tilo                  0.259   M_ctr_q_18
+    SLICE_X15Y43.D6      net (fanout=2)        0.827   numbersDisplay/ctr/M_ctr_q[8]
+    SLICE_X15Y43.D       Tilo                  0.259   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B2      net (fanout=1)        1.228   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
-    SLICE_X17Y40.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
+    SLICE_X15Y39.B2      net (fanout=1)        1.254   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_03
+    SLICE_X15Y39.B       Tilo                  0.259   numbersDisplay/ctr/M_ctr_q[2]
                                                        numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_04
-    SLICE_X17Y44.B6      net (fanout=19)       0.664   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
-    SLICE_X17Y44.CLK     Tas                   0.373   M_ctr_q_18
+    SLICE_X15Y43.B6      net (fanout=19)       0.690   numbersDisplay/ctr/GND_15_o_GND_15_o_equal_2_o_0
+    SLICE_X15Y43.CLK     Tas                   0.373   M_numbersDisplay_sel[2]
                                                        numbersDisplay/ctr/M_ctr_q_17_rstpot
                                                        numbersDisplay/ctr/M_ctr_q_17
     -------------------------------------------------  ---------------------------
-    Total                                      4.040ns (1.321ns logic, 2.719ns route)
-                                                       (32.7% logic, 67.3% route)
+    Total                                      4.092ns (1.321ns logic, 2.771ns route)
+                                                       (32.3% logic, 67.7% route)
 
 --------------------------------------------------------------------------------
 
@@ -1114,89 +1120,98 @@ Slack: 17.334ns (period - min period limit)
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_y_q[25]/CLK
-  Logical resource: ran/M_y_q_21/CK
-  Location pin: SLICE_X12Y11.CLK
+  Physical resource: reset_cond/M_stage_q[2]/CLK
+  Logical resource: reset_cond/M_stage_q_0/CK
+  Location pin: SLICE_X8Y15.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_y_q[25]/CLK
-  Logical resource: ran/M_y_q_25/CK
-  Location pin: SLICE_X12Y11.CLK
+  Physical resource: reset_cond/M_stage_q[2]/CLK
+  Logical resource: reset_cond/M_stage_q_1/CK
+  Location pin: SLICE_X8Y15.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_y_q[30]/CLK
+  Physical resource: reset_cond/M_stage_q[2]/CLK
+  Logical resource: reset_cond/M_stage_q_2/CK
+  Location pin: SLICE_X8Y15.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: game/M_state_q_FSM_FFd2/CLK
+  Logical resource: game/M_state_q_FSM_FFd2/CK
+  Location pin: SLICE_X8Y22.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: game/M_state_q_FSM_FFd2/CLK
+  Logical resource: game/M_state_q_FSM_FFd1/CK
+  Location pin: SLICE_X8Y22.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.240ns (Trpw)
+  Physical resource: game/M_state_q_FSM_FFd2/SR
+  Logical resource: game/M_state_q_FSM_FFd1/SR
+  Location pin: SLICE_X8Y22.SR
+  Clock network: M_reset_cond_out
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: M_game_target_display[3]/CLK
+  Logical resource: game/M_targetnumber_q_0/CK
+  Location pin: SLICE_X8Y24.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: M_game_target_display[3]/CLK
+  Logical resource: game/M_targetnumber_q_1/CK
+  Location pin: SLICE_X8Y24.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: M_game_target_display[3]/CLK
+  Logical resource: game/M_targetnumber_q_2/CK
+  Location pin: SLICE_X8Y24.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: M_game_target_display[3]/CLK
+  Logical resource: game/M_targetnumber_q_3/CK
+  Location pin: SLICE_X8Y24.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: ran/M_z_q[25]/CLK
   Logical resource: ran/M_z_q_22/CK
-  Location pin: SLICE_X12Y12.CLK
+  Location pin: SLICE_X12Y15.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_y_q[30]/CLK
+  Physical resource: ran/M_z_q[25]/CLK
   Logical resource: ran/M_z_q_25/CK
-  Location pin: SLICE_X12Y12.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_y_q[30]/CLK
-  Logical resource: ran/M_y_q_30/CK
-  Location pin: SLICE_X12Y12.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_w_q[25]/CLK
-  Logical resource: ran/M_w_q_22/CK
-  Location pin: SLICE_X12Y13.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_w_q[25]/CLK
-  Logical resource: ran/M_w_q_23/CK
-  Location pin: SLICE_X12Y13.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_w_q[25]/CLK
-  Logical resource: ran/M_w_q_24/CK
-  Location pin: SLICE_X12Y13.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_w_q[25]/CLK
-  Logical resource: ran/M_w_q_25/CK
-  Location pin: SLICE_X12Y13.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_x_q[22]/CLK
-  Logical resource: ran/M_y_q_16/CK
-  Location pin: SLICE_X12Y14.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_x_q[22]/CLK
-  Logical resource: ran/M_y_q_17/CK
-  Location pin: SLICE_X12Y14.CLK
+  Location pin: SLICE_X12Y15.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
@@ -1204,7 +1219,7 @@ Slack: 19.520ns (period - min period limit)
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
   Physical resource: ran/M_x_q[22]/CLK
   Logical resource: ran/M_x_q_20/CK
-  Location pin: SLICE_X12Y14.CLK
+  Location pin: SLICE_X12Y16.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
@@ -1212,137 +1227,132 @@ Slack: 19.520ns (period - min period limit)
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
   Physical resource: ran/M_x_q[22]/CLK
   Logical resource: ran/M_x_q_22/CK
-  Location pin: SLICE_X12Y14.CLK
+  Location pin: SLICE_X12Y16.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_w_q[16]/CLK
-  Logical resource: ran/M_z_q_14/CK
-  Location pin: SLICE_X12Y15.CLK
+  Physical resource: ran/M_w_q[30]/CLK
+  Logical resource: ran/M_x_q_23/CK
+  Location pin: SLICE_X12Y17.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - (min high pulse limit / (high pulse / period)))
   Period: 20.000ns
   High pulse: 10.000ns
   High pulse limit: 0.240ns (Trpw)
-  Physical resource: ran/M_w_q[16]/SR
-  Logical resource: ran/M_z_q_14/SR
-  Location pin: SLICE_X12Y15.SR
+  Physical resource: ran/M_w_q[30]/SR
+  Logical resource: ran/M_x_q_23/SR
+  Location pin: SLICE_X12Y17.SR
   Clock network: M_stage_q_31
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_w_q[16]/CLK
-  Logical resource: ran/M_w_q_14/CK
-  Location pin: SLICE_X12Y15.CLK
+  Physical resource: ran/M_w_q[30]/CLK
+  Logical resource: ran/M_w_q_27/CK
+  Location pin: SLICE_X12Y17.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_w_q[16]/CLK
-  Logical resource: ran/M_z_q_15/CK
-  Location pin: SLICE_X12Y15.CLK
+  Physical resource: ran/M_w_q[30]/CLK
+  Logical resource: ran/M_x_q_24/CK
+  Location pin: SLICE_X12Y17.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - (min high pulse limit / (high pulse / period)))
   Period: 20.000ns
   High pulse: 10.000ns
   High pulse limit: 0.240ns (Trpw)
-  Physical resource: ran/M_w_q[16]/SR
-  Logical resource: ran/M_z_q_15/SR
-  Location pin: SLICE_X12Y15.SR
+  Physical resource: ran/M_w_q[30]/SR
+  Logical resource: ran/M_x_q_24/SR
+  Location pin: SLICE_X12Y17.SR
   Clock network: M_stage_q_31
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_w_q[16]/CLK
-  Logical resource: ran/M_w_q_15/CK
-  Location pin: SLICE_X12Y15.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_w_q[16]/CLK
-  Logical resource: ran/M_w_q_16/CK
-  Location pin: SLICE_X12Y15.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_y_q[20]/CLK
-  Logical resource: ran/M_z_q_2/CK
-  Location pin: SLICE_X12Y16.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_y_q[20]/CLK
-  Logical resource: ran/M_z_q_21/CK
-  Location pin: SLICE_X12Y16.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_y_q[20]/CLK
-  Logical resource: ran/M_y_q_9/CK
-  Location pin: SLICE_X12Y16.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_y_q[20]/CLK
-  Logical resource: ran/M_y_q_19/CK
-  Location pin: SLICE_X12Y16.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_y_q[20]/CLK
-  Logical resource: ran/M_y_q_2/CK
-  Location pin: SLICE_X12Y16.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: ran/M_y_q[20]/CLK
-  Logical resource: ran/M_y_q_20/CK
-  Location pin: SLICE_X12Y16.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 19.520ns (period - min period limit)
-  Period: 20.000ns
-  Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: M_ran_num[0]/CLK
-  Logical resource: ran/M_x_q_11/CK
+  Physical resource: ran/M_w_q[30]/CLK
+  Logical resource: ran/M_w_q_28/CK
   Location pin: SLICE_X12Y17.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: M_ran_num[0]/CLK
-  Logical resource: ran/M_x_q_13/CK
+  Physical resource: ran/M_w_q[30]/CLK
+  Logical resource: ran/M_x_q_26/CK
+  Location pin: SLICE_X12Y17.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.240ns (Trpw)
+  Physical resource: ran/M_w_q[30]/SR
+  Logical resource: ran/M_x_q_26/SR
+  Location pin: SLICE_X12Y17.SR
+  Clock network: M_stage_q_31
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: ran/M_w_q[30]/CLK
+  Logical resource: ran/M_w_q_29/CK
   Location pin: SLICE_X12Y17.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 19.520ns (period - min period limit)
   Period: 20.000ns
   Min period limit: 0.480ns (2083.333MHz) (Tcp)
-  Physical resource: M_ran_num[0]/CLK
-  Logical resource: ran/M_w_q_0/CK
+  Physical resource: ran/M_w_q[30]/CLK
+  Logical resource: ran/M_x_q_27/CK
   Location pin: SLICE_X12Y17.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.240ns (Trpw)
+  Physical resource: ran/M_w_q[30]/SR
+  Logical resource: ran/M_x_q_27/SR
+  Location pin: SLICE_X12Y17.SR
+  Clock network: M_stage_q_31
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: ran/M_w_q[30]/CLK
+  Logical resource: ran/M_w_q_30/CK
+  Location pin: SLICE_X12Y17.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: ran/M_z_q[20]/CLK
+  Logical resource: ran/M_y_q_18/CK
+  Location pin: SLICE_X12Y18.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.240ns (Trpw)
+  Physical resource: ran/M_z_q[20]/SR
+  Logical resource: ran/M_y_q_18/SR
+  Location pin: SLICE_X12Y18.SR
+  Clock network: M_stage_q_31
+--------------------------------------------------------------------------------
+Slack: 19.520ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: ran/M_z_q[20]/CLK
+  Logical resource: ran/M_z_q_17/CK
+  Location pin: SLICE_X12Y18.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 
@@ -1359,7 +1369,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.566|         |         |         |
+clk            |    4.554|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -1368,23 +1378,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 987 paths, 0 nets, and 449 connections
+Constraints cover 987 paths, 0 nets, and 437 connections
 
 Design statistics:
-   Minimum period:   4.566ns{1}   (Maximum frequency: 219.010MHz)
+   Minimum period:   4.554ns{1}   (Maximum frequency: 219.587MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Mon Nov 25 13:20:59 2019 
+Analysis completed Mon Nov 25 17:01:29 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 168 MB
+Peak Memory Usage: 4551 MB
 
 
 

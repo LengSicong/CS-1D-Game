@@ -1,7 +1,7 @@
-Release 14.7 - par P.20131013 (nt)
+Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Mon Nov 25 13:20:55 2019
+Mon Nov 25 17:01:26 2019
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -107,24 +107,24 @@ Pinout by Pin Number:
 |P85       |              |IOBM     |IO_L43P_GCLK5_1           |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
 |P86       |              |         |VCCO_1                    |         |           |1             |          |         |           |         |2.50   |          |           |                |
 |P87       |button(7)     |IOB      |IO_L42N_GCLK6_TRDY1_1     |INPUT    |LVTTL      |1             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
-|P88       |              |IOBM     |IO_L42P_GCLK7_1           |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P88       |target[2]     |IOB      |IO_L42P_GCLK7_1           |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
 |P89       |              |         |VCCINT                    |         |           |              |          |         |           |         |1.2    |          |           |                |
 |P90       |              |         |VCCAUX                    |         |           |              |          |         |           |         |3.3    |          |           |                |
 |P91       |              |         |GND                       |         |           |              |          |         |           |         |       |          |           |                |
 |P92       |              |IOBS     |IO_L41N_GCLK8_1           |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
 |P93       |              |IOBM     |IO_L41P_GCLK9_IRDY1_1     |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
 |P94       |              |IOBS     |IO_L40N_GCLK10_1          |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
-|P95       |              |IOBM     |IO_L40P_GCLK11_1          |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P95       |target[0]     |IOB      |IO_L40P_GCLK11_1          |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
 |P96       |              |         |GND                       |         |           |              |          |         |           |         |       |          |           |                |
 |P97       |display_sel[1]|IOB      |IO_L34N_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
-|P98       |display_sel[0]|IOB      |IO_L34P_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
-|P99       |target[2]     |IOB      |IO_L33N_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
-|P100      |display_sel[2]|IOB      |IO_L33P_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
-|P101      |              |IOBS     |IO_L32N_1                 |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
-|P102      |target[0]     |IOB      |IO_L32P_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
+|P98       |              |IOBM     |IO_L34P_1                 |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P99       |              |IOBS     |IO_L33N_1                 |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P100      |              |IOBM     |IO_L33P_1                 |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P101      |display_sel[0]|IOB      |IO_L32N_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
+|P102      |display_sel[2]|IOB      |IO_L32P_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
 |P103      |              |         |VCCO_1                    |         |           |1             |          |         |           |         |2.50   |          |           |                |
-|P104      |display_seg   |IOB      |IO_L1N_VREF_1             |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
-|P105      |              |IOBM     |IO_L1P_1                  |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P104      |              |IOBS     |IO_L1N_VREF_1             |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P105      |display_seg   |IOB      |IO_L1P_1                  |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |       |UNLOCATED |NO         |NONE            |
 |P106      |              |         |TDO                       |         |           |              |          |         |           |         |       |          |           |                |
 |P107      |              |         |TMS                       |         |           |              |          |         |           |         |       |          |           |                |
 |P108      |              |         |GND                       |         |           |              |          |         |           |         |       |          |           |                |

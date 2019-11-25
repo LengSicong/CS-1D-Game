@@ -113,8 +113,8 @@ module mojo_top_0 (
     for (i = 1'h0; i < 4'h8; i = i + 1) begin
       M_numbersDisplay_values[(i)*4+3-:4] = M_game_s_seg_display[(i)*16+15-:16];
     end
-    display_seg = M_numbersDisplay_seg;
-    display_sel = M_numbersDisplay_sel;
+    display_seg = ~M_numbersDisplay_seg;
+    display_sel = ~M_numbersDisplay_sel;
     if (M_game_target_display >= 4'h9) begin
       M_seven_seg1_char = M_game_target_display - 4'ha;
       target[0+6-:7] = M_seven_seg1_segs;

@@ -1,8 +1,8 @@
 INTSTYLE=pa
-INFILE=D:\Github\CS-1D-Game\CS-Game\work\planAhead\CS-Game\CS-Game.runs\impl_1\mojo_top_0_routed.ncd
-OUTFILE=D:\Github\CS-1D-Game\CS-Game\work\planAhead\CS-Game\CS-Game.runs\impl_1\mojo_top_0.bit
+INFILE=C:\Users\1003765\Documents\GitHub\CS-1D-Game\CS-Game\work\planAhead\CS-Game\CS-Game.runs\impl_1\mojo_top_0_routed.ncd
+OUTFILE=C:\Users\1003765\Documents\GitHub\CS-1D-Game\CS-Game\work\planAhead\CS-Game\CS-Game.runs\impl_1\mojo_top_0.bit
 FAMILY=Spartan6
 PART=xc6slx9-2tqg144
-WORKINGDIR=D:\Github\CS-1D-Game\CS-Game\work\planAhead\CS-Game\CS-Game.runs\impl_1
+WORKINGDIR=C:\Users\1003765\Documents\GitHub\CS-1D-Game\CS-Game\work\planAhead\CS-Game\CS-Game.runs\impl_1
 LICENSE=WebPack
-USER_INFO=211821445_0_0_158
+USER_INFO=210774588_0_0_156
