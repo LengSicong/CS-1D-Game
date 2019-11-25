@@ -17,9 +17,10 @@ module mojo_top_0 (
     input avr_tx,
     output reg avr_rx,
     input avr_rx_busy,
-    output reg [23:0] io_led,
-    input [4:0] io_button,
-    input [23:0] io_dip
+    input [7:0] button,
+    output reg [13:0] target,
+    output reg display_seg,
+    output reg [2:0] display_sel
   );
   
   
@@ -65,21 +66,42 @@ module mojo_top_0 (
     .s_seg_display(M_game_s_seg_display),
     .target_display(M_game_target_display)
   );
+  wire [7-1:0] M_numbersDisplay_seg;
+  wire [3-1:0] M_numbersDisplay_sel;
+  reg [32-1:0] M_numbersDisplay_values;
+  multi_seven_seg_4 numbersDisplay (
+    .clk(clk),
+    .rst(rst),
+    .values(M_numbersDisplay_values),
+    .seg(M_numbersDisplay_seg),
+    .sel(M_numbersDisplay_sel)
+  );
   reg [55:0] M_counter2_d, M_counter2_q = 1'h0;
+  
+  wire [7-1:0] M_seven_seg1_segs;
+  reg [4-1:0] M_seven_seg1_char;
+  seven_seg_5 seven_seg1 (
+    .char(M_seven_seg1_char),
+    .segs(M_seven_seg1_segs)
+  );
+  
+  wire [7-1:0] M_seven_seg2_segs;
+  reg [4-1:0] M_seven_seg2_char;
+  seven_seg_5 seven_seg2 (
+    .char(M_seven_seg2_char),
+    .segs(M_seven_seg2_segs)
+  );
   
   integer i;
   
   always @* begin
     M_counter2_d = M_counter2_q;
     
-    io_led[16+7-:8] = 1'h0;
-    io_led[8+7-:8] = 1'h0;
-    io_led[0+7-:8] = 1'h0;
     M_ran_seed = 1'h1;
     M_ran_next = 1'h1;
     M_game_ran = M_ran_num;
     for (i = 1'h0; i < 4'h8; i = i + 1) begin
-      M_game_button[(i)*1+0-:1] = 1'h0;
+      M_game_button[(i)*1+0-:1] = button[(i)*1+0-:1];
     end
     M_reset_cond_in = ~rst_n;
     rst = M_reset_cond_out;
@@ -88,11 +110,23 @@ module mojo_top_0 (
     spi_channel = 4'bzzzz;
     avr_rx = 1'bz;
     M_game_counter2 = M_counter2_q;
-    if (io_dip[0+0+0-:1]) begin
-      M_game_start = 1'h1;
-    end else begin
-      M_game_start = 1'h0;
+    for (i = 1'h0; i < 4'h8; i = i + 1) begin
+      M_numbersDisplay_values[(i)*4+3-:4] = M_game_s_seg_display[(i)*16+15-:16];
     end
+    display_seg = M_numbersDisplay_seg;
+    display_sel = M_numbersDisplay_sel;
+    if (M_game_target_display >= 4'h9) begin
+      M_seven_seg1_char = M_game_target_display - 4'ha;
+      target[0+6-:7] = M_seven_seg1_segs;
+      M_seven_seg2_char = 1'h1;
+      target[7+6-:7] = M_seven_seg2_segs;
+    end else begin
+      M_seven_seg1_char = M_game_target_display;
+      target[0+6-:7] = M_seven_seg1_segs;
+      M_seven_seg2_char = 1'h0;
+      target[7+6-:7] = M_seven_seg2_segs;
+    end
+    M_game_start = 1'h1;
     M_counter2_d = M_counter2_q + 1'h1;
   end
   

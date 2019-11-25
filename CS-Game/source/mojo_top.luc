@@ -11,17 +11,18 @@ module mojo_top (
     input avr_tx,           // AVR TX (FPGA RX)
     output avr_rx,          // AVR RX (FPGA TX)
     input avr_rx_busy,       // AVR RX buffer full
-    output io_led [3][8],   // LEDs on IO Shield
+    //output io_led [3][8],   // LEDs on IO Shield
     //output io_seg [8],      // 7-segment LEDs on IO Shield
     //output io_sel [4],      // Digit select on IO Shield
-    input io_button [5],    // 5 buttons on IO Shield
-    input io_dip [3][8],     // DIP switches on IO Shield
+    //input io_button [5],    // 5 buttons on IO Shield
+    //input io_dip [3][8],     // DIP switches on IO Shield
     
-    input button[8], // button press from game player  
-    output target[2][7],  // target numbersDisplay
-    output display_seg[8], // 8 numbers' segment display
-    output display_sel[3]  // 8 numbers' digit select
-  ) {
+    input button[8],
+    output target[2][7], // target numbersDisplay
+    output display_seg,
+    output display_sel[3]
+     
+) {
   
   sig rst;                  // reset signal
   
@@ -38,19 +39,21 @@ module mojo_top (
       //dff r12[16];
     }
   }
+  seven_seg seven_seg1;
+  seven_seg seven_seg2;
   var i;
   
   always {
     
-    io_led[2] = 0;
-    io_led[1] = 0;
-    io_led[0] =0;
+    //io_led[2] = 0;
+    //io_led[1] = 0;
+    //io_led[0] =0;
     ran.seed = 1;
     ran.next = 1;
     game.ran = ran.num;
-    game.button = button;
+        
     for (i=0; i<8;i++)
-      game.button[i] = 0;
+      game.button[i] = button[i];
     
     reset_cond.in = ~rst_n; // input raw inverted reset signal
     rst = reset_cond.out;   // conditioned reset
@@ -62,23 +65,30 @@ module mojo_top (
     game.counter2 = counter2.q; //feed the counter1 to game
     
     for (i=0;i<8;i++)
-      numbersDisplay.values[i] = game.target_display[i];
+      numbersDisplay.values[i] = game.s_seg_display[i];
     
-    display_seg = ~numbersDisplay.seg;
-    display_sel = ~numbersDisplay.sel;  
+    display_seg = numbersDisplay.seg;
+    display_sel = numbersDisplay.sel;
+    
     if (game.target_display>=9){
-      target[0] = game.target_display-10;
-      target[1] = 1;
+      seven_seg1.char = game.target_display-10;
+      target[0] = seven_seg1.segs;
+      seven_seg2.char = 1;
+      target[1] = seven_seg2.segs;
       } else{
-      target[0] = game.target_display;
-      target[1] = 0;
+      seven_seg1.char = game.target_display;
+      target[0] = seven_seg1.segs;
+      seven_seg2.char = 0;
+      target[1] = seven_seg2.segs;
     }  
-      
+    
+    game.start = 1;  
+    /*
     if(io_dip[0][0]) //use DIP switch[0][0] to start
       game.start = b1;
     else
       game.start = b0;
-      
+    */  
     counter2.d = counter2.q + 1;
     
   }

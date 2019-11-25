@@ -11,7 +11,6 @@
     <src>Game_fsm.luc</src>
     <src top="true">mojo_top.luc</src>
     <ucf>Custom.ucf</ucf>
-    <ucf>io_shield.ucf</ucf>
     <ucf lib="true">mojo.ucf</ucf>
     <component>pn_gen.luc</component>
     <component>reset_conditioner.luc</component>

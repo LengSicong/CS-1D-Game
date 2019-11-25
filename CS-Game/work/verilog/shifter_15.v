@@ -4,27 +4,27 @@
    This is a temporary file and any changes made to it will be destroyed.
 */
 
-module compare_9 (
+module shifter_15 (
+    input [1:0] alufn,
     input [15:0] a,
     input [15:0] b,
-    input [1:0] alufn,
-    output reg [15:0] cmp
+    output reg [15:0] ashifted
   );
   
   
   
   always @* begin
-    cmp = 16'h0000;
+    ashifted = 16'h0000;
     
-    case (alufn)
-      2'h1: begin
-        cmp[0+0-:1] = a == b;
+    case (alufn[0+1-:2])
+      2'h0: begin
+        ashifted = a << b[0+3-:4];
       end
-      2'h2: begin
-        cmp[0+0-:1] = a < b;
+      2'h1: begin
+        ashifted = a >> b[0+3-:4];
       end
       2'h3: begin
-        cmp[0+0-:1] = a <= b;
+        ashifted = $signed(a) >>> b[0+3-:4];
       end
     endcase
   end

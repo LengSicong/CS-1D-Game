@@ -27,7 +27,7 @@ module game_fsm_3 (
   reg [16-1:0] M_alu_a;
   reg [16-1:0] M_alu_b;
   reg [6-1:0] M_alu_alufn;
-  alu_4 alu (
+  alu_7 alu (
     .a(M_alu_a),
     .b(M_alu_b),
     .alufn(M_alu_alufn),
@@ -43,7 +43,7 @@ module game_fsm_3 (
   genvar GEN_edge_detector0;
   generate
   for (GEN_edge_detector0=0;GEN_edge_detector0<4'h8;GEN_edge_detector0=GEN_edge_detector0+1) begin: edge_detector_gen_0
-    edge_detector_5 edge_detector (
+    edge_detector_8 edge_detector (
       .clk(clk),
       .in(M_edge_detector_in[GEN_edge_detector0*(1)+(1)-1-:(1)]),
       .out(M_edge_detector_out[GEN_edge_detector0*(1)+(1)-1-:(1)])
@@ -56,7 +56,7 @@ module game_fsm_3 (
   genvar GEN_button_cond0;
   generate
   for (GEN_button_cond0=0;GEN_button_cond0<4'h8;GEN_button_cond0=GEN_button_cond0+1) begin: button_cond_gen_0
-    button_conditioner_6 button_cond (
+    button_conditioner_9 button_cond (
       .clk(clk),
       .in(M_button_cond_in[GEN_button_cond0*(1)+(1)-1-:(1)]),
       .out(M_button_cond_out[GEN_button_cond0*(1)+(1)-1-:(1)])

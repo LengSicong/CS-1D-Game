@@ -10,7 +10,7 @@
      MIN_DELAY = 20
      NUM_SYNC = 2
 */
-module button_conditioner_6 (
+module button_conditioner_9 (
     input clk,
     input in,
     output reg out
@@ -23,7 +23,7 @@ module button_conditioner_6 (
   
   wire [1-1:0] M_sync_out;
   reg [1-1:0] M_sync_in;
-  pipeline_11 sync (
+  pipeline_16 sync (
     .clk(clk),
     .in(M_sync_in),
     .out(M_sync_out)
