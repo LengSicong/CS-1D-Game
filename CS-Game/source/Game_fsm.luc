@@ -28,7 +28,6 @@ module game_fsm (
         dff ra[16];
         dff rb[16];
         dff r[8][16];
-        dff alufn[6];
         dff numIncre;
         dff counter1[28]; // for display time count
     }
@@ -51,7 +50,6 @@ module game_fsm (
     
     alu.a = 0;
     alu.b = 0;
-    alu.alufn = 0;
     out = 0;
     display = 0;
     whetherstart = start;
@@ -72,14 +70,14 @@ module game_fsm (
           r.d = 8x{{h0fff}};
   
           numIncre.d = 0;
-          opr.d = 1;
+          opr.d = 1; // add operation
           state.d = state.RANDOM_CARDS1;
           }
         if (ran[4] == 1 && ran[3:0]<=6 && ran[3:0]>=0){
           targetnumber.d = ran[3:0];
           r.d = 8x{{h0fff}};
           numIncre.d = 0;
-          opr.d = 0;
+          opr.d = 0; // substract operation
           state.d = state.RANDOM_CARDS1;
           }
              
@@ -127,7 +125,11 @@ module game_fsm (
       state.COMP:
         alu.a = ra.q;
         alu.b = ra.q;
-        alu.alufn = alufn.q;
+        if (opr.q == 1) // add 
+          alu.alufn = 0;
+        else            // substract
+          alu.alufn = 1;   
+        
         if(alu.out == targetnumber.q){
           r.d[ra.q] = hffff;
           r.d[rb.q] = hffff;
@@ -154,7 +156,6 @@ module game_fsm (
       default:
         alu.a = 0;
         alu.b = 0;
-        alu.alufn = 0;
         state.d = state.IDLE;
         display = b0; 
       }
