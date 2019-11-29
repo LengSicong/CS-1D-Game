@@ -25,8 +25,8 @@ module game_fsm (
         fsm state = {IDLE,RANDOM_TARGET,RANDOM_CARDS1,RANDOM_CARDS2,GAME11,GAME12, WIN, LOSE, COMP };
         dff targetnumber[16];
         dff opr[1]; // 1 for add or 0 for substract
-        dff ra[16];
-        dff rb[16];
+        dff ra[16]; // ra stores the index of card number
+        dff rb[16]; // rb stores the second index of card number
         dff r[8][16];
         dff numIncre;
         dff counter1[28]; // for display time count
