@@ -96,6 +96,7 @@ module game_fsm (
             r.d[ran[3:0]] = targetnumber.q-numIncre.q; 
           else          // if substraction, distribute targetnumber+numIncre to a random location 
             r.d[ran[3:0]] = targetnumber.q+numIncre.q;
+          numIncre.d = numIncre.q - 1;  
         }  
         if (r.q[0]!=hfff && r.q[1]!=hfff && r.q[2]!=hfff && r.q[3]!=hfff && r.q[4]!=hfff 
           && r.q[5]!=hfff && r.q[6]!=hfff && r.q[7]!=hfff)

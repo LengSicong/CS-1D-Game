@@ -17,17 +17,25 @@ module regfiles (
   ) {
     .clk(clk){
       .rst(rst) {
+        dff temp[16]; //0b1100
         dff targetnumber[16]; // 0b1111
         dff opr[1]; // 1 for add or 0 for substract // 0b1000
-        dff card_a[16]; // 0b1001 user chosen card index 1
-        dff card_b[16]; // 0b1010 user chosen card index 2
+        dff card_a[16]; // 0b1101 user chosen card content1
+        dff card_b[16]; // 0b1110 user chosen card content2
+        dff card_a_index[16]; // 0b1001 user chosen card index 1
+        dff card_b_index[16]; // 0b1010 user chosen card index 2
         dff r[8][16]; // 0b0000 ~ 0b0111 
     }
   }
   always {
     ra_data = 0;
     rb_data = 0;
+    
     // write port
+    if (rst) {
+      r.d = 8x{{h0fff}};
+     
+      }
     if (we){
       if (write_address<7)
         r.d[write_address] = wdata;
@@ -35,8 +43,11 @@ module regfiles (
         case(write_address){
           b1111: targetnumber.d = wdata;
           b1000: opr.d = wdata;
-          b1001: card_a.d = wdata;
-          b1010: card_b.d = wdata;
+          b1001: card_a_index.d = wdata;
+          b1010: card_b_index.d = wdata;
+          b1100: temp.d = wdata;
+          b1101: card_a.d = wdata;
+          b1110: card_b.d = wdata;
         }  
     }
     
@@ -47,8 +58,11 @@ module regfiles (
         case(read_address_a){
           b1111: ra_data = targetnumber.q;
           b1000: ra_data = opr.q;
-          b1001: ra_data = card_a.q;
-          b1010: ra_data = card_b.q;
+          b1001: ra_data = card_a_index.q;
+          b1010: ra_data = card_b_index.q;
+          b1100: ra_data = temp.q;
+          b1101: ra_data = card_a.q;
+          b1110: ra_data = card_b.q;
         }    
       
     // read_port_b  
@@ -58,8 +72,11 @@ module regfiles (
         case(read_address_b){
           b1111: rb_data = targetnumber.q;
           b1000: rb_data = opr.q;
-          b1001: rb_data = card_a.q;
-          b1010: rb_data = card_b.q;
+          b1001: rb_data = card_a_index.q;
+          b1010: rb_data = card_b_index.q;
+          b1100: ra_data = temp.q;
+          b1101: rb_data = card_a.q;
+          b1110: rb_data = card_b.q;
         } 
       
   }

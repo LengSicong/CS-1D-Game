@@ -1,0 +1,306 @@
+module game_CU (
+    input clk,  // clock
+    input rst,  // reset
+    input counter2[56],
+    input timer,
+    input ran[32],
+    input ra_data[16], // direct radata from regfile
+    input rb_data[16],
+    input start,
+    input button[8],
+    
+    output s_seg_display[8][16], // display for seven segments of 8 card numbers
+    output target_display[16], // display for seven segments of target nuber
+    output alufn[6],
+    output wdsel[2],
+    output write_address[4], // write address
+    output we, // write enable signel
+    output cu_output_data[16], //output of random gen(from CU)
+    
+    // two read port
+    output read_address_a[4], // read address a 
+    output read_address_b[4] // read address b 
+  ) {
+  .clk(clk){
+     edge_detector edge_detector[8](#RISE(1), #FALL(0));
+     button_conditioner button_cond[8];
+    .rst(rst){
+    dff s_seg_display_dff[8][16];
+    dff target_display_dff[16];
+    dff little_timer[20];
+    dff numIncre[20];
+    fsm state = {IDLE, RANDOM_TARGET,INIT_ADD, INIT_SUBSTRACT, 
+    RANDOM_CARDS1_ADD,RANDOM_CARDS1_SUB,RANDOM_CARDS2_ADD,RANDOM_CARDS2_SUB,
+    GAME11,GAME12,GAME21,GAME22,CHECKOP,ADD,SUB,COMP,DISPLAY, UNPAIRED, WIN, LOSE };
+    }}
+  var i;
+  always {
+    s_seg_display = s_seg_display_dff.q;
+    target_display = target_display_dff.q;  
+        
+    
+    for (i = 0; i<8; i++)
+      button_cond.in[i] = button[i];
+    for (i = 0; i<8; i++)
+      edge_detector.in[i] = button_cond.out[i];
+    
+    alufn = 0;
+    wdsel = 0;
+    write_address = 0;
+    we = 0;
+    read_address_a = 0;
+    read_address_b = 0;
+    cu_output_data = 0;
+    
+    case(state.q){
+      state.IDLE:
+        s_seg_display_dff.d = 8x{{16h0014}};
+        target_display_dff.d = 0;
+        if (start == b1) 
+          state.d = state.RANDOM_TARGET;
+                
+      state.RANDOM_TARGET:
+        
+        if (ran[3:0]<=12 && ran[3:0]>=7){ // if random to add operation 
+   
+          wdsel = b11;
+          write_address = b1111;
+          we = 1;
+          cu_output_data = ran[3:0];
+          numIncre.d = 0;
+          state.d = state.INIT_ADD;
+          }
+        if (ran[3:0]<=6 && ran[3:0]>=0){ // if random to substract operation
+
+          wdsel = b11;
+          write_address = b1111;
+          we = 1;
+          cu_output_data = ran[3:0];
+          numIncre.d = 0;        
+          state.d = state.INIT_SUBSTRACT;
+          } 
+            
+      state.INIT_ADD:
+        wdsel = b11;
+        write_address = b1000;
+        we = 1;
+        cu_output_data = b1;
+        state.d = state.RANDOM_CARDS1_ADD;  
+      
+      state.INIT_SUBSTRACT:
+        wdsel = b11;
+        write_address = b1000;
+        we = 1;
+        cu_output_data = b1;          
+        state.d = state.RANDOM_CARDS1_SUB;  
+        
+      state.RANDOM_CARDS1_ADD:
+        if (ran[3:0]>=0 && ran[3:0]<=7){
+          read_address_a = ran[3:0];
+          if (ra_data == hfff) {
+            wdsel = b11;
+            write_address = ran[3:0];
+            we = 1;
+            cu_output_data = numIncre.q;
+            numIncre.d = numIncre.q + 1;
+            if (numIncre.q==3)
+              state.d = state.RANDOM_CARDS2_ADD;
+          }
+          
+        }
+        
+      state.RANDOM_CARDS1_SUB:
+        if (ran[3:0]>=0 && ran[3:0]<=7){
+          read_address_a = ran[3:0];
+          if (ra_data == hfff) {
+            wdsel = b11;
+            write_address = ran[3:0];
+            we = 1;
+            cu_output_data = numIncre.q;
+            numIncre.d = numIncre.q + 1;
+            if (numIncre.q==3)
+              state.d = state.RANDOM_CARDS2_SUB;
+          }
+          
+        }           
+         
+      
+      state.RANDOM_CARDS2_ADD:
+       
+        if (ran[3:0]>=0 && ran[3:0]<=7){
+          read_address_a = ran[3:0];
+          read_address_b = b1111;
+          if (ra_data == hfff){
+          // if addition, distribute targetnumber-numIncre to a random location
+            wdsel = b11;
+            write_address = ran[3:0];
+            we = 1;
+            cu_output_data = rb_data - numIncre.q; 
+            numIncre.d = numIncre.q - 1;  
+            if (numIncre.q==0) // at the same time, the use for numIncre becomes count of number of cards that are paired 
+              state.d = state.GAME11;  
+            
+          }    
+        }  
+        
+        
+          
+      state.RANDOM_CARDS2_SUB:       
+        if (ran[3:0]>=0 && ran[3:0]<=7){
+          read_address_a = ran[3:0];
+          read_address_b = b1111;
+          if (ra_data == hfff){
+          // if substraction, distribute targetnumber+numIncre to a random location 
+            wdsel = b11;
+            write_address = ran[3:0];
+            we = 1;
+            cu_output_data = rb_data + numIncre.q; 
+            numIncre.d = numIncre.q - 1; 
+            if (numIncre.q==0)
+              state.d = state.GAME11;  
+          }    
+        }
+      
+      state.GAME11: // GAME start
+        for (i=0;i<8;i++)
+          if (edge_detector.out[i]){
+            read_address_a = i;
+            if (ra_data != hffff){
+              wdsel = b11;
+              write_address = b1001;
+              we = 1;
+              cu_output_data = i;
+              s_seg_display_dff.d[i] = ra_data;
+              state.d = state.GAME12;
+            }  
+          }  
+        
+        if(timer == 1)
+          state.d = state.LOSE;
+        
+      state.GAME12:
+        read_address_a = b1001;
+        read_address_b = ra_data;
+        write_address =  b1101;
+        cu_output_data = rb_data;
+        we = 1;
+        wdsel = b11;
+        state.d = state.GAME21;
+        
+       
+     state.GAME21:
+        for (i=0;i<8;i++)
+          if (edge_detector.out[i]){
+            read_address_a = i;
+            read_address_b = b1001;
+            if (ra_data != hffff && rb_data != i){
+              wdsel = b11;
+              write_address = b1010;
+              we = 1;
+              cu_output_data = i;
+              s_seg_display_dff.d[i] = ra_data;
+              state.d = state.GAME22;
+            }  
+          }  
+        
+        if(timer == 1)
+          state.d = state.LOSE;
+          
+      state.GAME22:
+        read_address_a = b1010;
+        read_address_b = ra_data;
+        write_address =  b1110;
+        cu_output_data = rb_data;
+        we = 1;
+        wdsel = b11;
+        state.d = state.CHECKOP;      
+     
+      state.CHECKOP:
+        read_address_a = b1000;
+        if( ra_data == 1)
+          state.d = state.ADD;
+        if( ra_data == 0)
+          state.d = state.SUB;
+             
+      state.ADD:
+        read_address_a = b1101;
+        read_address_b = b1110;
+        alufn = b000000;
+        we = 1;
+        wdsel = b00;
+        write_address = b1100;
+        state.d = state.COMP;
+        state.d = state.COMP;
+        
+      state.SUB:
+        read_address_a = b1101;
+        read_address_b = b1110;
+        alufn = b000001;
+        we = 1;
+        wdsel = b00;
+        write_address = b1100;
+        state.d = state.COMP;
+        state.d = state.COMP;
+        
+      state.COMP:
+        read_address_a = b1100;
+        read_address_b = b1111;
+        alufn = b110011;
+        we = 1;
+        wdsel = b00;
+        write_address = b1100;
+        little_timer.d = 0;
+        
+        state.d = state.DISPLAY;
+      
+      state.DISPLAY:
+        little_timer.d = little_timer.q + 1;
+  
+        if (little_timer.q[19] == 1) {
+          read_address_a = b1100; // read the result of compare
+          if (ra_data){
+            numIncre.d = numIncre.q+1;
+            if (numIncre.q == 4)
+              state.d = state.WIN;
+            else
+              state.d = state.GAME11;  
+          }else
+            state.d = state.UNPAIRED;  
+          }  
+        
+      state.UNPAIRED:
+        read_address_a = b1001; // read ra_index
+        read_address_b = b1010; // read rb_index
+        s_seg_display_dff.d[ra_data] = 20;
+        s_seg_display_dff.d[rb_data] = 20;
+        state.d = state.GAME11; 
+        
+      state.WIN:
+        s_seg_display_dff.d[0] = 10;
+        s_seg_display_dff.d[2] = 11;
+        s_seg_display_dff.d[4] = 12;
+        s_seg_display_dff.d[6] = 12;
+        s_seg_display_dff.d[1] = 20;
+        s_seg_display_dff.d[3] = 20;
+        s_seg_display_dff.d[5] = 20;
+        s_seg_display_dff.d[7] = 20;
+        
+        
+      state.LOSE:
+        s_seg_display_dff.d[0] = 13;
+        s_seg_display_dff.d[2] = 11;
+        s_seg_display_dff.d[4] = 14;
+        s_seg_display_dff.d[6] = 15;            
+        s_seg_display_dff.d[1] = 20;
+        s_seg_display_dff.d[3] = 20;
+        s_seg_display_dff.d[5] = 20;
+        s_seg_display_dff.d[7] = 20;
+        
+      default:
+        state.d = state.IDLE;  
+              
+    }
+  }
+
+}
+
