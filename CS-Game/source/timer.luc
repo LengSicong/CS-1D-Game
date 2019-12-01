@@ -1,0 +1,18 @@
+module timer (
+    input clk,  // clock
+    input rst,  // reset
+    output out // out = 1: the time is up and not yet otherwise
+  ) {
+    .clk(clk),.rst(rst){
+    counter ctr(#SIZE(6),#DIV(25));
+    dff result;
+    }
+  always {
+    out = result.q;
+    if (ctr.value[5]==1)
+      result.d = 1;
+    else
+      result.d = 0;
+      
+  }
+}

@@ -1,7 +1,6 @@
 module game_CU (
     input clk,  // clock
     input rst,  // reset
-    input counter2[56],
     input timer,
     input ran[32],
     input ra_data[16], // direct radata from regfile
@@ -19,7 +18,8 @@ module game_CU (
     
     // two read port
     output read_address_a[4], // read address a 
-    output read_address_b[4] // read address b 
+    output read_address_b[4], // read address b
+    output timer_start  // to tell the timer to start counting
   ) {
   .clk(clk){
      edge_detector edge_detector[8](#RISE(1), #FALL(0));
@@ -38,7 +38,7 @@ module game_CU (
     s_seg_display = s_seg_display_dff.q;
     target_display = target_display_dff.q;  
         
-    
+    timer_start = 0;
     for (i = 0; i<8; i++)
       button_cond.in[i] = button[i];
     for (i = 0; i<8; i++)
@@ -54,10 +54,10 @@ module game_CU (
     
     case(state.q){
       state.IDLE:
-        s_seg_display_dff.d = 8x{{16h0014}};
+        s_seg_display_dff.d = 8x{{16h0008}}; // init all the 7 segment display to be null (which is indicated as 20 in seven_seg module)
         target_display_dff.d = 0;
         if (start == b1) 
-          state.d = state.RANDOM_TARGET;
+         state.d = state.RANDOM_TARGET;
                 
       state.RANDOM_TARGET:
         
@@ -68,6 +68,7 @@ module game_CU (
           we = 1;
           cu_output_data = ran[3:0];
           numIncre.d = 0;
+          target_display_dff.d = ran[3:0];
           state.d = state.INIT_ADD;
           }
         if (ran[3:0]<=6 && ran[3:0]>=0){ // if random to substract operation
@@ -76,7 +77,8 @@ module game_CU (
           write_address = b1111;
           we = 1;
           cu_output_data = ran[3:0];
-          numIncre.d = 0;        
+          numIncre.d = 0;   
+          target_display_dff.d = ran[3:0];     
           state.d = state.INIT_SUBSTRACT;
           } 
             
@@ -138,7 +140,10 @@ module game_CU (
             cu_output_data = rb_data - numIncre.q; 
             numIncre.d = numIncre.q - 1;  
             if (numIncre.q==0) // at the same time, the use for numIncre becomes count of number of cards that are paired 
-              state.d = state.GAME11;  
+              {
+              timer_start = 1; // start the timer
+              state.d = state.GAME11;  // all INIT finished, start the game              
+              }
             
           }    
         }  
@@ -156,8 +161,10 @@ module game_CU (
             we = 1;
             cu_output_data = rb_data + numIncre.q; 
             numIncre.d = numIncre.q - 1; 
-            if (numIncre.q==0)
-              state.d = state.GAME11;  
+            if (numIncre.q==0){
+              timer_start = 1; // start the timer
+              state.d = state.GAME11; // all INIT finished, start the game
+            }  
           }    
         }
       
@@ -165,7 +172,7 @@ module game_CU (
         for (i=0;i<8;i++)
           if (edge_detector.out[i]){
             read_address_a = i;
-            if (ra_data != hffff){
+            if (s_seg_display_dff.q[i] == 20){
               wdsel = b11;
               write_address = b1001;
               we = 1;
@@ -193,7 +200,7 @@ module game_CU (
           if (edge_detector.out[i]){
             read_address_a = i;
             read_address_b = b1001;
-            if (ra_data != hffff && rb_data != i){
+            if (s_seg_display_dff.q[i] == 20 && rb_data != i){
               wdsel = b11;
               write_address = b1010;
               we = 1;

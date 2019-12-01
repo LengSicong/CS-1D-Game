@@ -8,7 +8,7 @@
    Parameters:
      SEED = 128h843233523a613966423b622562592c62
 */
-module pn_gen_2 (
+module pn_gen_10 (
     input clk,
     input rst,
     input next,

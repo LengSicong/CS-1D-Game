@@ -23,13 +23,20 @@ NET "button[7]" LOC = P87;
 NET "button[7]" IOSTANDARD = LVTTL;
 NET "button[7]" PULLDOWN;
 
-NET "display_seg<0>" LOC = P51 | IOSTANDARD = LVTTL;
-NET "display_seg<1>" LOC = P41 | IOSTANDARD = LVTTL;
-NET "display_seg<2>" LOC = P35 | IOSTANDARD = LVTTL;
-NET "display_seg<3>" LOC = P33 | IOSTANDARD = LVTTL;
-NET "display_seg<4>" LOC = P30 | IOSTANDARD = LVTTL;
-NET "display_seg<5>" LOC = P27 | IOSTANDARD = LVTTL;
-NET "display_seg<6>" LOC = P24 | IOSTANDARD = LVTTL;
+NET "display_seg[0]" LOC = P51;
+NET "display_seg[0]" IOSTANDARD = LVTTL;
+NET "display_seg[1]" LOC = P41;
+NET "display_seg[1]" IOSTANDARD = LVTTL;
+NET "display_seg[2]" LOC = P35;
+NET "display_seg[2]" IOSTANDARD = LVTTL;
+NET "display_seg[3]" LOC = P33;
+NET "display_seg[3]" IOSTANDARD = LVTTL;
+NET "display_seg[4]" LOC = P30;
+NET "display_seg[4]" IOSTANDARD = LVTTL;
+NET "display_seg[5]" LOC = P27;
+NET "display_seg[5]" IOSTANDARD = LVTTL;
+NET "display_seg[6]" LOC = P24;
+NET "display_seg[6]" IOSTANDARD = LVTTL;
 NET "display_seg<7>" LOC = P22 | IOSTANDARD = LVTTL;
 
 NET "display_sel<0>" LOC = 124 | IOSTANDARD = LVTTL;

@@ -7,34 +7,42 @@ Reading design: mojo_top_0.prj
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/shifter_15.v" into library work
-Parsing module <shifter_15>.
-Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/pipeline_16.v" into library work
-Parsing module <pipeline_16>.
-Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/compare_14.v" into library work
-Parsing module <compare_14>.
-Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/boolean_13.v" into library work
-Parsing module <boolean_13>.
-Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/adder_12.v" into library work
-Parsing module <adder_12>.
-Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/seven_seg_5.v" into library work
-Parsing module <seven_seg_5>.
-Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/edge_detector_8.v" into library work
-Parsing module <edge_detector_8>.
-Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/counter_10.v" into library work
-Parsing module <counter_10>.
-Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/button_conditioner_9.v" into library work
-Parsing module <button_conditioner_9>.
-Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/alu_7.v" into library work
-Parsing module <alu_7>.
+Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/pipeline_19.v" into library work
+Parsing module <pipeline_19>.
+Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/shifter_18.v" into library work
+Parsing module <shifter_18>.
+Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/edge_detector_7.v" into library work
+Parsing module <edge_detector_7>.
+Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/counter_20.v" into library work
+Parsing module <counter_20>.
+Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/compare_17.v" into library work
+Parsing module <compare_17>.
+Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/button_conditioner_8.v" into library work
+Parsing module <button_conditioner_8>.
+Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/boolean_16.v" into library work
+Parsing module <boolean_16>.
+Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/adder_15.v" into library work
+Parsing module <adder_15>.
+Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/timer_9.v" into library work
+Parsing module <timer_9>.
+Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/seven_seg_4.v" into library work
+Parsing module <seven_seg_4>.
+Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Regfiles_11.v" into library work
+Parsing module <regfiles_11>.
+Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/pn_gen_10.v" into library work
+Parsing module <pn_gen_10>.
+Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" into library work
+Parsing module <game_CU_12>.
+Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/counter_13.v" into library work
+Parsing module <counter_13>.
+Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/alu_6.v" into library work
+Parsing module <alu_6>.
 Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/reset_conditioner_1.v" into library work
 Parsing module <reset_conditioner_1>.
-Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/pn_gen_2.v" into library work
-Parsing module <pn_gen_2>.
-Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/multi_seven_seg_4.v" into library work
-Parsing module <multi_seven_seg_4>.
-Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Game_fsm_3.v" into library work
-Parsing module <game_fsm_3>.
+Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/multi_seven_seg_3.v" into library work
+Parsing module <multi_seven_seg_3>.
+Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" into library work
+Parsing module <miniBeta_2>.
 Analyzing Verilog file "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
 Parsing module <mojo_top_0>.
 
@@ -46,42 +54,53 @@ Elaborating module <mojo_top_0>.
 
 Elaborating module <reset_conditioner_1>.
 
-Elaborating module <pn_gen_2>.
+Elaborating module <miniBeta_2>.
 
-Elaborating module <game_fsm_3>.
+Elaborating module <alu_6>.
 
-Elaborating module <alu_7>.
+Elaborating module <adder_15>.
 
-Elaborating module <adder_12>.
+Elaborating module <boolean_16>.
 
-Elaborating module <boolean_13>.
+Elaborating module <compare_17>.
 
-Elaborating module <compare_14>.
+Elaborating module <shifter_18>.
+WARNING:HDLCompiler:1127 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" Line 30: Assignment to M_game_alu_z ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" Line 31: Assignment to M_game_alu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" Line 32: Assignment to M_game_alu_n ignored, since the identifier is never used
 
-Elaborating module <shifter_15>.
-WARNING:HDLCompiler:1127 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Game_fsm_3.v" Line 35: Assignment to M_alu_z ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Game_fsm_3.v" Line 36: Assignment to M_alu_v ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Game_fsm_3.v" Line 37: Assignment to M_alu_n ignored, since the identifier is never used
+Elaborating module <edge_detector_7>.
 
-Elaborating module <edge_detector_8>.
+Elaborating module <button_conditioner_8>.
 
-Elaborating module <button_conditioner_9>.
+Elaborating module <pipeline_19>.
 
-Elaborating module <pipeline_16>.
-WARNING:HDLCompiler:634 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Game_fsm_3.v" Line 82: Net <M_alufn_d[5]> does not have a driver.
-WARNING:HDLCompiler:1127 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 63: Assignment to M_game_whetherstart ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 64: Assignment to M_game_display ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 65: Assignment to M_game_out ignored, since the identifier is never used
+Elaborating module <timer_9>.
 
-Elaborating module <multi_seven_seg_4>.
+Elaborating module <counter_20>.
 
-Elaborating module <counter_10>.
+Elaborating module <pn_gen_10>.
 
-Elaborating module <seven_seg_5>.
-WARNING:HDLCompiler:413 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 114: Result of 16-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 116: Result of 7-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 119: Result of 16-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 124: Result of 16-bit expression is truncated to fit in 4-bit target.
+Elaborating module <regfiles_11>.
+WARNING:HDLCompiler:413 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Regfiles_11.v" Line 55: Result of 16-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <game_CU_12>.
+WARNING:HDLCompiler:413 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" Line 155: Result of 20-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" Line 170: Result of 20-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" Line 186: Result of 20-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" Line 203: Result of 20-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" Line 232: Result of 16-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" Line 260: Result of 16-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:1127 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 45: Assignment to M_beta_s_seg_display ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 47: Assignment to M_beta_out ignored, since the identifier is never used
+
+Elaborating module <multi_seven_seg_3>.
+
+Elaborating module <counter_13>.
+
+Elaborating module <seven_seg_4>.
+WARNING:HDLCompiler:413 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 92: Result of 16-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 97: Result of 16-bit expression is truncated to fit in 4-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -95,22 +114,18 @@ WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved an
 WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" line 56: Output port <whetherstart> of the instance <game> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" line 56: Output port <display> of the instance <game> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" line 56: Output port <out> of the instance <game> is unconnected or connected to loadless signal.
-    Found 56-bit register for signal <M_counter2_q>.
-    Found 56-bit adder for signal <M_counter2_d> created at line 130.
-    Found 4-bit subtractor for signal <M_game_target_display[15]_GND_1_o_sub_4_OUT<3:0>> created at line 119.
-    Found 1-bit tristate buffer for signal <spi_miso> created at line 97
-    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 97
-    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 97
-    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 97
-    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 97
-    Found 1-bit tristate buffer for signal <avr_rx> created at line 97
-    Found 16-bit comparator lessequal for signal <n0003> created at line 118
+INFO:Xst:3210 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" line 41: Output port <s_seg_display> of the instance <beta> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" line 41: Output port <out> of the instance <beta> is unconnected or connected to loadless signal.
+    Found 4-bit subtractor for signal <M_beta_target_display[15]_GND_1_o_sub_4_OUT<3:0>> created at line 92.
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 76
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 76
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 76
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 76
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 76
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 76
+    Found 16-bit comparator lessequal for signal <n0003> created at line 91
     Summary:
-	inferred   2 Adder/Subtractor(s).
-	inferred  56 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
 	inferred   1 Comparator(s).
 	inferred   1 Multiplexer(s).
 	inferred   6 Tristate(s).
@@ -123,80 +138,25 @@ Synthesizing Unit <reset_conditioner_1>.
 	inferred   4 D-type flip-flop(s).
 Unit <reset_conditioner_1> synthesized.
 
-Synthesizing Unit <pn_gen_2>.
-    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/pn_gen_2.v".
-    Found 32-bit register for signal <M_y_q>.
-    Found 32-bit register for signal <M_z_q>.
-    Found 32-bit register for signal <M_w_q>.
-    Found 32-bit register for signal <M_x_q>.
+Synthesizing Unit <miniBeta_2>.
+    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v".
+INFO:Xst:3210 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" line 25: Output port <z> of the instance <game_alu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" line 25: Output port <v> of the instance <game_alu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" line 25: Output port <n> of the instance <game_alu> is unconnected or connected to loadless signal.
+    Found 16-bit 4-to-1 multiplexer for signal <M_game_regfiles_wdata> created at line 164.
     Summary:
-	inferred 128 D-type flip-flop(s).
-Unit <pn_gen_2> synthesized.
-WARNING:Xst:2972 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Game_fsm_3.v" line 30. All outputs of instance <alu> of block <alu_7> are unconnected in block <game_fsm_3>. Underlying logic will be removed.
+	inferred   1 Multiplexer(s).
+Unit <miniBeta_2> synthesized.
 
-Synthesizing Unit <game_fsm_3>.
-    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Game_fsm_3.v".
-WARNING:Xst:647 - Input <ran<31:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <counter2<54:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Game_fsm_3.v" line 30: Output port <z> of the instance <alu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Game_fsm_3.v" line 30: Output port <v> of the instance <alu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Game_fsm_3.v" line 30: Output port <n> of the instance <alu> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <M_alufn_d> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-    Found 1-bit register for signal <M_opr_q>.
-    Found 16-bit register for signal <M_ra_q>.
-    Found 16-bit register for signal <M_rb_q>.
-    Found 128-bit register for signal <M_r_q>.
-    Found 1-bit register for signal <M_numIncre_q>.
-    Found 28-bit register for signal <M_counter1_q>.
-    Found 4-bit register for signal <M_state_q>.
-    Found 16-bit register for signal <M_targetnumber_q>.
-INFO:Xst:1799 - State 0100 is never reached in FSM <M_state_q>.
-INFO:Xst:1799 - State 0101 is never reached in FSM <M_state_q>.
-INFO:Xst:1799 - State 0111 is never reached in FSM <M_state_q>.
-INFO:Xst:1799 - State 1000 is never reached in FSM <M_state_q>.
-INFO:Xst:1799 - State 0110 is never reached in FSM <M_state_q>.
-    Found finite state machine <FSM_0> for signal <M_state_q>.
-    -----------------------------------------------------------------------
-    | States             | 8                                              |
-    | Transitions        | 7                                              |
-    | Inputs             | 39                                             |
-    | Outputs            | 2                                              |
-    | Clock              | clk (rising_edge)                              |
-    | Reset              | rst (positive)                                 |
-    | Reset type         | synchronous                                    |
-    | Reset State        | 0000                                           |
-    | Power Up State     | 0000                                           |
-    | Encoding           | auto                                           |
-    | Implementation     | LUT                                            |
-    -----------------------------------------------------------------------
-    Found 16-bit subtractor for signal <M_targetnumber_q[15]_GND_4_o_sub_171_OUT> created at line 152.
-    Found 28-bit adder for signal <M_counter1_d> created at line 109.
-    Found 1-bit adder for signal <M_numIncre_q_PWR_4_o_add_164_OUT<0>> created at line 144.
-    Found 16-bit adder for signal <M_targetnumber_q[15]_GND_4_o_add_314_OUT> created at line 154.
-    Found 8-bit adder for signal <ran[3]_GND_4_o_add_315_OUT> created at line 154.
-    Found 255-bit shifter logical right for signal <n1388> created at line 150
-    Found 4-bit comparator greater for signal <n0005> created at line 125
-    Found 4-bit comparator greater for signal <n0008> created at line 125
-    Found 4-bit comparator greater for signal <n0017> created at line 132
-    Found 4-bit comparator lessequal for signal <n0169> created at line 150
-    WARNING:Xst:2404 -  FFs/Latches <M_alufn_q<5:0>> (without init value) have a constant value of 0 in block <game_fsm_3>.
+Synthesizing Unit <alu_6>.
+    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/alu_6.v".
+    Found 16-bit 4-to-1 multiplexer for signal <out> created at line 68.
     Summary:
-	inferred   5 Adder/Subtractor(s).
-	inferred 190 D-type flip-flop(s).
-	inferred   4 Comparator(s).
-	inferred 438 Multiplexer(s).
-	inferred   1 Combinational logic shifter(s).
-	inferred   1 Finite State Machine(s).
-Unit <game_fsm_3> synthesized.
+	inferred   4 Multiplexer(s).
+Unit <alu_6> synthesized.
 
-Synthesizing Unit <alu_7>.
-    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/alu_7.v".
-    Summary:
-	no macro.
-Unit <alu_7> synthesized.
-
-Synthesizing Unit <adder_12>.
-    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/adder_12.v".
+Synthesizing Unit <adder_15>.
+    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/adder_15.v".
     Found 16-bit subtractor for signal <a[15]_b[15]_sub_2_OUT> created at line 31.
     Found 16-bit adder for signal <a[15]_b[15]_add_0_OUT> created at line 28.
     Found 16x16-bit multiplier for signal <n0022> created at line 34.
@@ -205,15 +165,15 @@ Synthesizing Unit <adder_12>.
 	inferred   1 Multiplier(s).
 	inferred   1 Adder/Subtractor(s).
 	inferred   2 Multiplexer(s).
-Unit <adder_12> synthesized.
+Unit <adder_15> synthesized.
 
-Synthesizing Unit <boolean_13>.
-    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/boolean_13.v".
+Synthesizing Unit <boolean_16>.
+    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/boolean_16.v".
     Summary:
-Unit <boolean_13> synthesized.
+Unit <boolean_16> synthesized.
 
-Synthesizing Unit <compare_14>.
-    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/compare_14.v".
+Synthesizing Unit <compare_17>.
+    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/compare_17.v".
     Found 16-bit 4-to-1 multiplexer for signal <cmp> created at line 19.
     Found 16-bit comparator equal for signal <a[15]_b[15]_equal_1_o> created at line 21
     Found 16-bit comparator greater for signal <a[15]_b[15]_LessThan_2_o> created at line 24
@@ -221,10 +181,10 @@ Synthesizing Unit <compare_14>.
     Summary:
 	inferred   3 Comparator(s).
 	inferred   1 Multiplexer(s).
-Unit <compare_14> synthesized.
+Unit <compare_17> synthesized.
 
-Synthesizing Unit <shifter_15>.
-    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/shifter_15.v".
+Synthesizing Unit <shifter_18>.
+    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/shifter_18.v".
 WARNING:Xst:647 - Input <b<15:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit shifter logical left for signal <a[15]_b[3]_shift_left_0_OUT> created at line 21
     Found 16-bit shifter logical right for signal <a[15]_b[3]_shift_right_1_OUT> created at line 24
@@ -233,56 +193,171 @@ WARNING:Xst:647 - Input <b<15:4>> is never used. This port will be preserved and
     Summary:
 	inferred   1 Multiplexer(s).
 	inferred   3 Combinational logic shifter(s).
-Unit <shifter_15> synthesized.
+Unit <shifter_18> synthesized.
 
-Synthesizing Unit <edge_detector_8>.
-    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/edge_detector_8.v".
+Synthesizing Unit <edge_detector_7>.
+    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/edge_detector_7.v".
     Found 1-bit register for signal <M_last_q>.
     Summary:
 	inferred   1 D-type flip-flop(s).
-Unit <edge_detector_8> synthesized.
+Unit <edge_detector_7> synthesized.
 
-Synthesizing Unit <button_conditioner_9>.
-    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/button_conditioner_9.v".
+Synthesizing Unit <button_conditioner_8>.
+    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/button_conditioner_8.v".
     Found 20-bit register for signal <M_ctr_q>.
-    Found 20-bit adder for signal <M_ctr_q[19]_GND_12_o_add_2_OUT> created at line 39.
+    Found 20-bit adder for signal <M_ctr_q[19]_GND_11_o_add_2_OUT> created at line 39.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  20 D-type flip-flop(s).
-Unit <button_conditioner_9> synthesized.
+Unit <button_conditioner_8> synthesized.
 
-Synthesizing Unit <pipeline_16>.
-    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/pipeline_16.v".
+Synthesizing Unit <pipeline_19>.
+    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/pipeline_19.v".
     Found 2-bit register for signal <M_pipe_q>.
     Summary:
 	inferred   2 D-type flip-flop(s).
-Unit <pipeline_16> synthesized.
+Unit <pipeline_19> synthesized.
 
-Synthesizing Unit <multi_seven_seg_4>.
-    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/multi_seven_seg_4.v".
-    Found 5-bit adder for signal <M_ctr_value[2]_GND_14_o_add_0_OUT> created at line 41.
+Synthesizing Unit <timer_9>.
+    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/timer_9.v".
+    Found 1-bit register for signal <M_result_q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <timer_9> synthesized.
+
+Synthesizing Unit <counter_20>.
+    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/counter_20.v".
+    Found 31-bit register for signal <M_ctr_q>.
+    Found 31-bit adder for signal <M_ctr_d> created at line 35.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  31 D-type flip-flop(s).
+Unit <counter_20> synthesized.
+
+Synthesizing Unit <pn_gen_10>.
+    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/pn_gen_10.v".
+    Found 32-bit register for signal <M_y_q>.
+    Found 32-bit register for signal <M_z_q>.
+    Found 32-bit register for signal <M_w_q>.
+    Found 32-bit register for signal <M_x_q>.
+    Summary:
+	inferred 128 D-type flip-flop(s).
+Unit <pn_gen_10> synthesized.
+
+Synthesizing Unit <regfiles_11>.
+    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Regfiles_11.v".
+    Found 16-bit register for signal <M_targetnumber_q>.
+    Found 1-bit register for signal <M_opr_q>.
+    Found 16-bit register for signal <M_card_a_q>.
+    Found 16-bit register for signal <M_card_b_q>.
+    Found 16-bit register for signal <M_card_a_index_q>.
+    Found 16-bit register for signal <M_card_b_index_q>.
+    Found 128-bit register for signal <M_r_q>.
+    Found 16-bit register for signal <M_temp_q>.
+    Found 8-bit adder for signal <write_address[3]_GND_16_o_add_2_OUT> created at line 47.
+    Found 8-bit adder for signal <n0403> created at line 76.
+    Found 8-bit adder for signal <n0407> created at line 104.
+    Found 255-bit shifter logical right for signal <n0404> created at line 76
+    Found 255-bit shifter logical right for signal <n0408> created at line 104
+    Found 16-bit 8-to-1 multiplexer for signal <_n0597> created at line 79.
+    Found 16-bit 8-to-1 multiplexer for signal <_n0633> created at line 107.
+    Found 4-bit comparator greater for signal <write_address[3]_GND_16_o_LessThan_2_o> created at line 46
+    Found 4-bit comparator greater for signal <read_address_a[3]_GND_16_o_LessThan_175_o> created at line 75
+    Found 4-bit comparator greater for signal <read_address_b[3]_GND_16_o_LessThan_188_o> created at line 103
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 225 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred 154 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <regfiles_11> synthesized.
+WARNING:Xst:2972 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" line 36. All outputs of instance <edge_detector_gen_0[0].edge_detector> of block <edge_detector_7> are unconnected in block <game_CU_12>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" line 36. All outputs of instance <edge_detector_gen_0[1].edge_detector> of block <edge_detector_7> are unconnected in block <game_CU_12>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" line 36. All outputs of instance <edge_detector_gen_0[2].edge_detector> of block <edge_detector_7> are unconnected in block <game_CU_12>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" line 36. All outputs of instance <edge_detector_gen_0[3].edge_detector> of block <edge_detector_7> are unconnected in block <game_CU_12>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" line 36. All outputs of instance <edge_detector_gen_0[4].edge_detector> of block <edge_detector_7> are unconnected in block <game_CU_12>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" line 36. All outputs of instance <edge_detector_gen_0[5].edge_detector> of block <edge_detector_7> are unconnected in block <game_CU_12>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" line 36. All outputs of instance <edge_detector_gen_0[6].edge_detector> of block <edge_detector_7> are unconnected in block <game_CU_12>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" line 36. All outputs of instance <edge_detector_gen_0[7].edge_detector> of block <edge_detector_7> are unconnected in block <game_CU_12>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" line 49. All outputs of instance <button_cond_gen_0[0].button_cond> of block <button_conditioner_8> are unconnected in block <game_CU_12>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" line 49. All outputs of instance <button_cond_gen_0[1].button_cond> of block <button_conditioner_8> are unconnected in block <game_CU_12>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" line 49. All outputs of instance <button_cond_gen_0[2].button_cond> of block <button_conditioner_8> are unconnected in block <game_CU_12>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" line 49. All outputs of instance <button_cond_gen_0[3].button_cond> of block <button_conditioner_8> are unconnected in block <game_CU_12>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" line 49. All outputs of instance <button_cond_gen_0[4].button_cond> of block <button_conditioner_8> are unconnected in block <game_CU_12>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" line 49. All outputs of instance <button_cond_gen_0[5].button_cond> of block <button_conditioner_8> are unconnected in block <game_CU_12>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" line 49. All outputs of instance <button_cond_gen_0[6].button_cond> of block <button_conditioner_8> are unconnected in block <game_CU_12>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" line 49. All outputs of instance <button_cond_gen_0[7].button_cond> of block <button_conditioner_8> are unconnected in block <game_CU_12>. Underlying logic will be removed.
+
+Synthesizing Unit <game_CU_12>.
+    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v".
+WARNING:Xst:647 - Input <ran<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <start> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit register for signal <M_target_display_dff_q>.
+    Found 20-bit register for signal <M_little_timer_q>.
+    Found 20-bit register for signal <M_numIncre_q>.
+    Found 5-bit register for signal <M_state_q>.
+    Found 128-bit register for signal <M_s_seg_display_dff_q>.
+INFO:Xst:1799 - State 00010 is never reached in FSM <M_state_q>.
+INFO:Xst:1799 - State 00011 is never reached in FSM <M_state_q>.
+INFO:Xst:1799 - State 00100 is never reached in FSM <M_state_q>.
+INFO:Xst:1799 - State 00101 is never reached in FSM <M_state_q>.
+INFO:Xst:1799 - State 00110 is never reached in FSM <M_state_q>.
+INFO:Xst:1799 - State 00111 is never reached in FSM <M_state_q>.
+INFO:Xst:1799 - State 01000 is never reached in FSM <M_state_q>.
+INFO:Xst:1799 - State 01001 is never reached in FSM <M_state_q>.
+INFO:Xst:1799 - State 10011 is never reached in FSM <M_state_q>.
+INFO:Xst:1799 - State 01010 is never reached in FSM <M_state_q>.
+INFO:Xst:1799 - State 01011 is never reached in FSM <M_state_q>.
+INFO:Xst:1799 - State 01100 is never reached in FSM <M_state_q>.
+INFO:Xst:1799 - State 01110 is never reached in FSM <M_state_q>.
+INFO:Xst:1799 - State 01101 is never reached in FSM <M_state_q>.
+INFO:Xst:1799 - State 01111 is never reached in FSM <M_state_q>.
+INFO:Xst:1799 - State 10000 is never reached in FSM <M_state_q>.
+INFO:Xst:1799 - State 10001 is never reached in FSM <M_state_q>.
+INFO:Xst:1799 - State 10010 is never reached in FSM <M_state_q>.
+    Found finite state machine <FSM_0> for signal <M_state_q>.
+    -----------------------------------------------------------------------
+    | States             | 19                                             |
+    | Transitions        | 1                                              |
+    | Inputs             | 37                                             |
+    | Outputs            | 18                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00000                                          |
+    | Power Up State     | 00000                                          |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred 128 D-type flip-flop(s).
+Unit <game_CU_12> synthesized.
+
+Synthesizing Unit <multi_seven_seg_3>.
+    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/multi_seven_seg_3.v".
+    Found 5-bit adder for signal <M_ctr_value[2]_GND_18_o_add_0_OUT> created at line 41.
     Found 63-bit shifter logical right for signal <n0009> created at line 41
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   1 Combinational logic shifter(s).
-Unit <multi_seven_seg_4> synthesized.
+Unit <multi_seven_seg_3> synthesized.
 
-Synthesizing Unit <counter_10>.
-    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/counter_10.v".
+Synthesizing Unit <counter_13>.
+    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/counter_13.v".
     Found 19-bit register for signal <M_ctr_q>.
-    Found 19-bit adder for signal <M_ctr_q[18]_GND_15_o_add_0_OUT> created at line 35.
+    Found 19-bit adder for signal <M_ctr_q[18]_GND_19_o_add_0_OUT> created at line 35.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  19 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
-Unit <counter_10> synthesized.
+Unit <counter_13> synthesized.
 
-Synthesizing Unit <seven_seg_5>.
-    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/seven_seg_5.v".
+Synthesizing Unit <seven_seg_4>.
+    Related source file is "C:/Users/12255/Desktop/CS1D/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/seven_seg_4.v".
     Found 16x7-bit Read Only RAM for signal <segs>
     Summary:
 	inferred   1 RAM(s).
-Unit <seven_seg_5> synthesized.
+Unit <seven_seg_4> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -290,59 +365,63 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 3
  16x7-bit single-port Read Only RAM                    : 3
-# Adders/Subtractors                                   : 17
- 1-bit adder                                           : 1
- 16-bit adder                                          : 1
- 16-bit subtractor                                     : 1
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 16
+ 16-bit addsub                                         : 1
  19-bit adder                                          : 1
  20-bit adder                                          : 8
- 28-bit adder                                          : 1
+ 31-bit adder                                          : 1
  4-bit subtractor                                      : 1
  5-bit adder                                           : 1
- 56-bit adder                                          : 1
- 8-bit adder                                           : 1
-# Registers                                            : 37
+ 8-bit adder                                           : 3
+# Registers                                            : 41
  1-bit register                                        : 10
- 128-bit register                                      : 1
- 16-bit register                                       : 2
+ 128-bit register                                      : 2
+ 16-bit register                                       : 6
  19-bit register                                       : 1
  2-bit register                                        : 8
  20-bit register                                       : 8
- 28-bit register                                       : 1
+ 31-bit register                                       : 1
  32-bit register                                       : 4
  4-bit register                                        : 1
- 56-bit register                                       : 1
-# Comparators                                          : 5
- 16-bit comparator lessequal                           : 1
+# Comparators                                          : 7
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 1
+ 16-bit comparator lessequal                           : 2
  4-bit comparator greater                              : 3
- 4-bit comparator lessequal                            : 1
-# Multiplexers                                         : 440
- 1-bit 2-to-1 multiplexer                              : 9
- 10-bit 2-to-1 multiplexer                             : 5
- 11-bit 2-to-1 multiplexer                             : 5
- 12-bit 2-to-1 multiplexer                             : 5
- 128-bit 2-to-1 multiplexer                            : 8
- 13-bit 2-to-1 multiplexer                             : 5
- 14-bit 2-to-1 multiplexer                             : 5
- 15-bit 2-to-1 multiplexer                             : 5
- 16-bit 2-to-1 multiplexer                             : 344
+# Multiplexers                                         : 165
+ 1-bit 2-to-1 multiplexer                              : 5
+ 10-bit 2-to-1 multiplexer                             : 2
+ 11-bit 2-to-1 multiplexer                             : 2
+ 12-bit 2-to-1 multiplexer                             : 2
+ 128-bit 2-to-1 multiplexer                            : 3
+ 13-bit 2-to-1 multiplexer                             : 2
+ 14-bit 2-to-1 multiplexer                             : 2
+ 15-bit 2-to-1 multiplexer                             : 2
+ 16-bit 2-to-1 multiplexer                             : 121
+ 16-bit 4-to-1 multiplexer                             : 4
+ 16-bit 8-to-1 multiplexer                             : 2
  19-bit 2-to-1 multiplexer                             : 1
- 2-bit 2-to-1 multiplexer                              : 5
- 3-bit 2-to-1 multiplexer                              : 5
- 32-bit 2-to-1 multiplexer                             : 7
- 4-bit 2-to-1 multiplexer                              : 6
- 5-bit 2-to-1 multiplexer                              : 5
- 6-bit 2-to-1 multiplexer                              : 5
- 7-bit 2-to-1 multiplexer                              : 5
- 8-bit 2-to-1 multiplexer                              : 5
- 9-bit 2-to-1 multiplexer                              : 5
-# Logic shifters                                       : 2
- 255-bit shifter logical right                         : 1
+ 2-bit 2-to-1 multiplexer                              : 2
+ 3-bit 2-to-1 multiplexer                              : 2
+ 4-bit 2-to-1 multiplexer                              : 3
+ 5-bit 2-to-1 multiplexer                              : 2
+ 6-bit 2-to-1 multiplexer                              : 2
+ 7-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+ 9-bit 2-to-1 multiplexer                              : 2
+# Logic shifters                                       : 6
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+ 255-bit shifter logical right                         : 2
  63-bit shifter logical right                          : 1
 # Tristates                                            : 6
  1-bit tristate buffer                                 : 6
-# FSMs                                                 : 1
-# Xors                                                 : 2
+# Xors                                                 : 19
+ 1-bit xor2                                            : 16
+ 16-bit xor2                                           : 1
  32-bit xor2                                           : 1
  32-bit xor4                                           : 1
 
@@ -354,24 +433,19 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 =========================================================================
 
 
-Synthesizing (advanced) Unit <button_conditioner_9>.
+Synthesizing (advanced) Unit <button_conditioner_8>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <button_conditioner_9> synthesized (advanced).
+Unit <button_conditioner_8> synthesized (advanced).
 
-Synthesizing (advanced) Unit <counter_10>.
+Synthesizing (advanced) Unit <counter_13>.
 The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
-Unit <counter_10> synthesized (advanced).
+Unit <counter_13> synthesized (advanced).
 
-Synthesizing (advanced) Unit <game_fsm_3>.
-The following registers are absorbed into counter <M_numIncre_q>: 1 register on signal <M_numIncre_q>.
-The following registers are absorbed into counter <M_counter1_q>: 1 register on signal <M_counter1_q>.
-Unit <game_fsm_3> synthesized (advanced).
+Synthesizing (advanced) Unit <counter_20>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+Unit <counter_20> synthesized (advanced).
 
-Synthesizing (advanced) Unit <mojo_top_0>.
-The following registers are absorbed into counter <M_counter2_q>: 1 register on signal <M_counter2_q>.
-Unit <mojo_top_0> synthesized (advanced).
-
-Synthesizing (advanced) Unit <seven_seg_5>.
+Synthesizing (advanced) Unit <seven_seg_4>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_segs> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -383,20 +457,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_segs> will be implemented on LUTs ei
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to signal <segs>          |          |
     -----------------------------------------------------------------------
-Unit <seven_seg_5> synthesized (advanced).
-WARNING:Xst:2677 - Node <M_ra_q_3> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_ra_q_4> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_ra_q_5> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_ra_q_6> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_ra_q_7> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_ra_q_8> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_ra_q_9> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_ra_q_10> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_ra_q_11> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_ra_q_12> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_ra_q_13> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_ra_q_14> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_ra_q_15> of sequential type is unconnected in block <game_fsm_3>.
+Unit <seven_seg_4> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -404,48 +465,54 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 3
  16x7-bit single-port distributed Read Only RAM        : 3
-# Adders/Subtractors                                   : 5
- 16-bit adder                                          : 1
- 16-bit subtractor                                     : 1
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 6
+ 16-bit addsub                                         : 1
  4-bit subtractor                                      : 1
  5-bit adder                                           : 1
+ 7-bit adder                                           : 2
  8-bit adder                                           : 1
-# Counters                                             : 12
- 1-bit up counter                                      : 1
+# Counters                                             : 10
  19-bit up counter                                     : 1
  20-bit up counter                                     : 8
- 28-bit up counter                                     : 1
- 56-bit up counter                                     : 1
-# Registers                                            : 304
- Flip-Flops                                            : 304
-# Comparators                                          : 5
- 16-bit comparator lessequal                           : 1
+ 31-bit up counter                                     : 1
+# Registers                                            : 510
+ Flip-Flops                                            : 510
+# Comparators                                          : 7
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 1
+ 16-bit comparator lessequal                           : 2
  4-bit comparator greater                              : 3
- 4-bit comparator lessequal                            : 1
-# Multiplexers                                         : 438
- 1-bit 2-to-1 multiplexer                              : 8
- 10-bit 2-to-1 multiplexer                             : 5
- 11-bit 2-to-1 multiplexer                             : 5
- 12-bit 2-to-1 multiplexer                             : 5
- 128-bit 2-to-1 multiplexer                            : 8
- 13-bit 2-to-1 multiplexer                             : 5
- 14-bit 2-to-1 multiplexer                             : 5
- 15-bit 2-to-1 multiplexer                             : 5
- 16-bit 2-to-1 multiplexer                             : 344
- 2-bit 2-to-1 multiplexer                              : 5
- 3-bit 2-to-1 multiplexer                              : 5
- 32-bit 2-to-1 multiplexer                             : 7
- 4-bit 2-to-1 multiplexer                              : 6
- 5-bit 2-to-1 multiplexer                              : 5
- 6-bit 2-to-1 multiplexer                              : 5
- 7-bit 2-to-1 multiplexer                              : 5
- 8-bit 2-to-1 multiplexer                              : 5
- 9-bit 2-to-1 multiplexer                              : 5
-# Logic shifters                                       : 2
- 255-bit shifter logical right                         : 1
+# Multiplexers                                         : 209
+ 1-bit 2-to-1 multiplexer                              : 21
+ 1-bit 8-to-1 multiplexer                              : 32
+ 10-bit 2-to-1 multiplexer                             : 2
+ 11-bit 2-to-1 multiplexer                             : 2
+ 12-bit 2-to-1 multiplexer                             : 2
+ 128-bit 2-to-1 multiplexer                            : 3
+ 13-bit 2-to-1 multiplexer                             : 2
+ 14-bit 2-to-1 multiplexer                             : 2
+ 15-bit 2-to-1 multiplexer                             : 2
+ 16-bit 2-to-1 multiplexer                             : 120
+ 16-bit 4-to-1 multiplexer                             : 4
+ 2-bit 2-to-1 multiplexer                              : 2
+ 3-bit 2-to-1 multiplexer                              : 2
+ 4-bit 2-to-1 multiplexer                              : 3
+ 5-bit 2-to-1 multiplexer                              : 2
+ 6-bit 2-to-1 multiplexer                              : 2
+ 7-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+ 9-bit 2-to-1 multiplexer                              : 2
+# Logic shifters                                       : 6
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+ 255-bit shifter logical right                         : 2
  63-bit shifter logical right                          : 1
-# FSMs                                                 : 1
-# Xors                                                 : 2
+# Xors                                                 : 19
+ 1-bit xor2                                            : 16
+ 16-bit xor2                                           : 1
  32-bit xor2                                           : 1
  32-bit xor4                                           : 1
 
@@ -454,264 +521,396 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch <M_targetnumber_q_4> has a constant value of 0 in block <game_fsm_3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_5> has a constant value of 0 in block <game_fsm_3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_6> has a constant value of 0 in block <game_fsm_3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_7> has a constant value of 0 in block <game_fsm_3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_8> has a constant value of 0 in block <game_fsm_3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_9> has a constant value of 0 in block <game_fsm_3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_10> has a constant value of 0 in block <game_fsm_3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_11> has a constant value of 0 in block <game_fsm_3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_12> has a constant value of 0 in block <game_fsm_3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_13> has a constant value of 0 in block <game_fsm_3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_14> has a constant value of 0 in block <game_fsm_3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_15> has a constant value of 0 in block <game_fsm_3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_ra_q_0> has a constant value of 0 in block <game_fsm_3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_ra_q_1> has a constant value of 0 in block <game_fsm_3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_ra_q_2> has a constant value of 0 in block <game_fsm_3>. This FF/Latch will be trimmed during the optimization process.
-Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <game/FSM_0> on signal <M_state_q[1:2]> with gray encoding.
--------------------
- State | Encoding
--------------------
- 0000  | 00
- 0001  | 01
- 0010  | 11
- 0100  | unreached
- 0101  | unreached
- 0111  | unreached
- 1000  | unreached
- 0110  | unreached
--------------------
-WARNING:Xst:2677 - Node <M_opr_q_0> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_0> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_1> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_2> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_3> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_4> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_5> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_6> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_7> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_8> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_9> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_10> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_11> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_12> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_13> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_14> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_15> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_16> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_17> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_18> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_19> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_20> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_21> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_22> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_23> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_24> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_25> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_26> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_27> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_28> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_29> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_30> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_31> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_32> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_33> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_34> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_35> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_36> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_37> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_38> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_39> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_40> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_41> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_42> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_43> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_44> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_45> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_46> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_47> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_48> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_49> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_50> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_51> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_52> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_53> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_54> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_55> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_56> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_57> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_58> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_59> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_60> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_61> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_62> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_63> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_64> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_65> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_66> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_67> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_68> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_69> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_70> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_71> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_72> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_73> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_74> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_75> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_76> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_77> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_78> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_79> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_80> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_81> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_82> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_83> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_84> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_85> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_86> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_87> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_88> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_89> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_90> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_91> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_92> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_93> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_94> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_95> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_96> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_97> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_98> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_99> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_100> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_101> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_102> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_103> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_104> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_105> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_106> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_107> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_108> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_109> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_110> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_111> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_112> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_113> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_114> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_115> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_116> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_117> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_118> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_119> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_120> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_121> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_122> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_123> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_124> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_125> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_126> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <M_r_q_127> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <edge_detector_gen_0[7].edge_detector/M_last_q> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <edge_detector_gen_0[6].edge_detector/M_last_q> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <edge_detector_gen_0[5].edge_detector/M_last_q> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <edge_detector_gen_0[4].edge_detector/M_last_q> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <edge_detector_gen_0[3].edge_detector/M_last_q> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <edge_detector_gen_0[2].edge_detector/M_last_q> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <edge_detector_gen_0[1].edge_detector/M_last_q> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <edge_detector_gen_0[0].edge_detector/M_last_q> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <button_cond_gen_0[0].button_cond/sync/M_pipe_q_1> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <button_cond_gen_0[0].button_cond/sync/M_pipe_q_0> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <button_cond_gen_0[1].button_cond/sync/M_pipe_q_1> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <button_cond_gen_0[1].button_cond/sync/M_pipe_q_0> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <button_cond_gen_0[2].button_cond/sync/M_pipe_q_1> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <button_cond_gen_0[2].button_cond/sync/M_pipe_q_0> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <button_cond_gen_0[3].button_cond/sync/M_pipe_q_1> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <button_cond_gen_0[3].button_cond/sync/M_pipe_q_0> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <button_cond_gen_0[4].button_cond/sync/M_pipe_q_1> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <button_cond_gen_0[4].button_cond/sync/M_pipe_q_0> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <button_cond_gen_0[5].button_cond/sync/M_pipe_q_1> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <button_cond_gen_0[5].button_cond/sync/M_pipe_q_0> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <button_cond_gen_0[6].button_cond/sync/M_pipe_q_1> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <button_cond_gen_0[6].button_cond/sync/M_pipe_q_0> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <button_cond_gen_0[7].button_cond/sync/M_pipe_q_1> of sequential type is unconnected in block <game_fsm_3>.
-WARNING:Xst:2677 - Node <button_cond_gen_0[7].button_cond/sync/M_pipe_q_0> of sequential type is unconnected in block <game_fsm_3>.
+WARNING:Xst:1293 - FF/Latch <M_s_seg_display_dff_q_95> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_94> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_93> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_92> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_91> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_90> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_89> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_88> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_87> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_86> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_85> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_84> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_82> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_81> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_80> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_79> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_78> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_77> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_76> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_75> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_74> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_73> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_72> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_71> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_70> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_69> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_68> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_66> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_65> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_64> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_127> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_126> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_125> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_124> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_123> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_122> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_121> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_120> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_119> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_118> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_117> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_116> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_114> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_113> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_112> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_111> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_110> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_109> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_108> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_107> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_106> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_105> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_104> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_103> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_102> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_101> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_100> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_98> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_97> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_96> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_31> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_30> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_29> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_28> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_27> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_26> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_25> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_24> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_23> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_22> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_21> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_20> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_18> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_17> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_16> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_15> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_14> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_13> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_12> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_11> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_10> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_9> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_8> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_7> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_6> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_5> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_4> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_2> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_1> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_0> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_63> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_62> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_61> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_60> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_59> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_58> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_57> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_56> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_55> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_54> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_53> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_52> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_50> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_49> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_48> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_47> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_46> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_45> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_44> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_43> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_42> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_41> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_40> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_39> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_38> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_37> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_36> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_34> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_33> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_s_seg_display_dff_q_32> has a constant value of 0 in block <game_CU_12>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <M_s_seg_display_dff_q_3> in Unit <game_CU_12> is equivalent to the following 7 FFs/Latches, which will be removed : <M_s_seg_display_dff_q_19> <M_s_seg_display_dff_q_35> <M_s_seg_display_dff_q_51> <M_s_seg_display_dff_q_67> <M_s_seg_display_dff_q_83> <M_s_seg_display_dff_q_99> <M_s_seg_display_dff_q_115> 
+WARNING:Xst:2973 - All outputs of instance <ran> of block <pn_gen_10> are unconnected in block <miniBeta_2>. Underlying logic will be removed.
+WARNING:Xst:2973 - All outputs of instance <game_regfiles> of block <regfiles_11> are unconnected in block <miniBeta_2>. Underlying logic will be removed.
+WARNING:Xst:2973 - All outputs of instance <game_alu> of block <alu_6> are unconnected in block <miniBeta_2>. Underlying logic will be removed.
+WARNING:Xst:2677 - Node <edge_detector_gen_0[7].edge_detector/M_last_q> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <edge_detector_gen_0[6].edge_detector/M_last_q> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <edge_detector_gen_0[5].edge_detector/M_last_q> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <edge_detector_gen_0[4].edge_detector/M_last_q> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <edge_detector_gen_0[3].edge_detector/M_last_q> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <edge_detector_gen_0[2].edge_detector/M_last_q> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <edge_detector_gen_0[1].edge_detector/M_last_q> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <edge_detector_gen_0[0].edge_detector/M_last_q> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <button_cond_gen_0[0].button_cond/sync/M_pipe_q_1> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <button_cond_gen_0[0].button_cond/sync/M_pipe_q_0> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <button_cond_gen_0[1].button_cond/sync/M_pipe_q_1> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <button_cond_gen_0[1].button_cond/sync/M_pipe_q_0> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <button_cond_gen_0[2].button_cond/sync/M_pipe_q_1> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <button_cond_gen_0[2].button_cond/sync/M_pipe_q_0> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <button_cond_gen_0[3].button_cond/sync/M_pipe_q_1> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <button_cond_gen_0[3].button_cond/sync/M_pipe_q_0> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <button_cond_gen_0[4].button_cond/sync/M_pipe_q_1> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <button_cond_gen_0[4].button_cond/sync/M_pipe_q_0> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <button_cond_gen_0[5].button_cond/sync/M_pipe_q_1> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <button_cond_gen_0[5].button_cond/sync/M_pipe_q_0> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <button_cond_gen_0[6].button_cond/sync/M_pipe_q_1> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <button_cond_gen_0[6].button_cond/sync/M_pipe_q_0> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <button_cond_gen_0[7].button_cond/sync/M_pipe_q_1> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <button_cond_gen_0[7].button_cond/sync/M_pipe_q_0> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:2677 - Node <timer/M_result_q> of sequential type is unconnected in block <miniBeta_2>.
+WARNING:Xst:1293 - FF/Latch <M_card_a_index_q_8> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_index_q_7> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_index_q_6> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_index_q_5> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_index_q_4> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_index_q_3> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_index_q_2> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_index_q_1> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_index_q_0> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_q_15> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_q_14> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_q_13> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_q_12> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_q_11> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_q_10> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_q_9> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_q_8> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_q_7> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_q_6> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_q_5> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_q_4> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_q_3> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_q_2> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_q_1> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_opr_q_0> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_temp_q_15> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_temp_q_14> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_temp_q_13> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_temp_q_12> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_temp_q_11> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_temp_q_10> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_temp_q_9> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_temp_q_8> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_temp_q_7> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_temp_q_6> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_temp_q_5> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_temp_q_4> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_temp_q_3> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_temp_q_2> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_temp_q_1> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_temp_q_0> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_index_q_15> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_index_q_14> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_index_q_13> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_index_q_12> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_index_q_11> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_index_q_10> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_index_q_9> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_7> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_6> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_5> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_4> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_3> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_2> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_1> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_0> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_q_15> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_q_14> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_q_13> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_q_12> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_q_11> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_q_10> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_q_9> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_q_8> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_q_7> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_q_6> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_q_5> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_q_4> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_q_3> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_q_2> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_q_1> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_a_q_0> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_q_0> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_index_q_15> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_index_q_14> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_index_q_13> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_index_q_12> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_index_q_11> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_index_q_10> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_index_q_9> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_index_q_8> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_index_q_7> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_index_q_6> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_index_q_5> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_index_q_4> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_index_q_3> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_index_q_2> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_index_q_1> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_card_b_index_q_0> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_15> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_14> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_13> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_12> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_11> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_10> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_9> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_targetnumber_q_8> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <M_r_q_127> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_126> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_125> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_124> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_111> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_110> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_109> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_108> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_95> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_94> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_93> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_92> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_79> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_78> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_77> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_76> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_63> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_62> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_61> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_60> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_47> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_46> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_45> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_44> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_31> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_30> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_29> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_28> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_15> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_14> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_13> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_r_q_12> has a constant value of 0 in block <regfiles_11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <M_r_q_16> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_17> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_18> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_19> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_20> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_21> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_22> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_23> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_24> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_25> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_26> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_27> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_32> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_33> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_34> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_35> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_36> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_37> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_38> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_39> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_40> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_41> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_42> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_43> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_48> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_49> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_50> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_51> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_52> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_53> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_54> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_55> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_56> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_57> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_58> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_59> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_64> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_65> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_66> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_67> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_68> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_69> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_70> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_71> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_72> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_73> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_74> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_75> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_80> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_81> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_82> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_83> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_84> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_85> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_86> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_87> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_88> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_89> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_90> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_91> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_96> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_97> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_98> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_99> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_100> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_101> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_102> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_103> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_104> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_105> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_106> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_107> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_112> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_113> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_114> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_115> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_116> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_117> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_118> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_119> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_120> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_121> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_122> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2677 - Node <M_r_q_123> of sequential type is unconnected in block <regfiles_11>.
+WARNING:Xst:2973 - All outputs of instance <boolean> of block <boolean_16> are unconnected in block <alu_6>. Underlying logic will be removed.
+WARNING:Xst:2677 - Node <Mmult_n0022> of sequential type is unconnected in block <adder_15>.
+WARNING:Xst:2677 - Node <beta/game_controlunit/M_s_seg_display_dff_q_3> of sequential type is unconnected in block <mojo_top_0>.
 
 Optimizing unit <mojo_top_0> ...
 
-Optimizing unit <game_fsm_3> ...
+Optimizing unit <pn_gen_10> ...
 
-Optimizing unit <pn_gen_2> ...
-WARNING:Xst:2677 - Node <M_counter2_q_0> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_1> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_2> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_3> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_4> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_5> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_6> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_7> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_8> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_9> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_10> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_11> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_12> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_13> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_14> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_15> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_16> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_17> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_18> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_19> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_20> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_21> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_22> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_23> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_24> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_25> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_26> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_27> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_28> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_29> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_30> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_31> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_32> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_33> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_34> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_35> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_36> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_37> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_38> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_39> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_40> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_41> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_42> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_43> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_44> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_45> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_46> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_47> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_48> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_49> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_50> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_51> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_52> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_53> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_54> of sequential type is unconnected in block <mojo_top_0>.
-WARNING:Xst:2677 - Node <M_counter2_q_55> of sequential type is unconnected in block <mojo_top_0>.
+Optimizing unit <regfiles_11> ...
+
+Optimizing unit <adder_15> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 3.
-FlipFlop reset_cond/M_stage_q_3 has been replicated 2 time(s)
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 0.
 
 Final Macro Processing ...
+
+Processing Unit <mojo_top_0> :
+INFO:Xst:741 - HDL ADVISOR - A 4-bit shift register was found for signal <reset_cond/M_stage_q_3> and currently occupies 4 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <mojo_top_0> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 159
- Flip-Flops                                            : 159
+# Registers                                            : 23
+ Flip-Flops                                            : 23
 
 =========================================================================
 
@@ -735,7 +934,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 159   |
+clk                                | BUFGP                  | 23    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -747,8 +946,8 @@ Timing Summary:
 Speed Grade: -2
 
    Minimum period: 4.669ns (Maximum Frequency: 214.179MHz)
-   Minimum input arrival time before clock: 3.598ns
-   Maximum output required time after clock: 5.714ns
+   Minimum input arrival time before clock: 3.526ns
+   Maximum output required time after clock: 5.138ns
    Maximum combinational path delay: No path found
 
 =========================================================================

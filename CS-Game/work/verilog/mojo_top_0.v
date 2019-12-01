@@ -19,7 +19,7 @@ module mojo_top_0 (
     input avr_rx_busy,
     input [7:0] button,
     output reg [13:0] target,
-    output reg display_seg,
+    output reg [6:0] display_seg,
     output reg [2:0] display_sel
   );
   
@@ -34,60 +34,39 @@ module mojo_top_0 (
     .in(M_reset_cond_in),
     .out(M_reset_cond_out)
   );
-  wire [32-1:0] M_ran_num;
-  reg [1-1:0] M_ran_next;
-  reg [32-1:0] M_ran_seed;
-  pn_gen_2 ran (
+  wire [128-1:0] M_beta_s_seg_display;
+  wire [16-1:0] M_beta_target_display;
+  wire [1-1:0] M_beta_out;
+  reg [8-1:0] M_beta_button;
+  miniBeta_2 beta (
     .clk(clk),
     .rst(rst),
-    .next(M_ran_next),
-    .seed(M_ran_seed),
-    .num(M_ran_num)
-  );
-  wire [1-1:0] M_game_whetherstart;
-  wire [8-1:0] M_game_display;
-  wire [1-1:0] M_game_out;
-  wire [128-1:0] M_game_s_seg_display;
-  wire [16-1:0] M_game_target_display;
-  reg [32-1:0] M_game_ran;
-  reg [56-1:0] M_game_counter2;
-  reg [1-1:0] M_game_start;
-  reg [8-1:0] M_game_button;
-  game_fsm_3 game (
-    .clk(clk),
-    .rst(rst),
-    .ran(M_game_ran),
-    .counter2(M_game_counter2),
-    .start(M_game_start),
-    .button(M_game_button),
-    .whetherstart(M_game_whetherstart),
-    .display(M_game_display),
-    .out(M_game_out),
-    .s_seg_display(M_game_s_seg_display),
-    .target_display(M_game_target_display)
+    .button(M_beta_button),
+    .s_seg_display(M_beta_s_seg_display),
+    .target_display(M_beta_target_display),
+    .out(M_beta_out)
   );
   wire [7-1:0] M_numbersDisplay_seg;
   wire [3-1:0] M_numbersDisplay_sel;
   reg [32-1:0] M_numbersDisplay_values;
-  multi_seven_seg_4 numbersDisplay (
+  multi_seven_seg_3 numbersDisplay (
     .clk(clk),
     .rst(rst),
     .values(M_numbersDisplay_values),
     .seg(M_numbersDisplay_seg),
     .sel(M_numbersDisplay_sel)
   );
-  reg [55:0] M_counter2_d, M_counter2_q = 1'h0;
   
   wire [7-1:0] M_seven_seg1_segs;
   reg [4-1:0] M_seven_seg1_char;
-  seven_seg_5 seven_seg1 (
+  seven_seg_4 seven_seg1 (
     .char(M_seven_seg1_char),
     .segs(M_seven_seg1_segs)
   );
   
   wire [7-1:0] M_seven_seg2_segs;
   reg [4-1:0] M_seven_seg2_char;
-  seven_seg_5 seven_seg2 (
+  seven_seg_4 seven_seg2 (
     .char(M_seven_seg2_char),
     .segs(M_seven_seg2_segs)
   );
@@ -95,13 +74,8 @@ module mojo_top_0 (
   integer i;
   
   always @* begin
-    M_counter2_d = M_counter2_q;
-    
-    M_ran_seed = 1'h1;
-    M_ran_next = 1'h1;
-    M_game_ran = M_ran_num;
     for (i = 1'h0; i < 4'h8; i = i + 1) begin
-      M_game_button[(i)*1+0-:1] = button[(i)*1+0-:1];
+      M_beta_button[(i)*1+0-:1] = button[(i)*1+0-:1];
     end
     M_reset_cond_in = ~rst_n;
     rst = M_reset_cond_out;
@@ -109,33 +83,21 @@ module mojo_top_0 (
     spi_miso = 1'bz;
     spi_channel = 4'bzzzz;
     avr_rx = 1'bz;
-    M_game_counter2 = M_counter2_q;
     for (i = 1'h0; i < 4'h8; i = i + 1) begin
-      M_numbersDisplay_values[(i)*4+3-:4] = M_game_s_seg_display[(i)*16+15-:16];
+      M_numbersDisplay_values[(i)*4+3-:4] = 4'h8;
     end
     display_seg = ~M_numbersDisplay_seg;
     display_sel = ~M_numbersDisplay_sel;
-    if (M_game_target_display >= 4'h9) begin
-      M_seven_seg1_char = M_game_target_display - 4'ha;
+    if (M_beta_target_display >= 4'h9) begin
+      M_seven_seg1_char = M_beta_target_display - 4'ha;
       target[0+6-:7] = M_seven_seg1_segs;
       M_seven_seg2_char = 1'h1;
       target[7+6-:7] = M_seven_seg2_segs;
     end else begin
-      M_seven_seg1_char = M_game_target_display;
+      M_seven_seg1_char = M_beta_target_display;
       target[0+6-:7] = M_seven_seg1_segs;
       M_seven_seg2_char = 1'h0;
       target[7+6-:7] = M_seven_seg2_segs;
     end
-    M_game_start = 1'h1;
-    M_counter2_d = M_counter2_q + 1'h1;
   end
-  
-  always @(posedge clk) begin
-    if (rst == 1'b1) begin
-      M_counter2_q <= 1'h0;
-    end else begin
-      M_counter2_q <= M_counter2_d;
-    end
-  end
-  
 endmodule
