@@ -17,8 +17,7 @@ module miniBeta (
   .rst(rst){
     pn_gen ran;
     regfiles game_regfiles;
-    game_CU game_controlunit;
-    
+    game_CU game_controlunit;    
     }
   } 
   

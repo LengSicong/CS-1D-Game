@@ -8,9 +8,9 @@ var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "D:/ISE/14.7/ISE_DS/EDK/bin/nt64;D:/ISE/14.7/ISE_DS/EDK/lib/nt64;D:/ISE/14.7/ISE_DS/ISE/bin/nt64;D:/ISE/14.7/ISE_DS/ISE/lib/nt64;D:/ISE/14.7/ISE_DS/common/bin/nt64;D:/ISE/14.7/ISE_DS/common/lib/nt64;D:/ISE/14.7/ISE_DS/PlanAhead/bin;";
+  PathVal = "C:/Xilinx/14.7/ISE_DS/EDK/bin/nt64;C:/Xilinx/14.7/ISE_DS/EDK/lib/nt64;C:/Xilinx/14.7/ISE_DS/ISE/bin/nt64;C:/Xilinx/14.7/ISE_DS/ISE/lib/nt64;C:/Xilinx/14.7/ISE_DS/common/bin/nt64;C:/Xilinx/14.7/ISE_DS/common/lib/nt64;C:/Xilinx/14.7/ISE_DS/PlanAhead/bin;";
 } else {
-  PathVal = "D:/ISE/14.7/ISE_DS/EDK/bin/nt64;D:/ISE/14.7/ISE_DS/EDK/lib/nt64;D:/ISE/14.7/ISE_DS/ISE/bin/nt64;D:/ISE/14.7/ISE_DS/ISE/lib/nt64;D:/ISE/14.7/ISE_DS/common/bin/nt64;D:/ISE/14.7/ISE_DS/common/lib/nt64;D:/ISE/14.7/ISE_DS/PlanAhead/bin;" + PathVal;
+  PathVal = "C:/Xilinx/14.7/ISE_DS/EDK/bin/nt64;C:/Xilinx/14.7/ISE_DS/EDK/lib/nt64;C:/Xilinx/14.7/ISE_DS/ISE/bin/nt64;C:/Xilinx/14.7/ISE_DS/ISE/lib/nt64;C:/Xilinx/14.7/ISE_DS/common/bin/nt64;C:/Xilinx/14.7/ISE_DS/common/lib/nt64;C:/Xilinx/14.7/ISE_DS/PlanAhead/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;

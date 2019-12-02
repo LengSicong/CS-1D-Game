@@ -48,30 +48,34 @@ NET "display_seg[5]" IOSTANDARD = LVTTL;
 NET "display_seg[6]" LOC = P24;
 NET "display_seg[6]" IOSTANDARD = LVTTL;
 
-NET "target[1]" LOC = P40;
+NET "target[0]" LOC = P95;
+NET "target[0]" IOSTANDARD = LVTTL;
+NET "target[1]" LOC = P98;
 NET "target[1]" IOSTANDARD = LVTTL;
-NET "target[3]" LOC = P32;
+NET "target[2]" LOC = P100;
+NET "target[2]" IOSTANDARD = LVTTL;
+NET "target[3]" LOC = P102;
 NET "target[3]" IOSTANDARD = LVTTL;
-NET "target[4]" LOC = P29;
+NET "target[4]" LOC = P105;
 NET "target[4]" IOSTANDARD = LVTTL;
-NET "target[5]" LOC = P26;
+NET "target[5]" LOC = P112;
 NET "target[5]" IOSTANDARD = LVTTL;
-NET "target[6]" LOC = P23;
+NET "target[6]" LOC = P115;
 NET "target[6]" IOSTANDARD = LVTTL;
-NET "target[7]" LOC = P21;
-NET "target[7]" IOSTANDARD = LVTTL;
 
-NET "target[8]" LOC = P16;
+NET "target[7]" LOC = P58;
+NET "target[7]" IOSTANDARD = LVTTL;
+NET "target[8]" LOC = P67;
 NET "target[8]" IOSTANDARD = LVTTL;
-NET "target[9]" LOC = P14;
+NET "target[9]" LOC = P75;
 NET "target[9]" IOSTANDARD = LVTTL;
-NET "target[10]" LOC = P11;
+NET "target[10]" LOC = P79;
 NET "target[10]" IOSTANDARD = LVTTL;
-NET "target[11]" LOC = P9;
+NET "target[11]" LOC = P81;
 NET "target[11]" IOSTANDARD = LVTTL;
-NET "target[12]" LOC = P7;
+NET "target[12]" LOC = P83;
 NET "target[12]" IOSTANDARD = LVTTL;
-NET "target[13]" LOC = P5;
+NET "target[13]" LOC = P85;
 NET "target[13]" IOSTANDARD = LVTTL;
 
 ####################################################################################

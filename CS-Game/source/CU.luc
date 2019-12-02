@@ -22,15 +22,14 @@ module game_CU (
     output timer_start  // to tell the timer to start counting
   ) {
   .clk(clk){
-     edge_detector edge_detector[8](#RISE(1), #FALL(0));
-     button_conditioner button_cond[8];
+ 
     .rst(rst){
     dff s_seg_display_dff[8][16];
     dff target_display_dff[16];
-    dff little_timer[20];
+    dff little_timer[30];
     dff numIncre[20];
     fsm state = {IDLE, RANDOM_TARGET,INIT_ADD, INIT_SUBSTRACT, 
-    RANDOM_CARDS1_ADD,RANDOM_CARDS1_SUB,RANDOM_CARDS2_ADD,RANDOM_CARDS2_SUB,
+    RANDOM_CARDS1_ADD,RANDOM_CARDS1_SUB, TEST, RANDOM_CARDS2_ADD,RANDOM_CARDS2_SUB,
     GAME11,GAME12,GAME21,GAME22,CHECKOP,ADD,SUB,COMP,DISPLAY, UNPAIRED, WIN, LOSE };
     }}
   var i;
@@ -39,10 +38,7 @@ module game_CU (
     target_display = target_display_dff.q;  
         
     timer_start = 0;
-    for (i = 0; i<8; i++)
-      button_cond.in[i] = button[i];
-    for (i = 0; i<8; i++)
-      edge_detector.in[i] = button_cond.out[i];
+ 
     
     alufn = 0;
     wdsel = 0;
@@ -54,13 +50,13 @@ module game_CU (
     
     case(state.q){
       state.IDLE:
-        s_seg_display_dff.d = 8x{{16h0008}}; // init all the 7 segment display to be null (which is indicated as 20 in seven_seg module)
+        s_seg_display_dff.d = 8x{{16h0}}; // init all the 7 segment display 
         target_display_dff.d = 0;
         if (start == b1) 
          state.d = state.RANDOM_TARGET;
                 
       state.RANDOM_TARGET:
-        
+        s_seg_display_dff.d = 8x{{16h1}};
         if (ran[3:0]<=12 && ran[3:0]>=7){ // if random to add operation 
    
           wdsel = b11;
@@ -83,6 +79,7 @@ module game_CU (
           } 
             
       state.INIT_ADD:
+        s_seg_display_dff.d = 8x{{16h4}};
         wdsel = b11;
         write_address = b1000;
         we = 1;
@@ -90,23 +87,27 @@ module game_CU (
         state.d = state.RANDOM_CARDS1_ADD;  
       
       state.INIT_SUBSTRACT:
+        s_seg_display_dff.d = 8x{{16h4}};
         wdsel = b11;
         write_address = b1000;
         we = 1;
         cu_output_data = b1;          
         state.d = state.RANDOM_CARDS1_SUB;  
         
-      state.RANDOM_CARDS1_ADD:
+      state.RANDOM_CARDS1_ADD:  
         if (ran[3:0]>=0 && ran[3:0]<=7){
           read_address_a = ran[3:0];
-          if (ra_data == hfff) {
+          if (s_seg_display_dff.q[ran[3:0]] == h4) {
+            s_seg_display_dff.d[ran[3:0]] = h5;
             wdsel = b11;
             write_address = ran[3:0];
             we = 1;
-            cu_output_data = numIncre.q;
+            cu_output_data = numIncre.q + 3;
             numIncre.d = numIncre.q + 1;
-            if (numIncre.q==3)
+            if (numIncre.q==3){
+              numIncre.d =3;
               state.d = state.RANDOM_CARDS2_ADD;
+            }  
           }
           
         }
@@ -114,67 +115,84 @@ module game_CU (
       state.RANDOM_CARDS1_SUB:
         if (ran[3:0]>=0 && ran[3:0]<=7){
           read_address_a = ran[3:0];
-          if (ra_data == hfff) {
+          if (s_seg_display_dff.q[ran[3:0]] == h4) {
+            s_seg_display_dff.d[ran[3:0]] = h5;
             wdsel = b11;
             write_address = ran[3:0];
             we = 1;
             cu_output_data = numIncre.q;
             numIncre.d = numIncre.q + 1;
-            if (numIncre.q==3)
+            if (numIncre.q==3){
+              numIncre.d = 3;
               state.d = state.RANDOM_CARDS2_SUB;
+            }
           }
           
         }           
          
-      
+      state.TEST:
+        state.d = state.TEST;
+        
       state.RANDOM_CARDS2_ADD:
-       
+        
         if (ran[3:0]>=0 && ran[3:0]<=7){
           read_address_a = ran[3:0];
           read_address_b = b1111;
-          if (ra_data == hfff){
+          if (s_seg_display_dff.q[ran[3:0]] == h4){
           // if addition, distribute targetnumber-numIncre to a random location
+            s_seg_display_dff.d[ran[3:0]] = h5;
             wdsel = b11;
             write_address = ran[3:0];
             we = 1;
-            cu_output_data = rb_data - numIncre.q; 
+            cu_output_data = target_display_dff.q - numIncre.q - 3; 
             numIncre.d = numIncre.q - 1;  
-            if (numIncre.q==0) // at the same time, the use for numIncre becomes count of number of cards that are paired 
+            if (numIncre.q == 0) // at the same time, the use for numIncre becomes count of number of cards that are paired 
               {
+              numIncre.d = 0;
               timer_start = 1; // start the timer
+              s_seg_display_dff.d = 8x{{16h14}}; // write 20 to display(which is null)
               state.d = state.GAME11;  // all INIT finished, start the game              
               }
             
           }    
-        }  
-        
-        
+        }
+              
+       
+      state.RANDOM_CARDS2_SUB:  
           
-      state.RANDOM_CARDS2_SUB:       
         if (ran[3:0]>=0 && ran[3:0]<=7){
           read_address_a = ran[3:0];
           read_address_b = b1111;
-          if (ra_data == hfff){
+          if (s_seg_display_dff.q[ran[3:0]] == h4){
           // if substraction, distribute targetnumber+numIncre to a random location 
+            s_seg_display_dff.d[ran[3:0]] = h5;
             wdsel = b11;
             write_address = ran[3:0];
             we = 1;
-            cu_output_data = rb_data + numIncre.q; 
+            cu_output_data = target_display_dff.q + numIncre.q; 
             numIncre.d = numIncre.q - 1; 
-            if (numIncre.q==0){
+            if (numIncre.q == 0){
+              numIncre.d =0;
               timer_start = 1; // start the timer
+              s_seg_display_dff.d = 8x{{16h14}} ; // write 20 to display(which is null)
               state.d = state.GAME11; // all INIT finished, start the game
             }  
           }    
         }
+        /*
+        if (s_seg_display_dff.q == 8x{{16h5}}){
+          timer_start = 1; // start the timer
+          s_seg_display_dff.d = 8x{{16h14}};
+          state.d = state.GAME11;  // all INIT finished, start the game            
+        } */    
       
       state.GAME11: // GAME start
         for (i=0;i<8;i++)
-          if (edge_detector.out[i]){
+          if (button[i]){
             read_address_a = i;
             if (s_seg_display_dff.q[i] == 20){
               wdsel = b11;
-              write_address = b1001;
+              write_address = b1001; // save the ra index
               we = 1;
               cu_output_data = i;
               s_seg_display_dff.d[i] = ra_data;
@@ -197,7 +215,7 @@ module game_CU (
        
      state.GAME21:
         for (i=0;i<8;i++)
-          if (edge_detector.out[i]){
+          if (button[i]){
             read_address_a = i;
             read_address_b = b1001;
             if (s_seg_display_dff.q[i] == 20 && rb_data != i){
@@ -263,11 +281,11 @@ module game_CU (
       state.DISPLAY:
         little_timer.d = little_timer.q + 1;
   
-        if (little_timer.q[19] == 1) {
+        if (little_timer.q[25] == 1) {
           read_address_a = b1100; // read the result of compare
           if (ra_data){
             numIncre.d = numIncre.q+1;
-            if (numIncre.q == 4)
+            if (numIncre.q == 3)
               state.d = state.WIN;
             else
               state.d = state.GAME11;  

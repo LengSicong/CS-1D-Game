@@ -8,40 +8,46 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Sun Dec 01 15:06:25 2019
+Mapped Date    : Mon Dec 02 18:13:33 2019
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    6
 Slice Logic Utilization:
-  Number of Slice Registers:                    23 out of  11,440    1%
-    Number used as Flip Flops:                  23
+  Number of Slice Registers:                   806 out of  11,440    7%
+    Number used as Flip Flops:                 793
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
-    Number used as AND/OR logics:                0
-  Number of Slice LUTs:                         45 out of   5,720    1%
-    Number used as logic:                       44 out of   5,720    1%
-      Number using O6 output only:              26
-      Number using O5 output only:              17
-      Number using O5 and O6:                    1
+    Number used as AND/OR logics:               13
+  Number of Slice LUTs:                      1,656 out of   5,720   28%
+    Number used as logic:                    1,628 out of   5,720   28%
+      Number using O6 output only:           1,233
+      Number using O5 output only:             238
+      Number using O5 and O6:                  157
       Number used as ROM:                        0
-    Number used as Memory:                       0 out of   1,440    0%
-    Number used exclusively as route-thrus:      1
-      Number with same-slice register load:      0
-      Number with same-slice carry load:         1
+    Number used as Memory:                       4 out of   1,440    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:             4
+        Number using O6 output only:             0
+        Number using O5 output only:             0
+        Number using O5 and O6:                  4
+    Number used exclusively as route-thrus:     24
+      Number with same-slice register load:     10
+      Number with same-slice carry load:        14
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    18 out of   1,430    1%
-  Number of MUXCYs used:                        20 out of   2,860    1%
-  Number of LUT Flip Flop pairs used:           49
-    Number with an unused Flip Flop:            26 out of      49   53%
-    Number with an unused LUT:                   4 out of      49    8%
-    Number of fully used LUT-FF pairs:          19 out of      49   38%
-    Number of unique control sets:               2
+  Number of occupied Slices:                   542 out of   1,430   37%
+  Number of MUXCYs used:                       372 out of   2,860   13%
+  Number of LUT Flip Flop pairs used:        1,682
+    Number with an unused Flip Flop:           925 out of   1,682   54%
+    Number with an unused LUT:                  26 out of   1,682    1%
+    Number of fully used LUT-FF pairs:         731 out of   1,682   43%
+    Number of unique control sets:              22
     Number of slice register sites lost
-      to control set restrictions:               9 out of  11,440    1%
+      to control set restrictions:              71 out of  11,440    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -50,8 +56,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        48 out of     102   47%
-    Number of LOCed IOBs:                       43 out of      48   89%
+  Number of bonded IOBs:                        45 out of     102   44%
+    Number of LOCed IOBs:                       45 out of      45  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -78,11 +84,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                1.42
+Average Fanout of Non-Clock Nets:                4.65
 
-Peak Memory Usage:  4507 MB
-Total REAL time to MAP completion:  3 secs 
-Total CPU time to MAP completion (all processors):   3 secs 
+Peak Memory Usage:  4531 MB
+Total REAL time to MAP completion:  25 secs 
+Total CPU time to MAP completion (all processors):   30 secs 
 
 Table of Contents
 -----------------
@@ -124,8 +130,8 @@ INFO:Map:284 - Map is running with the multi-threading option on. Map currently
    supports the use of up to 2 processors. Based on the the user options and
    machine load, Map will use 2 processors during this run.
 INFO:LIT:243 - Logical network avr_rx_busy_IBUF has no load.
-INFO:LIT:395 - The above info message is repeated 13 more times for the
-   following (max. 5 shown):
+INFO:LIT:395 - The above info message is repeated 5 more times for the following
+   (max. 5 shown):
    spi_mosi_IBUF,
    spi_ss_IBUF,
    spi_sck_IBUF,
@@ -142,19 +148,30 @@ INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
    1.260 Volts)
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
-INFO:Place:834 - Only a subset of IOs are locked. Out of 48 IOs, 43 are locked
-   and 5 are not locked. If you would like to print the names of these IOs,
-   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
 INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-  12 block(s) removed
-   5 block(s) optimized away
+  13 block(s) removed
+  45 block(s) optimized away
    6 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block
+"beta/game_controlunit/Msub_GND_17_o_GND_17_o_sub_495_OUT<15:0>15" (ROM)
+removed.
 
 The trimmed logic reported below is either:
    1. part of a cycle
@@ -184,6 +201,46 @@ Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
+VCC 		beta/CC
+GND 		beta/ND
+GND 		beta/button_cond_gen_0[0].button_cond/XST_GND
+VCC 		beta/button_cond_gen_0[0].button_cond/XST_VCC
+GND 		beta/button_cond_gen_0[0].button_cond/sync/XST_GND
+VCC 		beta/button_cond_gen_0[0].button_cond/sync/XST_VCC
+GND 		beta/button_cond_gen_0[1].button_cond/XST_GND
+VCC 		beta/button_cond_gen_0[1].button_cond/XST_VCC
+GND 		beta/button_cond_gen_0[1].button_cond/sync/XST_GND
+VCC 		beta/button_cond_gen_0[1].button_cond/sync/XST_VCC
+GND 		beta/button_cond_gen_0[2].button_cond/XST_GND
+VCC 		beta/button_cond_gen_0[2].button_cond/XST_VCC
+GND 		beta/button_cond_gen_0[2].button_cond/sync/XST_GND
+VCC 		beta/button_cond_gen_0[2].button_cond/sync/XST_VCC
+GND 		beta/button_cond_gen_0[3].button_cond/XST_GND
+VCC 		beta/button_cond_gen_0[3].button_cond/XST_VCC
+GND 		beta/button_cond_gen_0[3].button_cond/sync/XST_GND
+VCC 		beta/button_cond_gen_0[3].button_cond/sync/XST_VCC
+GND 		beta/button_cond_gen_0[4].button_cond/XST_GND
+VCC 		beta/button_cond_gen_0[4].button_cond/XST_VCC
+GND 		beta/button_cond_gen_0[4].button_cond/sync/XST_GND
+VCC 		beta/button_cond_gen_0[4].button_cond/sync/XST_VCC
+GND 		beta/button_cond_gen_0[5].button_cond/XST_GND
+VCC 		beta/button_cond_gen_0[5].button_cond/XST_VCC
+GND 		beta/button_cond_gen_0[5].button_cond/sync/XST_GND
+VCC 		beta/button_cond_gen_0[5].button_cond/sync/XST_VCC
+GND 		beta/button_cond_gen_0[6].button_cond/XST_GND
+VCC 		beta/button_cond_gen_0[6].button_cond/XST_VCC
+GND 		beta/button_cond_gen_0[6].button_cond/sync/XST_GND
+VCC 		beta/button_cond_gen_0[6].button_cond/sync/XST_VCC
+GND 		beta/button_cond_gen_0[7].button_cond/XST_GND
+VCC 		beta/button_cond_gen_0[7].button_cond/XST_VCC
+GND 		beta/button_cond_gen_0[7].button_cond/sync/XST_GND
+VCC 		beta/button_cond_gen_0[7].button_cond/sync/XST_VCC
+GND 		beta/game_alu/compare/XST_GND
+VCC 		beta/game_alu/compare/XST_VCC
+GND 		beta/game_controlunit/XST_GND
+VCC 		beta/game_controlunit/XST_VCC
+GND 		beta/timer/ctr/XST_GND
+VCC 		beta/timer/ctr/XST_VCC
 GND 		numbersDisplay/ctr/XST_GND
 VCC 		numbersDisplay/ctr/XST_VCC
 GND 		reset_cond/XST_GND
@@ -200,14 +257,14 @@ Section 6 - IOB Properties
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | avr_rx_busy                        | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
 | avr_tx                             | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
-| button(0)                          | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
-| button(1)                          | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
-| button(2)                          | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
-| button(3)                          | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
-| button(4)                          | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
-| button(5)                          | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
-| button(6)                          | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
-| button(7)                          | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
+| button[0]                          | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
+| button[1]                          | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
+| button[2]                          | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
+| button[3]                          | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
+| button[4]                          | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
+| button[5]                          | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
+| button[6]                          | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
+| button[7]                          | IOB              | INPUT     | LVTTL                |       |          |      |              | PULLDOWN |          |
 | cclk                               | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
 | clk                                | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
 | display_seg[0]                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
@@ -217,9 +274,6 @@ Section 6 - IOB Properties
 | display_seg[4]                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | display_seg[5]                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | display_seg[6]                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
-| display_sel[0]                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| display_sel[1]                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| display_sel[2]                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | led[0]                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | led[1]                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | led[2]                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
@@ -232,9 +286,9 @@ Section 6 - IOB Properties
 | spi_mosi                           | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
 | spi_sck                            | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
 | spi_ss                             | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
-| target[0]                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| target[0]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | target[1]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
-| target[2]                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| target[2]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | target[3]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | target[4]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
 | target[5]                          | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |

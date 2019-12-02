@@ -6,15 +6,14 @@
     <src>Regfiles.luc</src>
     <src>timer.luc</src>
     <src>CU.luc</src>
-    <src>littletimer.luc</src>
     <src>miniBeta.luc</src>
     <src>compare.luc</src>
     <src>multi_seven_seg.luc</src>
     <src top="true">mojo_top.luc</src>
     <src>shifter.luc</src>
     <src>seven_seg.luc</src>
-    <src>Game_fsm.luc</src>
     <src>adder.luc</src>
+    <src>Game_fsm.luc</src>
     <ucf>Custom.ucf</ucf>
     <ucf lib="true">mojo.ucf</ucf>
     <component>pn_gen.luc</component>

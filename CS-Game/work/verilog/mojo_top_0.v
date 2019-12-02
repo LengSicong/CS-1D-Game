@@ -19,8 +19,7 @@ module mojo_top_0 (
     input avr_rx_busy,
     input [7:0] button,
     output reg [13:0] target,
-    output reg [6:0] display_seg,
-    output reg [2:0] display_sel
+    output reg [6:0] display_seg
   );
   
   
@@ -48,7 +47,7 @@ module mojo_top_0 (
   );
   wire [7-1:0] M_numbersDisplay_seg;
   wire [3-1:0] M_numbersDisplay_sel;
-  reg [32-1:0] M_numbersDisplay_values;
+  reg [128-1:0] M_numbersDisplay_values;
   multi_seven_seg_3 numbersDisplay (
     .clk(clk),
     .rst(rst),
@@ -58,14 +57,14 @@ module mojo_top_0 (
   );
   
   wire [7-1:0] M_seven_seg1_segs;
-  reg [4-1:0] M_seven_seg1_char;
+  reg [16-1:0] M_seven_seg1_char;
   seven_seg_4 seven_seg1 (
     .char(M_seven_seg1_char),
     .segs(M_seven_seg1_segs)
   );
   
   wire [7-1:0] M_seven_seg2_segs;
-  reg [4-1:0] M_seven_seg2_char;
+  reg [16-1:0] M_seven_seg2_char;
   seven_seg_4 seven_seg2 (
     .char(M_seven_seg2_char),
     .segs(M_seven_seg2_segs)
@@ -84,20 +83,20 @@ module mojo_top_0 (
     spi_channel = 4'bzzzz;
     avr_rx = 1'bz;
     for (i = 1'h0; i < 4'h8; i = i + 1) begin
-      M_numbersDisplay_values[(i)*4+3-:4] = 4'h8;
+      M_numbersDisplay_values[(i)*16+15-:16] = M_beta_s_seg_display[(i)*16+15-:16];
     end
     display_seg = ~M_numbersDisplay_seg;
-    display_sel = ~M_numbersDisplay_sel;
-    if (M_beta_target_display >= 4'h9) begin
+    led[0+2-:3] = ~M_numbersDisplay_sel;
+    if (M_beta_target_display > 4'h9) begin
       M_seven_seg1_char = M_beta_target_display - 4'ha;
-      target[0+6-:7] = M_seven_seg1_segs;
+      target[0+6-:7] = ~M_seven_seg1_segs;
       M_seven_seg2_char = 1'h1;
-      target[7+6-:7] = M_seven_seg2_segs;
+      target[7+6-:7] = ~M_seven_seg2_segs;
     end else begin
       M_seven_seg1_char = M_beta_target_display;
-      target[0+6-:7] = M_seven_seg1_segs;
+      target[0+6-:7] = ~M_seven_seg1_segs;
       M_seven_seg2_char = 1'h0;
-      target[7+6-:7] = M_seven_seg2_segs;
+      target[7+6-:7] = ~M_seven_seg2_segs;
     end
   end
 endmodule

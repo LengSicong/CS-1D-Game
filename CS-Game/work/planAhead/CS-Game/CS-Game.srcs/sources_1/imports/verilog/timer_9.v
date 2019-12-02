@@ -12,7 +12,7 @@ module timer_9 (
   
   
   
-  wire [6-1:0] M_ctr_value;
+  wire [8-1:0] M_ctr_value;
   counter_20 ctr (
     .clk(clk),
     .rst(rst),
@@ -24,7 +24,7 @@ module timer_9 (
     M_result_d = M_result_q;
     
     out = M_result_q;
-    if (M_ctr_value[5+0-:1] == 1'h1) begin
+    if (M_ctr_value[7+0-:1] == 1'h1) begin
       M_result_d = 1'h1;
     end else begin
       M_result_d = 1'h0;

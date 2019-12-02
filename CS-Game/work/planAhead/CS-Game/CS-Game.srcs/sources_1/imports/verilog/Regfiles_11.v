@@ -43,7 +43,7 @@ module regfiles_11 (
       M_r_d = 128'h0fff0fff0fff0fff0fff0fff0fff0fff;
     end
     if (we) begin
-      if (write_address < 3'h7) begin
+      if (write_address <= 3'h7) begin
         M_r_d[(write_address)*16+15-:16] = wdata;
       end else begin
         
@@ -72,7 +72,7 @@ module regfiles_11 (
         endcase
       end
     end
-    if (read_address_a < 3'h7) begin
+    if (read_address_a <= 3'h7) begin
       ra_data = M_r_q[(read_address_a)*16+15-:16];
     end else begin
       
@@ -100,7 +100,7 @@ module regfiles_11 (
         end
       endcase
     end
-    if (read_address_b < 3'h7) begin
+    if (read_address_b <= 3'h7) begin
       rb_data = M_r_q[(read_address_b)*16+15-:16];
     end else begin
       

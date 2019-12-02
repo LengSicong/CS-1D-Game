@@ -37,7 +37,7 @@ module regfiles (
      
       }
     if (we){
-      if (write_address<7)
+      if (write_address<=7)
         r.d[write_address] = wdata;
       else 
         case(write_address){
@@ -52,7 +52,7 @@ module regfiles (
     }
     
     // read_port_a
-    if (read_address_a<7)
+    if (read_address_a<=7)
         ra_data = r.q[read_address_a];
       else 
         case(read_address_a){
@@ -66,7 +66,7 @@ module regfiles (
         }    
       
     // read_port_b  
-    if (read_address_b<7)
+    if (read_address_b<=7)
         rb_data = r.q[read_address_b];
       else 
         case(read_address_b){

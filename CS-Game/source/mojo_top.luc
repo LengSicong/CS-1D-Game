@@ -1,7 +1,8 @@
 module mojo_top (
     input clk,              // 50MHz clock
     input rst_n,            // reset button (active low)
-    output led [8],         // 8 user controllable LEDs
+    // led[2:0] utilized as our external 7 segment selector
+    output led [8],         // 8 user controllable LEDs //
     input cclk,             // configuration clock, AVR ready when high
     output spi_miso,        // AVR SPI MISO
     input spi_ss,           // AVR SPI Slave Select
@@ -19,8 +20,8 @@ module mojo_top (
     
     input button[8],
     output target[2][7], // target numbersDisplay
-    output display_seg[7],
-    output display_sel[3]
+    output display_seg[7]
+    //output display_sel[3]
      
 ) {
   
@@ -60,22 +61,22 @@ module mojo_top (
     avr_rx = bz;            // not using serial port
     
     for (i=0;i<8;i++)
-      numbersDisplay.values[i] = 8;
-      //numbersDisplay.values[i] = beta.s_seg_display[i];
+      //numbersDisplay.values[i] = 8;
+      numbersDisplay.values[i] = beta.s_seg_display[i];
     
     display_seg = ~numbersDisplay.seg;
-    display_sel = ~numbersDisplay.sel;
+    led[2:0] = ~numbersDisplay.sel;
     
-    if (beta.target_display>=9){
+    if (beta.target_display>9){
       seven_seg1.char = beta.target_display-10;
-      target[0] = seven_seg1.segs;
+      target[0] = ~seven_seg1.segs;
       seven_seg2.char = 1;
-      target[1] = seven_seg2.segs;
+      target[1] = ~seven_seg2.segs;
       } else{
       seven_seg1.char = beta.target_display;
-      target[0] = seven_seg1.segs;
+      target[0] = ~seven_seg1.segs;
       seven_seg2.char = 0;
-      target[1] = seven_seg2.segs;
+      target[1] = ~seven_seg2.segs;
     }  
     
   
