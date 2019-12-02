@@ -42,7 +42,7 @@ module seven_seg_4 (
         segs = 7'h7f;
       end
       4'h9: begin
-        segs = 7'h67;
+        segs = 7'h6f;
       end
       4'ha: begin
         segs = 7'h73;

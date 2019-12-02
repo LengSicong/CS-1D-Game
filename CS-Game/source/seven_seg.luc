@@ -14,7 +14,7 @@ module seven_seg (
       6: segs = 7b1111101;
       7: segs = 7b0000111;
       8: segs = 7b1111111;
-      9: segs = 7b1100111;
+      9: segs = 7b1101111;
       10: segs = 7b1110011;  // P
       11: segs = 7b1110111;  // A
       12: segs = 7b1101101; // S

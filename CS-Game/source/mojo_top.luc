@@ -20,7 +20,8 @@ module mojo_top (
     
     input button[8],
     output target[2][7], // target numbersDisplay
-    output display_seg[7]
+    output display_seg[7],
+    output opr_display  // display for operation LED
     //output display_sel[3]
      
 ) {
@@ -66,6 +67,7 @@ module mojo_top (
     
     display_seg = ~numbersDisplay.seg;
     led[2:0] = ~numbersDisplay.sel;
+    opr_display = beta.opr_display;
     
     if (beta.target_display>9){
       seven_seg1.char = beta.target_display-10;

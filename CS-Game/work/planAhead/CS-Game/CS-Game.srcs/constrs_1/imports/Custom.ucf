@@ -30,3 +30,5 @@ NET "target<10>" LOC = P79 | IOSTANDARD = LVTTL;
 NET "target<11>" LOC = P81 | IOSTANDARD = LVTTL;
 NET "target<12>" LOC = P83 | IOSTANDARD = LVTTL;
 NET "target<13>" LOC = P85 | IOSTANDARD = LVTTL;
+
+NET "opr_display" LOC = P121 | IOSTANDARD = LVTTL;

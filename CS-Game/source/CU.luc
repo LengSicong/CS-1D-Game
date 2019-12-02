@@ -10,6 +10,7 @@ module game_CU (
     
     output s_seg_display[8][16], // display for seven segments of 8 card numbers
     output target_display[16], // display for seven segments of target nuber
+    output opr_display[1], // display for operation LED
     output alufn[6],
     output wdsel[2],
     output write_address[4], // write address
@@ -26,6 +27,7 @@ module game_CU (
     .rst(rst){
     dff s_seg_display_dff[8][16];
     dff target_display_dff[16];
+    dff opr_display_dff[1];
     dff little_timer[30];
     dff numIncre[20];
     fsm state = {IDLE, RANDOM_TARGET,INIT_ADD, INIT_SUBSTRACT, 
@@ -36,7 +38,7 @@ module game_CU (
   always {
     s_seg_display = s_seg_display_dff.q;
     target_display = target_display_dff.q;  
-        
+    opr_display = opr_display_dff.q[0];    
     timer_start = 0;
  
     
@@ -52,13 +54,14 @@ module game_CU (
       state.IDLE:
         s_seg_display_dff.d = 8x{{16h0}}; // init all the 7 segment display 
         target_display_dff.d = 0;
+        opr_display_dff.d[0] = 0;
         if (start == b1) 
          state.d = state.RANDOM_TARGET;
                 
       state.RANDOM_TARGET:
         s_seg_display_dff.d = 8x{{16h1}};
         if (ran[3:0]<=12 && ran[3:0]>=7){ // if random to add operation 
-   
+          opr_display_dff.d[0] = 1; 
           wdsel = b11;
           write_address = b1111;
           we = 1;
@@ -68,7 +71,7 @@ module game_CU (
           state.d = state.INIT_ADD;
           }
         if (ran[3:0]<=6 && ran[3:0]>=0){ // if random to substract operation
-
+          opr_display_dff.d[0] = 0;
           wdsel = b11;
           write_address = b1111;
           we = 1;
@@ -91,7 +94,7 @@ module game_CU (
         wdsel = b11;
         write_address = b1000;
         we = 1;
-        cu_output_data = b1;          
+        cu_output_data = b0;          
         state.d = state.RANDOM_CARDS1_SUB;  
         
       state.RANDOM_CARDS1_ADD:  
@@ -255,7 +258,6 @@ module game_CU (
         wdsel = b00;
         write_address = b1100;
         state.d = state.COMP;
-        state.d = state.COMP;
         
       state.SUB:
         read_address_a = b1101;
@@ -264,7 +266,6 @@ module game_CU (
         we = 1;
         wdsel = b00;
         write_address = b1100;
-        state.d = state.COMP;
         state.d = state.COMP;
         
       state.COMP:
