@@ -13,7 +13,7 @@ module mojo_top (
     output avr_rx,          // AVR RX (FPGA TX)
     input avr_rx_busy,       // AVR RX buffer full
     //output io_led [3][8],   // LEDs on IO Shield
-    //output io_seg [8],      // 7-segment LEDs on IO Shield
+    //output io_seg [8],      // 7-segment LEDs on IO Shield00
     //output io_sel [4],      // Digit select on IO Shield
     //input io_button [5],    // 5 buttons on IO Shield
     //input io_dip [3][8],     // DIP switches on IO Shield
@@ -21,7 +21,8 @@ module mojo_top (
     input button[8],
     output target[2][7], // target numbersDisplay
     output display_seg[7],
-    output opr_display  // display for operation LED
+    output opr_display_add,  // display for addition operation LED
+    output opr_display_sub // display for substraction operation LED 
     //output display_sel[3]
      
 ) {
@@ -67,7 +68,8 @@ module mojo_top (
     
     display_seg = ~numbersDisplay.seg;
     led[2:0] = ~numbersDisplay.sel;
-    opr_display = beta.opr_display;
+    opr_display_add = beta.opr_display_add;
+    opr_display_sub = beta.opr_display_sub;
     
     if (beta.target_display>9){
       seven_seg1.char = beta.target_display-10;

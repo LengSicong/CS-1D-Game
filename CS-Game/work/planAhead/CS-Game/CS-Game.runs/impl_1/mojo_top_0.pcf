@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Dec 02 19:12:18 2019
+// Written by: Map P.20131013 on Tue Dec 03 21:05:55 2019
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -21,7 +21,6 @@ COMP "button[5]" LOCATE = SITE "P82" LEVEL 1;
 COMP "button[6]" LOCATE = SITE "P84" LEVEL 1;
 COMP "button[7]" LOCATE = SITE "P87" LEVEL 1;
 COMP "avr_rx_busy" LOCATE = SITE "P39" LEVEL 1;
-COMP "opr_display" LOCATE = SITE "P121" LEVEL 1;
 COMP "target[0]" LOCATE = SITE "P95" LEVEL 1;
 COMP "target[1]" LOCATE = SITE "P98" LEVEL 1;
 COMP "target[2]" LOCATE = SITE "P100" LEVEL 1;
@@ -36,9 +35,7 @@ COMP "led[0]" LOCATE = SITE "P134" LEVEL 1;
 COMP "led[1]" LOCATE = SITE "P133" LEVEL 1;
 COMP "led[2]" LOCATE = SITE "P132" LEVEL 1;
 COMP "led[3]" LOCATE = SITE "P131" LEVEL 1;
-COMP "led[4]" LOCATE = SITE "P127" LEVEL 1;
 COMP "led[5]" LOCATE = SITE "P126" LEVEL 1;
-COMP "led[6]" LOCATE = SITE "P124" LEVEL 1;
 COMP "led[7]" LOCATE = SITE "P123" LEVEL 1;
 COMP "avr_tx" LOCATE = SITE "P55" LEVEL 1;
 COMP "display_seg[0]" LOCATE = SITE "P51" LEVEL 1;
@@ -50,6 +47,8 @@ COMP "display_seg[5]" LOCATE = SITE "P27" LEVEL 1;
 COMP "display_seg[6]" LOCATE = SITE "P24" LEVEL 1;
 COMP "spi_ss" LOCATE = SITE "P48" LEVEL 1;
 COMP "spi_mosi" LOCATE = SITE "P44" LEVEL 1;
+COMP "opr_display_add" LOCATE = SITE "P124" LEVEL 1;
+COMP "opr_display_sub" LOCATE = SITE "P127" LEVEL 1;
 TIMEGRP clk = BEL "beta/edge_detector_gen_0[2].edge_detector/M_last_q" BEL
         "beta/game_regfiles/M_r_q_12" BEL "beta/game_regfiles/M_r_q_13" BEL
         "beta/game_regfiles/M_r_q_14" BEL "beta/game_regfiles/M_r_q_20" BEL
@@ -246,8 +245,8 @@ TIMEGRP clk = BEL "beta/edge_detector_gen_0[2].edge_detector/M_last_q" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_32" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_28" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_33" BEL
-        "beta/game_controlunit/M_s_seg_display_dff_q_29" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_34" BEL
+        "beta/game_controlunit/M_s_seg_display_dff_q_29" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_35" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_40" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_36" BEL
@@ -256,8 +255,8 @@ TIMEGRP clk = BEL "beta/edge_detector_gen_0[2].edge_detector/M_last_q" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_37" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_38" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_43" BEL
-        "beta/game_controlunit/M_s_seg_display_dff_q_39" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_44" BEL
+        "beta/game_controlunit/M_s_seg_display_dff_q_39" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_45" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_50" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_46" BEL
@@ -266,8 +265,8 @@ TIMEGRP clk = BEL "beta/edge_detector_gen_0[2].edge_detector/M_last_q" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_47" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_48" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_53" BEL
-        "beta/game_controlunit/M_s_seg_display_dff_q_49" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_54" BEL
+        "beta/game_controlunit/M_s_seg_display_dff_q_49" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_55" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_60" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_56" BEL
@@ -286,8 +285,8 @@ TIMEGRP clk = BEL "beta/edge_detector_gen_0[2].edge_detector/M_last_q" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_67" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_68" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_73" BEL
-        "beta/game_controlunit/M_s_seg_display_dff_q_69" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_74" BEL
+        "beta/game_controlunit/M_s_seg_display_dff_q_69" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_75" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_80" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_81" BEL
@@ -335,8 +334,8 @@ TIMEGRP clk = BEL "beta/edge_detector_gen_0[2].edge_detector/M_last_q" BEL
         "beta/game_controlunit/M_little_timer_q_14" BEL
         "beta/game_controlunit/M_little_timer_q_15" BEL
         "beta/game_controlunit/M_little_timer_q_20" BEL
-        "beta/game_controlunit/M_little_timer_q_16" BEL
         "beta/game_controlunit/M_little_timer_q_21" BEL
+        "beta/game_controlunit/M_little_timer_q_16" BEL
         "beta/game_controlunit/M_little_timer_q_17" BEL
         "beta/game_controlunit/M_little_timer_q_22" BEL
         "beta/game_controlunit/M_little_timer_q_18" BEL
@@ -351,8 +350,8 @@ TIMEGRP clk = BEL "beta/edge_detector_gen_0[2].edge_detector/M_last_q" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_104" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_110" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_105" BEL
-        "beta/game_controlunit/M_s_seg_display_dff_q_106" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_111" BEL
+        "beta/game_controlunit/M_s_seg_display_dff_q_106" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_112" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_107" BEL
         "beta/game_controlunit/M_s_seg_display_dff_q_108" BEL

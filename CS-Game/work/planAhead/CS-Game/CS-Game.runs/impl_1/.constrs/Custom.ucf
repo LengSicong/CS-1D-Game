@@ -68,5 +68,7 @@ NET "target[12]" IOSTANDARD = LVTTL;
 NET "target[13]" LOC = P85;
 NET "target[13]" IOSTANDARD = LVTTL;
 
-NET "opr_display" LOC = P121;
-NET "opr_display" IOSTANDARD = LVTTL;
+NET "opr_display_add" LOC = P124;
+NET "opr_display_add" IOSTANDARD = LVTTL;
+NET "opr_display_sub" LOC = P127;
+NET "opr_display_sub" IOSTANDARD = LVTTL;

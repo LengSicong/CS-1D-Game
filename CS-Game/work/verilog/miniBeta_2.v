@@ -10,7 +10,8 @@ module miniBeta_2 (
     input rst,
     output reg [127:0] s_seg_display,
     output reg [15:0] target_display,
-    output reg opr_display
+    output reg opr_display_add,
+    output reg opr_display_sub
   );
   
   
@@ -95,7 +96,8 @@ module miniBeta_2 (
   );
   wire [128-1:0] M_game_controlunit_s_seg_display;
   wire [16-1:0] M_game_controlunit_target_display;
-  wire [1-1:0] M_game_controlunit_opr_display;
+  wire [1-1:0] M_game_controlunit_opr_display_add;
+  wire [1-1:0] M_game_controlunit_opr_display_sub;
   wire [6-1:0] M_game_controlunit_alufn;
   wire [2-1:0] M_game_controlunit_wdsel;
   wire [4-1:0] M_game_controlunit_write_address;
@@ -121,7 +123,8 @@ module miniBeta_2 (
     .button(M_game_controlunit_button),
     .s_seg_display(M_game_controlunit_s_seg_display),
     .target_display(M_game_controlunit_target_display),
-    .opr_display(M_game_controlunit_opr_display),
+    .opr_display_add(M_game_controlunit_opr_display_add),
+    .opr_display_sub(M_game_controlunit_opr_display_sub),
     .alufn(M_game_controlunit_alufn),
     .wdsel(M_game_controlunit_wdsel),
     .write_address(M_game_controlunit_write_address),
@@ -135,7 +138,8 @@ module miniBeta_2 (
   integer i;
   
   always @* begin
-    opr_display = 1'h0;
+    opr_display_add = 1'h0;
+    opr_display_sub = 1'h0;
     s_seg_display = 128'h00140014001400140014001400140014;
     target_display = 1'h0;
     for (i = 1'h0; i < 4'h8; i = i + 1) begin
@@ -153,7 +157,8 @@ module miniBeta_2 (
     M_game_controlunit_rb_data = M_game_regfiles_rb_data;
     s_seg_display = M_game_controlunit_s_seg_display;
     target_display = M_game_controlunit_target_display;
-    opr_display = M_game_controlunit_opr_display;
+    opr_display_add = M_game_controlunit_opr_display_add;
+    opr_display_sub = M_game_controlunit_opr_display_sub;
     M_game_controlunit_timer = M_timer_out;
     M_timer_rst = M_game_controlunit_timer_start;
     M_game_regfiles_we = M_game_controlunit_we;

@@ -15,7 +15,8 @@ module game_CU_12 (
     input [7:0] button,
     output reg [127:0] s_seg_display,
     output reg [15:0] target_display,
-    output reg [0:0] opr_display,
+    output reg [0:0] opr_display_add,
+    output reg [0:0] opr_display_sub,
     output reg [5:0] alufn,
     output reg [1:0] wdsel,
     output reg [3:0] write_address,
@@ -69,7 +70,13 @@ module game_CU_12 (
     
     s_seg_display = M_s_seg_display_dff_q;
     target_display = M_target_display_dff_q;
-    opr_display = M_opr_display_dff_q[0+0-:1];
+    if (M_opr_display_dff_q[0+0-:1]) begin
+      opr_display_add = 1'h1;
+      opr_display_sub = 1'h0;
+    end else begin
+      opr_display_add = 1'h0;
+      opr_display_sub = 1'h1;
+    end
     timer_start = 1'h0;
     alufn = 1'h0;
     wdsel = 1'h0;

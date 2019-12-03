@@ -5,7 +5,8 @@ module miniBeta (
     
     output s_seg_display[8][16], // display for seven segments of 8 card numbers
     output target_display[16], // display for seven segments of target nuber
-    output opr_display
+    output opr_display_add,
+    output opr_display_sub
   ) {
   
   alu game_alu;
@@ -24,7 +25,8 @@ module miniBeta (
   var i;
   
   always {
-    opr_display = 0;
+    opr_display_add = 0;
+    opr_display_sub = 0;
     s_seg_display = 8x{{16h0014}};
     target_display = 0;
     for (i = 0; i<8; i++)
@@ -51,7 +53,8 @@ module miniBeta (
     //output of cu to 7segments
     s_seg_display = game_controlunit.s_seg_display;
     target_display = game_controlunit.target_display;
-    opr_display = game_controlunit.opr_display;
+    opr_display_add = game_controlunit.opr_display_add;
+    opr_display_sub = game_controlunit.opr_display_sub;
     
     //pass timer to cu
     game_controlunit.timer = timer.out;

@@ -20,7 +20,8 @@ module mojo_top_0 (
     input [7:0] button,
     output reg [13:0] target,
     output reg [6:0] display_seg,
-    output reg opr_display
+    output reg opr_display_add,
+    output reg opr_display_sub
   );
   
   
@@ -36,7 +37,8 @@ module mojo_top_0 (
   );
   wire [128-1:0] M_beta_s_seg_display;
   wire [16-1:0] M_beta_target_display;
-  wire [1-1:0] M_beta_opr_display;
+  wire [1-1:0] M_beta_opr_display_add;
+  wire [1-1:0] M_beta_opr_display_sub;
   reg [8-1:0] M_beta_button;
   miniBeta_2 beta (
     .clk(clk),
@@ -44,7 +46,8 @@ module mojo_top_0 (
     .button(M_beta_button),
     .s_seg_display(M_beta_s_seg_display),
     .target_display(M_beta_target_display),
-    .opr_display(M_beta_opr_display)
+    .opr_display_add(M_beta_opr_display_add),
+    .opr_display_sub(M_beta_opr_display_sub)
   );
   wire [7-1:0] M_numbersDisplay_seg;
   wire [3-1:0] M_numbersDisplay_sel;
@@ -88,7 +91,8 @@ module mojo_top_0 (
     end
     display_seg = ~M_numbersDisplay_seg;
     led[0+2-:3] = ~M_numbersDisplay_sel;
-    opr_display = M_beta_opr_display;
+    opr_display_add = M_beta_opr_display_add;
+    opr_display_sub = M_beta_opr_display_sub;
     if (M_beta_target_display > 4'h9) begin
       M_seven_seg1_char = M_beta_target_display - 4'ha;
       target[0+6-:7] = ~M_seven_seg1_segs;

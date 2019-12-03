@@ -10,7 +10,8 @@ module game_CU (
     
     output s_seg_display[8][16], // display for seven segments of 8 card numbers
     output target_display[16], // display for seven segments of target nuber
-    output opr_display[1], // display for operation LED
+    output opr_display_add[1], // display for addition operation LED
+    output opr_display_sub[1], // display for substraction operation LED
     output alufn[6],
     output wdsel[2],
     output write_address[4], // write address
@@ -38,7 +39,13 @@ module game_CU (
   always {
     s_seg_display = s_seg_display_dff.q;
     target_display = target_display_dff.q;  
-    opr_display = opr_display_dff.q[0];    
+    if (opr_display_dff.q[0] == b1){
+      opr_display_add[0] = b1;
+      opr_display_sub[0] = b0;
+    } else {
+      opr_display_add[0] = b0;
+      opr_display_sub[0] = b1;
+    }      
     timer_start = 0;
  
     

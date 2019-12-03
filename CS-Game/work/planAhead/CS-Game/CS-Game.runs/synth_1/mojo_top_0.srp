@@ -1,9 +1,9 @@
-Release 14.7 - xst P.20131013 (nt64)
+Release 14.7 - xst P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: mojo_top_0.prj
 
@@ -53,43 +53,43 @@ Netlist Hierarchy                  : rebuilt
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/shifter_18.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/shifter_18.v" into library work
 Parsing module <shifter_18>.
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/pipeline_19.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/pipeline_19.v" into library work
 Parsing module <pipeline_19>.
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/counter_20.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/counter_20.v" into library work
 Parsing module <counter_20>.
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/compare_17.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/compare_17.v" into library work
 Parsing module <compare_17>.
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/boolean_16.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/boolean_16.v" into library work
 Parsing module <boolean_16>.
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/adder_15.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/adder_15.v" into library work
 Parsing module <adder_15>.
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/timer_9.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/timer_9.v" into library work
 Parsing module <timer_9>.
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/seven_seg_4.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/seven_seg_4.v" into library work
 Parsing module <seven_seg_4>.
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Regfiles_11.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Regfiles_11.v" into library work
 Parsing module <regfiles_11>.
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/pn_gen_10.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/pn_gen_10.v" into library work
 Parsing module <pn_gen_10>.
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/edge_detector_7.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/edge_detector_7.v" into library work
 Parsing module <edge_detector_7>.
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" into library work
 Parsing module <game_CU_12>.
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/counter_13.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/counter_13.v" into library work
 Parsing module <counter_13>.
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/button_conditioner_8.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/button_conditioner_8.v" into library work
 Parsing module <button_conditioner_8>.
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/alu_6.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/alu_6.v" into library work
 Parsing module <alu_6>.
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/reset_conditioner_1.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/reset_conditioner_1.v" into library work
 Parsing module <reset_conditioner_1>.
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/multi_seven_seg_3.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/multi_seven_seg_3.v" into library work
 Parsing module <multi_seven_seg_3>.
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" into library work
 Parsing module <miniBeta_2>.
-Analyzing Verilog file "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
+Analyzing Verilog file "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
 Parsing module <mojo_top_0>.
 
 =========================================================================
@@ -111,9 +111,9 @@ Elaborating module <boolean_16>.
 Elaborating module <compare_17>.
 
 Elaborating module <shifter_18>.
-WARNING:HDLCompiler:1127 - "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" Line 30: Assignment to M_game_alu_z ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" Line 31: Assignment to M_game_alu_v ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" Line 32: Assignment to M_game_alu_n ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" Line 31: Assignment to M_game_alu_z ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" Line 32: Assignment to M_game_alu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" Line 33: Assignment to M_game_alu_n ignored, since the identifier is never used
 
 Elaborating module <edge_detector_7>.
 
@@ -128,15 +128,15 @@ Elaborating module <counter_20>.
 Elaborating module <pn_gen_10>.
 
 Elaborating module <regfiles_11>.
-WARNING:HDLCompiler:413 - "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Regfiles_11.v" Line 55: Result of 16-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Regfiles_11.v" Line 55: Result of 16-bit expression is truncated to fit in 1-bit target.
 
 Elaborating module <game_CU_12>.
-WARNING:HDLCompiler:413 - "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" Line 138: Result of 20-bit expression is truncated to fit in 16-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" Line 155: Result of 20-bit expression is truncated to fit in 16-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" Line 176: Result of 20-bit expression is truncated to fit in 16-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" Line 196: Result of 20-bit expression is truncated to fit in 16-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" Line 227: Result of 16-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" Line 255: Result of 16-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" Line 145: Result of 20-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" Line 162: Result of 20-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" Line 183: Result of 20-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" Line 203: Result of 20-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" Line 234: Result of 16-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v" Line 262: Result of 16-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <multi_seven_seg_3>.
 
@@ -149,21 +149,21 @@ Elaborating module <seven_seg_4>.
 =========================================================================
 
 Synthesizing Unit <mojo_top_0>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v".
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/mojo_top_0.v".
 WARNING:Xst:647 - Input <cclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <spi_ss> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 16-bit subtractor for signal <M_beta_target_display[15]_GND_1_o_sub_4_OUT> created at line 93.
-    Found 1-bit tristate buffer for signal <spi_miso> created at line 76
-    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 76
-    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 76
-    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 76
-    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 76
-    Found 1-bit tristate buffer for signal <avr_rx> created at line 76
-    Found 16-bit comparator greater for signal <GND_1_o_M_beta_target_display[15]_LessThan_3_o> created at line 92
+    Found 16-bit subtractor for signal <M_beta_target_display[15]_GND_1_o_sub_4_OUT> created at line 97.
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 79
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 79
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 79
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 79
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 79
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 79
+    Found 16-bit comparator greater for signal <GND_1_o_M_beta_target_display[15]_LessThan_3_o> created at line 96
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   1 Comparator(s).
@@ -172,31 +172,31 @@ WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved
 Unit <mojo_top_0> synthesized.
 
 Synthesizing Unit <reset_conditioner_1>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/reset_conditioner_1.v".
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/reset_conditioner_1.v".
     Found 4-bit register for signal <M_stage_q>.
     Summary:
 	inferred   4 D-type flip-flop(s).
 Unit <reset_conditioner_1> synthesized.
 
 Synthesizing Unit <miniBeta_2>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v".
-INFO:Xst:3210 - "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" line 25: Output port <z> of the instance <game_alu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" line 25: Output port <v> of the instance <game_alu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" line 25: Output port <n> of the instance <game_alu> is unconnected or connected to loadless signal.
-    Found 16-bit 4-to-1 multiplexer for signal <M_game_regfiles_wdata> created at line 167.
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v".
+INFO:Xst:3210 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" line 26: Output port <z> of the instance <game_alu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" line 26: Output port <v> of the instance <game_alu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/miniBeta_2.v" line 26: Output port <n> of the instance <game_alu> is unconnected or connected to loadless signal.
+    Found 16-bit 4-to-1 multiplexer for signal <M_game_regfiles_wdata> created at line 172.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <miniBeta_2> synthesized.
 
 Synthesizing Unit <alu_6>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/alu_6.v".
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/alu_6.v".
     Found 16-bit 4-to-1 multiplexer for signal <out> created at line 68.
     Summary:
 	inferred   4 Multiplexer(s).
 Unit <alu_6> synthesized.
 
 Synthesizing Unit <adder_15>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/adder_15.v".
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/adder_15.v".
     Found 16-bit subtractor for signal <a[15]_b[15]_sub_2_OUT> created at line 31.
     Found 16-bit adder for signal <a[15]_b[15]_add_0_OUT> created at line 28.
     Found 16x16-bit multiplier for signal <n0022> created at line 34.
@@ -208,12 +208,12 @@ Synthesizing Unit <adder_15>.
 Unit <adder_15> synthesized.
 
 Synthesizing Unit <boolean_16>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/boolean_16.v".
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/boolean_16.v".
     Summary:
 Unit <boolean_16> synthesized.
 
 Synthesizing Unit <compare_17>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/compare_17.v".
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/compare_17.v".
     Found 16-bit 4-to-1 multiplexer for signal <cmp> created at line 19.
     Found 16-bit comparator equal for signal <a[15]_b[15]_equal_1_o> created at line 21
     Found 16-bit comparator greater for signal <a[15]_b[15]_LessThan_2_o> created at line 24
@@ -224,7 +224,7 @@ Synthesizing Unit <compare_17>.
 Unit <compare_17> synthesized.
 
 Synthesizing Unit <shifter_18>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/shifter_18.v".
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/shifter_18.v".
 WARNING:Xst:647 - Input <b<15:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit shifter logical left for signal <a[15]_b[3]_shift_left_0_OUT> created at line 21
     Found 16-bit shifter logical right for signal <a[15]_b[3]_shift_right_1_OUT> created at line 24
@@ -236,14 +236,14 @@ WARNING:Xst:647 - Input <b<15:4>> is never used. This port will be preserved and
 Unit <shifter_18> synthesized.
 
 Synthesizing Unit <edge_detector_7>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/edge_detector_7.v".
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/edge_detector_7.v".
     Found 1-bit register for signal <M_last_q>.
     Summary:
 	inferred   1 D-type flip-flop(s).
 Unit <edge_detector_7> synthesized.
 
 Synthesizing Unit <button_conditioner_8>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/button_conditioner_8.v".
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/button_conditioner_8.v".
     Found 20-bit register for signal <M_ctr_q>.
     Found 20-bit adder for signal <M_ctr_q[19]_GND_11_o_add_2_OUT> created at line 39.
     Summary:
@@ -252,21 +252,21 @@ Synthesizing Unit <button_conditioner_8>.
 Unit <button_conditioner_8> synthesized.
 
 Synthesizing Unit <pipeline_19>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/pipeline_19.v".
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/pipeline_19.v".
     Found 2-bit register for signal <M_pipe_q>.
     Summary:
 	inferred   2 D-type flip-flop(s).
 Unit <pipeline_19> synthesized.
 
 Synthesizing Unit <timer_9>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/timer_9.v".
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/timer_9.v".
     Found 1-bit register for signal <M_result_q>.
     Summary:
 	inferred   1 D-type flip-flop(s).
 Unit <timer_9> synthesized.
 
 Synthesizing Unit <counter_20>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/counter_20.v".
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/counter_20.v".
     Found 33-bit register for signal <M_ctr_q>.
     Found 33-bit adder for signal <M_ctr_d> created at line 35.
     Summary:
@@ -275,7 +275,7 @@ Synthesizing Unit <counter_20>.
 Unit <counter_20> synthesized.
 
 Synthesizing Unit <pn_gen_10>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/pn_gen_10.v".
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/pn_gen_10.v".
     Found 32-bit register for signal <M_y_q>.
     Found 32-bit register for signal <M_z_q>.
     Found 32-bit register for signal <M_w_q>.
@@ -285,7 +285,7 @@ Synthesizing Unit <pn_gen_10>.
 Unit <pn_gen_10> synthesized.
 
 Synthesizing Unit <regfiles_11>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Regfiles_11.v".
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/Regfiles_11.v".
     Found 16-bit register for signal <M_targetnumber_q>.
     Found 1-bit register for signal <M_opr_q>.
     Found 16-bit register for signal <M_card_a_q>.
@@ -313,7 +313,7 @@ Synthesizing Unit <regfiles_11>.
 Unit <regfiles_11> synthesized.
 
 Synthesizing Unit <game_CU_12>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v".
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/CU_12.v".
 WARNING:Xst:647 - Input <ran<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit register for signal <M_target_display_dff_q>.
     Found 1-bit register for signal <M_opr_display_dff_q>.
@@ -336,21 +336,21 @@ INFO:Xst:1799 - State 00110 is never reached in FSM <M_state_q>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 20-bit subtractor for signal <GND_17_o_M_numIncre_q[19]_sub_494_OUT> created at line 176.
-    Found 20-bit subtractor for signal <M_numIncre_q[19]_GND_17_o_sub_663_OUT> created at line 197.
-    Found 20-bit adder for signal <n1299> created at line 138.
-    Found 8-bit adder for signal <n1319[7:0]> created at line 191.
-    Found 20-bit adder for signal <n1463> created at line 196.
-    Found 30-bit adder for signal <M_little_timer_q[29]_GND_17_o_add_859_OUT> created at line 300.
-    Found 20-bit adder for signal <M_numIncre_q[19]_GND_17_o_add_862_OUT> created at line 304.
-    Found 20-bit adder for signal <n1633> created at line 318.
-    Found 20-bit adder for signal <n1776> created at line 319.
-    Found 16-bit subtractor for signal <GND_17_o_GND_17_o_sub_495_OUT<15:0>> created at line 176.
-    Found 255-bit shifter logical right for signal <n1320> created at line 191
-    Found 4-bit comparator greater for signal <n0002> created at line 93
-    Found 4-bit comparator greater for signal <n0004> created at line 93
-    Found 4-bit comparator greater for signal <n0014> created at line 103
-    Found 4-bit comparator greater for signal <n0045> created at line 188
+    Found 20-bit subtractor for signal <GND_17_o_M_numIncre_q[19]_sub_494_OUT> created at line 183.
+    Found 20-bit subtractor for signal <M_numIncre_q[19]_GND_17_o_sub_663_OUT> created at line 204.
+    Found 20-bit adder for signal <n1300> created at line 145.
+    Found 8-bit adder for signal <n1320[7:0]> created at line 198.
+    Found 20-bit adder for signal <n1464> created at line 203.
+    Found 30-bit adder for signal <M_little_timer_q[29]_GND_17_o_add_859_OUT> created at line 307.
+    Found 20-bit adder for signal <M_numIncre_q[19]_GND_17_o_add_862_OUT> created at line 311.
+    Found 20-bit adder for signal <n1634> created at line 325.
+    Found 20-bit adder for signal <n1777> created at line 326.
+    Found 16-bit subtractor for signal <GND_17_o_GND_17_o_sub_495_OUT<15:0>> created at line 183.
+    Found 255-bit shifter logical right for signal <n1321> created at line 198
+    Found 4-bit comparator greater for signal <n0003> created at line 100
+    Found 4-bit comparator greater for signal <n0005> created at line 100
+    Found 4-bit comparator greater for signal <n0015> created at line 110
+    Found 4-bit comparator greater for signal <n0046> created at line 195
     Summary:
 	inferred  10 Adder/Subtractor(s).
 	inferred 195 D-type flip-flop(s).
@@ -361,7 +361,7 @@ INFO:Xst:1799 - State 00110 is never reached in FSM <M_state_q>.
 Unit <game_CU_12> synthesized.
 
 Synthesizing Unit <multi_seven_seg_3>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/multi_seven_seg_3.v".
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/multi_seven_seg_3.v".
     Found 7-bit adder for signal <M_ctr_value[2]_GND_18_o_add_0_OUT> created at line 41.
     Found 255-bit shifter logical right for signal <n0009> created at line 41
     Summary:
@@ -370,7 +370,7 @@ Synthesizing Unit <multi_seven_seg_3>.
 Unit <multi_seven_seg_3> synthesized.
 
 Synthesizing Unit <counter_13>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/counter_13.v".
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/counter_13.v".
     Found 19-bit register for signal <M_ctr_q>.
     Found 19-bit adder for signal <M_ctr_q[18]_GND_19_o_add_0_OUT> created at line 35.
     Summary:
@@ -380,7 +380,7 @@ Synthesizing Unit <counter_13>.
 Unit <counter_13> synthesized.
 
 Synthesizing Unit <seven_seg_4>.
-    Related source file is "C:/Users/1003777/Desktop/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/seven_seg_4.v".
+    Related source file is "D:/Github/CS-1D-Game/CS-Game/work/planAhead/CS-Game/CS-Game.srcs/sources_1/imports/verilog/seven_seg_4.v".
     Found 32x7-bit Read Only RAM for signal <_n0056>
     Summary:
 	inferred   1 RAM(s).
@@ -718,9 +718,9 @@ Top Level Output File Name         : mojo_top_0.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2934
+# BELS                             : 2935
 #      GND                         : 23
-#      INV                         : 45
+#      INV                         : 46
 #      LUT1                        : 250
 #      LUT2                        : 198
 #      LUT3                        : 115
@@ -741,9 +741,9 @@ Primitive and Black Box Usage:
 #      SRLC16E                     : 8
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 45
+# IO Buffers                       : 46
 #      IBUF                        : 9
-#      OBUF                        : 30
+#      OBUF                        : 31
 #      OBUFT                       : 6
 
 Device utilization summary:
@@ -754,21 +754,21 @@ Selected Device : 6slx9tqg144-2
 
 Slice Logic Utilization: 
  Number of Slice Registers:             747  out of  11440     6%  
- Number of Slice LUTs:                 2162  out of   5720    37%  
-    Number used as Logic:              2154  out of   5720    37%  
+ Number of Slice LUTs:                 2163  out of   5720    37%  
+    Number used as Logic:              2155  out of   5720    37%  
     Number used as Memory:                8  out of   1440     0%  
        Number used as SRL:                8
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2414
-   Number with an unused Flip Flop:    1667  out of   2414    69%  
-   Number with an unused LUT:           252  out of   2414    10%  
-   Number of fully used LUT-FF pairs:   495  out of   2414    20%  
+ Number of LUT Flip Flop pairs used:   2415
+   Number with an unused Flip Flop:    1668  out of   2415    69%  
+   Number with an unused LUT:           252  out of   2415    10%  
+   Number of fully used LUT-FF pairs:   495  out of   2415    20%  
    Number of unique control sets:        37
 
 IO Utilization: 
- Number of IOs:                          52
- Number of bonded IOBs:                  46  out of    102    45%  
+ Number of IOs:                          53
+ Number of bonded IOBs:                  47  out of    102    46%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -904,7 +904,7 @@ Offset:              3.526ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 1500 / 22
+  Total number of paths / destination ports: 1501 / 23
 -------------------------------------------------------------------------
 Offset:              10.480ns (Levels of Logic = 7)
   Source:            beta/game_controlunit/M_s_seg_display_dff_q_58 (FF)
@@ -944,12 +944,12 @@ clk            |   35.783|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 88.00 secs
-Total CPU time to Xst completion: 88.31 secs
+Total REAL time to Xst completion: 119.00 secs
+Total CPU time to Xst completion: 119.17 secs
  
 --> 
 
-Total memory usage is 5018920 kilobytes
+Total memory usage is 410244 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   73 (   0 filtered)
