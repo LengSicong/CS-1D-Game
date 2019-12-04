@@ -1,6 +1,7 @@
 module timer (
     input clk,  // clock
     input rst,  // reset
+    input end_digit[4],
     output out // out = 1: the time is up and not yet otherwise
   ) {
     .clk(clk),.rst(rst){
@@ -9,7 +10,7 @@ module timer (
     }
   always {
     out = result.q;
-    if (ctr.value[7]==1)
+    if (ctr.value[end_digit[3:0]]==1)
       result.d = 1;
     else
       result.d = 0;

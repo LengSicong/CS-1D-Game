@@ -61,9 +61,11 @@ module miniBeta_2 (
   endgenerate
   wire [1-1:0] M_timer_out;
   reg [1-1:0] M_timer_rst;
+  reg [4-1:0] M_timer_end_digit;
   timer_9 timer (
     .clk(clk),
     .rst(M_timer_rst),
+    .end_digit(M_timer_end_digit),
     .out(M_timer_out)
   );
   wire [32-1:0] M_ran_num;
@@ -106,6 +108,7 @@ module miniBeta_2 (
   wire [4-1:0] M_game_controlunit_read_address_a;
   wire [4-1:0] M_game_controlunit_read_address_b;
   wire [1-1:0] M_game_controlunit_timer_start;
+  wire [4-1:0] M_game_controlunit_end_digit;
   reg [1-1:0] M_game_controlunit_timer;
   reg [32-1:0] M_game_controlunit_ran;
   reg [16-1:0] M_game_controlunit_ra_data;
@@ -132,7 +135,8 @@ module miniBeta_2 (
     .cu_output_data(M_game_controlunit_cu_output_data),
     .read_address_a(M_game_controlunit_read_address_a),
     .read_address_b(M_game_controlunit_read_address_b),
-    .timer_start(M_game_controlunit_timer_start)
+    .timer_start(M_game_controlunit_timer_start),
+    .end_digit(M_game_controlunit_end_digit)
   );
   
   integer i;
@@ -161,6 +165,7 @@ module miniBeta_2 (
     opr_display_sub = M_game_controlunit_opr_display_sub;
     M_game_controlunit_timer = M_timer_out;
     M_timer_rst = M_game_controlunit_timer_start;
+    M_timer_end_digit = M_game_controlunit_end_digit;
     M_game_regfiles_we = M_game_controlunit_we;
     M_game_regfiles_write_address = M_game_controlunit_write_address;
     M_game_regfiles_read_address_a = M_game_controlunit_read_address_a;

@@ -21,14 +21,16 @@ module game_CU (
     // two read port
     output read_address_a[4], // read address a 
     output read_address_b[4], // read address b
-    output timer_start  // to tell the timer to start counting
+    output timer_start,
+    output end_digit[4]  // to tell the timer to start counting
   ) {
   .clk(clk){
  
     .rst(rst){
     dff s_seg_display_dff[8][16];
     dff target_display_dff[16];
-    dff opr_display_dff[1];
+    dff opr_display_dff[2];
+    dff end_digit_dff[4];
     dff little_timer[30];
     dff numIncre[20];
     fsm state = {IDLE, RANDOM_TARGET,INIT_ADD, INIT_SUBSTRACT, 
@@ -39,15 +41,18 @@ module game_CU (
   always {
     s_seg_display = s_seg_display_dff.q;
     target_display = target_display_dff.q;  
-    if (opr_display_dff.q[0] == b1){
+    if (opr_display_dff.q == b1){
       opr_display_add[0] = b1;
       opr_display_sub[0] = b0;
-    } else {
+    } else if (opr_display_dff.q == 2){
       opr_display_add[0] = b0;
       opr_display_sub[0] = b1;
-    }      
+    } else {
+      opr_display_add[0] = b0;
+      opr_display_sub[0] = b0;
+    }     
     timer_start = 0;
- 
+    end_digit = end_digit_dff.q;   
     
     alufn = 0;
     wdsel = 0;
@@ -61,14 +66,16 @@ module game_CU (
       state.IDLE:
         s_seg_display_dff.d = 8x{{16h0}}; // init all the 7 segment display 
         target_display_dff.d = 0;
-        opr_display_dff.d[0] = 0;
+        opr_display_dff.d = 0;
+        if (end_digit_dff.q == 0)
+          end_digit_dff.d = 7;
         if (start == b1) 
          state.d = state.RANDOM_TARGET;
                 
       state.RANDOM_TARGET:
         s_seg_display_dff.d = 8x{{16h1}};
         if (ran[3:0]<=12 && ran[3:0]>=7){ // if random to add operation 
-          opr_display_dff.d[0] = 1; 
+          opr_display_dff.d = 1; 
           wdsel = b11;
           write_address = b1111;
           we = 1;
@@ -78,7 +85,7 @@ module game_CU (
           state.d = state.INIT_ADD;
           }
         if (ran[3:0]<=6 && ran[3:0]>=0){ // if random to substract operation
-          opr_display_dff.d[0] = 0;
+          opr_display_dff.d = 2;
           wdsel = b11;
           write_address = b1111;
           we = 1;
@@ -189,12 +196,7 @@ module game_CU (
             }  
           }    
         }
-        /*
-        if (s_seg_display_dff.q == 8x{{16h5}}){
-          timer_start = 1; // start the timer
-          s_seg_display_dff.d = 8x{{16h14}};
-          state.d = state.GAME11;  // all INIT finished, start the game            
-        } */    
+          
       
       state.GAME11: // GAME start
         for (i=0;i<8;i++)
@@ -309,25 +311,33 @@ module game_CU (
         state.d = state.GAME11; 
         
       state.WIN:
-        s_seg_display_dff.d[0] = 10;
-        s_seg_display_dff.d[2] = 11;
-        s_seg_display_dff.d[4] = 12;
+        s_seg_display_dff.d[3] = 10;
+        s_seg_display_dff.d[4] = 11;
+        s_seg_display_dff.d[5] = 12;
         s_seg_display_dff.d[6] = 12;
+        s_seg_display_dff.d[0] = 20;
         s_seg_display_dff.d[1] = 20;
-        s_seg_display_dff.d[3] = 20;
-        s_seg_display_dff.d[5] = 20;
+        s_seg_display_dff.d[2] = 20;
         s_seg_display_dff.d[7] = 20;
+        if ( start == b1){
+          if (end_digit_dff.q > 3) 
+            end_digit_dff.d = end_digit_dff.q - 1;
+          state.d = state.RANDOM_TARGET;
+        }
         
         
       state.LOSE:
-        s_seg_display_dff.d[0] = 13;
-        s_seg_display_dff.d[2] = 11;
-        s_seg_display_dff.d[4] = 14;
+        s_seg_display_dff.d[3] = 13;
+        s_seg_display_dff.d[4] = 11;
+        s_seg_display_dff.d[5] = 14;
         s_seg_display_dff.d[6] = 15;            
+        s_seg_display_dff.d[0] = 20;
         s_seg_display_dff.d[1] = 20;
-        s_seg_display_dff.d[3] = 20;
-        s_seg_display_dff.d[5] = 20;
+        s_seg_display_dff.d[2] = 20;
         s_seg_display_dff.d[7] = 20;
+        if ( start == b1){
+          state.d = state.RANDOM_TARGET;
+        }
         
       default:
         state.d = state.IDLE;  

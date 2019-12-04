@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Dec 03 21:06:26 2019
+Wed Dec 04 12:44:28 2019
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -76,7 +76,7 @@ Pinout by Pin Number:
 |P54       |               |         |GND                       |         |           |              |          |         |           |         |       |          |           |                |
 |P55       |avr_tx         |IOB      |IO_L30N_GCLK0_USERCCLK_2  |INPUT    |LVTTL      |2             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
 |P56       |clk            |IOB      |IO_L30P_GCLK1_D13_2       |INPUT    |LVTTL      |2             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
-|P57       |button[0]      |IOB      |IO_L14N_D12_2             |INPUT    |LVTTL      |2             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
+|P57       |button[7]      |IOB      |IO_L14N_D12_2             |INPUT    |LVTTL      |2             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
 |P58       |target[7]      |IOB      |IO_L14P_D11_2             |OUTPUT   |LVTTL      |2             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |P59       |               |IOBS     |IO_L13N_D10_2             |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
 |P60       |               |IOBM     |IO_L13P_M1_2              |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
@@ -85,7 +85,7 @@ Pinout by Pin Number:
 |P63       |               |         |VCCO_2                    |         |           |2             |          |         |           |         |3.30   |          |           |                |
 |P64       |               |IOBS     |IO_L3N_MOSI_CSI_B_MISO0_2 |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
 |P65       |               |IOBM     |IO_L3P_D0_DIN_MISO_MISO1_2|UNUSED   |           |2             |          |         |           |         |       |          |           |                |
-|P66       |button[1]      |IOB      |IO_L2N_CMPMOSI_2          |INPUT    |LVTTL      |2             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
+|P66       |button[6]      |IOB      |IO_L2N_CMPMOSI_2          |INPUT    |LVTTL      |2             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
 |P67       |target[8]      |IOB      |IO_L2P_CMPCLK_2           |OUTPUT   |LVTTL      |2             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |P68       |               |         |GND                       |         |           |              |          |         |           |         |       |          |           |                |
 |P69       |               |IOBS     |IO_L1N_M0_CMPMISO_2       |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
@@ -93,20 +93,20 @@ Pinout by Pin Number:
 |P71       |               |         |DONE_2                    |         |           |              |          |         |           |         |       |          |           |                |
 |P72       |               |         |CMPCS_B_2                 |         |           |              |          |         |           |         |       |          |           |                |
 |P73       |               |         |SUSPEND                   |         |           |              |          |         |           |         |       |          |           |                |
-|P74       |button[2]      |IOB      |IO_L74N_DOUT_BUSY_1       |INPUT    |LVTTL      |1             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
+|P74       |button[5]      |IOB      |IO_L74N_DOUT_BUSY_1       |INPUT    |LVTTL      |1             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
 |P75       |target[9]      |IOB      |IO_L74P_AWAKE_1           |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |P76       |               |         |VCCO_1                    |         |           |1             |          |         |           |         |3.30   |          |           |                |
 |P77       |               |         |GND                       |         |           |              |          |         |           |         |       |          |           |                |
-|P78       |button[3]      |IOB      |IO_L47N_1                 |INPUT    |LVTTL      |1             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
+|P78       |button[4]      |IOB      |IO_L47N_1                 |INPUT    |LVTTL      |1             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
 |P79       |target[10]     |IOB      |IO_L47P_1                 |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
-|P80       |button[4]      |IOB      |IO_L46N_1                 |INPUT    |LVTTL      |1             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
+|P80       |button[3]      |IOB      |IO_L46N_1                 |INPUT    |LVTTL      |1             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
 |P81       |target[11]     |IOB      |IO_L46P_1                 |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
-|P82       |button[5]      |IOB      |IO_L45N_1                 |INPUT    |LVTTL      |1             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
+|P82       |button[2]      |IOB      |IO_L45N_1                 |INPUT    |LVTTL      |1             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
 |P83       |target[12]     |IOB      |IO_L45P_1                 |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
-|P84       |button[6]      |IOB      |IO_L43N_GCLK4_1           |INPUT    |LVTTL      |1             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
+|P84       |button[1]      |IOB      |IO_L43N_GCLK4_1           |INPUT    |LVTTL      |1             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
 |P85       |target[13]     |IOB      |IO_L43P_GCLK5_1           |OUTPUT   |LVTTL      |1             |12        |SLOW     |           |         |       |LOCATED   |NO         |NONE            |
 |P86       |               |         |VCCO_1                    |         |           |1             |          |         |           |         |3.30   |          |           |                |
-|P87       |button[7]      |IOB      |IO_L42N_GCLK6_TRDY1_1     |INPUT    |LVTTL      |1             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
+|P87       |button[0]      |IOB      |IO_L42N_GCLK6_TRDY1_1     |INPUT    |LVTTL      |1             |          |         |PULLDOWN   |NONE     |       |LOCATED   |NO         |NONE            |
 |P88       |               |IOBM     |IO_L42P_GCLK7_1           |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
 |P89       |               |         |VCCINT                    |         |           |              |          |         |           |         |1.2    |          |           |                |
 |P90       |               |         |VCCAUX                    |         |           |              |          |         |           |         |3.3    |          |           |                |

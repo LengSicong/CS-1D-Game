@@ -61,6 +61,7 @@ module miniBeta (
     
     //pass start signal to timer
     timer.rst = game_controlunit.timer_start;
+    timer.end_digit = game_controlunit.end_digit;
     //---------Regfiles-----------
     //setup REGFILE unit 
     game_regfiles.we = game_controlunit.we;

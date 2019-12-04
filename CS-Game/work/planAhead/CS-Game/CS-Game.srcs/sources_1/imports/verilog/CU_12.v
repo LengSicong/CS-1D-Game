@@ -24,14 +24,16 @@ module game_CU_12 (
     output reg [15:0] cu_output_data,
     output reg [3:0] read_address_a,
     output reg [3:0] read_address_b,
-    output reg timer_start
+    output reg timer_start,
+    output reg [3:0] end_digit
   );
   
   
   
   reg [127:0] M_s_seg_display_dff_d, M_s_seg_display_dff_q = 1'h0;
   reg [15:0] M_target_display_dff_d, M_target_display_dff_q = 1'h0;
-  reg [0:0] M_opr_display_dff_d, M_opr_display_dff_q = 1'h0;
+  reg [1:0] M_opr_display_dff_d, M_opr_display_dff_q = 1'h0;
+  reg [3:0] M_end_digit_dff_d, M_end_digit_dff_q = 1'h0;
   reg [29:0] M_little_timer_d, M_little_timer_q = 1'h0;
   reg [19:0] M_numIncre_d, M_numIncre_q = 1'h0;
   localparam IDLE_state = 5'd0;
@@ -66,18 +68,25 @@ module game_CU_12 (
     M_little_timer_d = M_little_timer_q;
     M_s_seg_display_dff_d = M_s_seg_display_dff_q;
     M_numIncre_d = M_numIncre_q;
+    M_end_digit_dff_d = M_end_digit_dff_q;
     M_opr_display_dff_d = M_opr_display_dff_q;
     
     s_seg_display = M_s_seg_display_dff_q;
     target_display = M_target_display_dff_q;
-    if (M_opr_display_dff_q[0+0-:1]) begin
-      opr_display_add = 1'h1;
-      opr_display_sub = 1'h0;
+    if (M_opr_display_dff_q == 1'h1) begin
+      opr_display_add[0+0-:1] = 1'h1;
+      opr_display_sub[0+0-:1] = 1'h0;
     end else begin
-      opr_display_add = 1'h0;
-      opr_display_sub = 1'h1;
+      if (M_opr_display_dff_q == 2'h2) begin
+        opr_display_add[0+0-:1] = 1'h0;
+        opr_display_sub[0+0-:1] = 1'h1;
+      end else begin
+        opr_display_add[0+0-:1] = 1'h0;
+        opr_display_sub[0+0-:1] = 1'h0;
+      end
     end
     timer_start = 1'h0;
+    end_digit = M_end_digit_dff_q;
     alufn = 1'h0;
     wdsel = 1'h0;
     write_address = 1'h0;
@@ -90,7 +99,10 @@ module game_CU_12 (
       IDLE_state: begin
         M_s_seg_display_dff_d = 128'h00000000000000000000000000000000;
         M_target_display_dff_d = 1'h0;
-        M_opr_display_dff_d[0+0-:1] = 1'h0;
+        M_opr_display_dff_d = 1'h0;
+        if (M_end_digit_dff_q == 1'h0) begin
+          M_end_digit_dff_d = 3'h7;
+        end
         if (start == 1'h1) begin
           M_state_d = RANDOM_TARGET_state;
         end
@@ -98,7 +110,7 @@ module game_CU_12 (
       RANDOM_TARGET_state: begin
         M_s_seg_display_dff_d = 128'h00010001000100010001000100010001;
         if (ran[0+3-:4] <= 4'hc && ran[0+3-:4] >= 3'h7) begin
-          M_opr_display_dff_d[0+0-:1] = 1'h1;
+          M_opr_display_dff_d = 1'h1;
           wdsel = 2'h3;
           write_address = 4'hf;
           we = 1'h1;
@@ -108,7 +120,7 @@ module game_CU_12 (
           M_state_d = INIT_ADD_state;
         end
         if (ran[0+3-:4] <= 3'h6 && ran[0+3-:4] >= 1'h0) begin
-          M_opr_display_dff_d[0+0-:1] = 1'h0;
+          M_opr_display_dff_d = 2'h2;
           wdsel = 2'h3;
           write_address = 4'hf;
           we = 1'h1;
@@ -327,24 +339,33 @@ module game_CU_12 (
         M_state_d = GAME11_state;
       end
       WIN_state: begin
-        M_s_seg_display_dff_d[0+15-:16] = 4'ha;
-        M_s_seg_display_dff_d[32+15-:16] = 4'hb;
-        M_s_seg_display_dff_d[64+15-:16] = 4'hc;
+        M_s_seg_display_dff_d[48+15-:16] = 4'ha;
+        M_s_seg_display_dff_d[64+15-:16] = 4'hb;
+        M_s_seg_display_dff_d[80+15-:16] = 4'hc;
         M_s_seg_display_dff_d[96+15-:16] = 4'hc;
+        M_s_seg_display_dff_d[0+15-:16] = 5'h14;
         M_s_seg_display_dff_d[16+15-:16] = 5'h14;
-        M_s_seg_display_dff_d[48+15-:16] = 5'h14;
-        M_s_seg_display_dff_d[80+15-:16] = 5'h14;
+        M_s_seg_display_dff_d[32+15-:16] = 5'h14;
         M_s_seg_display_dff_d[112+15-:16] = 5'h14;
+        if (start == 1'h1) begin
+          if (M_end_digit_dff_q > 2'h3) begin
+            M_end_digit_dff_d = M_end_digit_dff_q - 1'h1;
+          end
+          M_state_d = RANDOM_TARGET_state;
+        end
       end
       LOSE_state: begin
-        M_s_seg_display_dff_d[0+15-:16] = 4'hd;
-        M_s_seg_display_dff_d[32+15-:16] = 4'hb;
-        M_s_seg_display_dff_d[64+15-:16] = 4'he;
+        M_s_seg_display_dff_d[48+15-:16] = 4'hd;
+        M_s_seg_display_dff_d[64+15-:16] = 4'hb;
+        M_s_seg_display_dff_d[80+15-:16] = 4'he;
         M_s_seg_display_dff_d[96+15-:16] = 4'hf;
+        M_s_seg_display_dff_d[0+15-:16] = 5'h14;
         M_s_seg_display_dff_d[16+15-:16] = 5'h14;
-        M_s_seg_display_dff_d[48+15-:16] = 5'h14;
-        M_s_seg_display_dff_d[80+15-:16] = 5'h14;
+        M_s_seg_display_dff_d[32+15-:16] = 5'h14;
         M_s_seg_display_dff_d[112+15-:16] = 5'h14;
+        if (start == 1'h1) begin
+          M_state_d = RANDOM_TARGET_state;
+        end
       end
       default: begin
         M_state_d = IDLE_state;
@@ -357,6 +378,7 @@ module game_CU_12 (
       M_s_seg_display_dff_q <= 1'h0;
       M_target_display_dff_q <= 1'h0;
       M_opr_display_dff_q <= 1'h0;
+      M_end_digit_dff_q <= 1'h0;
       M_little_timer_q <= 1'h0;
       M_numIncre_q <= 1'h0;
       M_state_q <= 1'h0;
@@ -364,6 +386,7 @@ module game_CU_12 (
       M_s_seg_display_dff_q <= M_s_seg_display_dff_d;
       M_target_display_dff_q <= M_target_display_dff_d;
       M_opr_display_dff_q <= M_opr_display_dff_d;
+      M_end_digit_dff_q <= M_end_digit_dff_d;
       M_little_timer_q <= M_little_timer_d;
       M_numIncre_q <= M_numIncre_d;
       M_state_q <= M_state_d;

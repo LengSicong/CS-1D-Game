@@ -7,6 +7,7 @@
 module timer_9 (
     input clk,
     input rst,
+    input [3:0] end_digit,
     output reg out
   );
   
@@ -24,7 +25,7 @@ module timer_9 (
     M_result_d = M_result_q;
     
     out = M_result_q;
-    if (M_ctr_value[7+0-:1] == 1'h1) begin
+    if (M_ctr_value[(end_digit[0+3-:4])*1+0-:1] == 1'h1) begin
       M_result_d = 1'h1;
     end else begin
       M_result_d = 1'h0;
