@@ -336,6 +336,7 @@ module game_CU (
         s_seg_display_dff.d[2] = 20;
         s_seg_display_dff.d[7] = 20;
         if ( start == b1){
+          end_digit_dff.d = 7;
           state.d = state.RANDOM_TARGET;
         }
         

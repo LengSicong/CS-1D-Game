@@ -364,6 +364,7 @@ module game_CU_12 (
         M_s_seg_display_dff_d[32+15-:16] = 5'h14;
         M_s_seg_display_dff_d[112+15-:16] = 5'h14;
         if (start == 1'h1) begin
+          M_end_digit_dff_d = 3'h7;
           M_state_d = RANDOM_TARGET_state;
         end
       end

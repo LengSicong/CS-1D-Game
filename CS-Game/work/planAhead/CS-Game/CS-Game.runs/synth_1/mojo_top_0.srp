@@ -3,7 +3,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: mojo_top_0.prj
 
@@ -343,15 +343,15 @@ INFO:Xst:1799 - State 00110 is never reached in FSM <M_state_q>.
     Found 20-bit subtractor for signal <GND_17_o_M_numIncre_q[19]_sub_500_OUT> created at line 195.
     Found 20-bit subtractor for signal <M_numIncre_q[19]_GND_17_o_sub_669_OUT> created at line 216.
     Found 4-bit subtractor for signal <M_end_digit_dff_q[3]_GND_17_o_sub_1165_OUT> created at line 352.
-    Found 20-bit adder for signal <n1318> created at line 157.
-    Found 8-bit adder for signal <n1338[7:0]> created at line 210.
-    Found 20-bit adder for signal <n1482> created at line 215.
+    Found 20-bit adder for signal <n1319> created at line 157.
+    Found 8-bit adder for signal <n1339[7:0]> created at line 210.
+    Found 20-bit adder for signal <n1483> created at line 215.
     Found 30-bit adder for signal <M_little_timer_q[29]_GND_17_o_add_865_OUT> created at line 319.
     Found 20-bit adder for signal <M_numIncre_q[19]_GND_17_o_add_868_OUT> created at line 323.
-    Found 20-bit adder for signal <n1652> created at line 337.
-    Found 20-bit adder for signal <n1795> created at line 338.
+    Found 20-bit adder for signal <n1653> created at line 337.
+    Found 20-bit adder for signal <n1796> created at line 338.
     Found 16-bit subtractor for signal <GND_17_o_GND_17_o_sub_501_OUT<15:0>> created at line 195.
-    Found 255-bit shifter logical right for signal <n1339> created at line 210
+    Found 255-bit shifter logical right for signal <n1340> created at line 210
     Found 4-bit comparator greater for signal <n0005> created at line 112
     Found 4-bit comparator greater for signal <n0007> created at line 112
     Found 4-bit comparator greater for signal <n0017> created at line 122
@@ -361,7 +361,7 @@ INFO:Xst:1799 - State 00110 is never reached in FSM <M_state_q>.
 	inferred  11 Adder/Subtractor(s).
 	inferred 200 D-type flip-flop(s).
 	inferred   5 Comparator(s).
-	inferred 1131 Multiplexer(s).
+	inferred 1132 Multiplexer(s).
 	inferred   1 Combinational logic shifter(s).
 	inferred   1 Finite State Machine(s).
 Unit <game_CU_12> synthesized.
@@ -429,7 +429,7 @@ Macro Statistics
  16-bit comparator lessequal                           : 1
  4-bit comparator greater                              : 5
  4-bit comparator lessequal                            : 3
-# Multiplexers                                         : 1299
+# Multiplexers                                         : 1300
  1-bit 2-to-1 multiplexer                              : 561
  10-bit 2-to-1 multiplexer                             : 5
  11-bit 2-to-1 multiplexer                             : 5
@@ -446,7 +446,7 @@ Macro Statistics
  20-bit 2-to-1 multiplexer                             : 6
  3-bit 2-to-1 multiplexer                              : 5
  30-bit 2-to-1 multiplexer                             : 1
- 4-bit 2-to-1 multiplexer                              : 83
+ 4-bit 2-to-1 multiplexer                              : 84
  5-bit 2-to-1 multiplexer                              : 5
  6-bit 2-to-1 multiplexer                              : 5
  7-bit 2-to-1 multiplexer                              : 8
@@ -488,7 +488,6 @@ The following registers are absorbed into counter <M_ctr_q>: 1 register on signa
 Unit <counter_20> synthesized (advanced).
 
 Synthesizing (advanced) Unit <game_CU_12>.
-The following registers are absorbed into counter <M_end_digit_dff_q>: 1 register on signal <M_end_digit_dff_q>.
 The following registers are absorbed into counter <M_little_timer_q>: 1 register on signal <M_little_timer_q>.
 Unit <game_CU_12> synthesized (advanced).
 
@@ -514,29 +513,29 @@ Macro Statistics
  32x7-bit single-port distributed Read Only RAM        : 3
 # Multipliers                                          : 1
  16x16-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 15
+# Adders/Subtractors                                   : 16
  16-bit adder                                          : 2
  16-bit addsub                                         : 1
  16-bit subtractor                                     : 3
  20-bit adder                                          : 1
  20-bit subtractor                                     : 1
+ 4-bit subtractor                                      : 1
  7-bit adder                                           : 3
  8-bit adder                                           : 4
-# Counters                                             : 12
+# Counters                                             : 11
  19-bit up counter                                     : 1
  20-bit up counter                                     : 8
  30-bit up counter                                     : 1
  33-bit up counter                                     : 1
- 4-bit down counter                                    : 1
-# Registers                                            : 548
- Flip-Flops                                            : 548
+# Registers                                            : 552
+ Flip-Flops                                            : 552
 # Comparators                                          : 12
  16-bit comparator equal                               : 1
  16-bit comparator greater                             : 2
  16-bit comparator lessequal                           : 1
  4-bit comparator greater                              : 5
  4-bit comparator lessequal                            : 3
-# Multiplexers                                         : 1341
+# Multiplexers                                         : 1343
  1-bit 2-to-1 multiplexer                              : 577
  1-bit 8-to-1 multiplexer                              : 32
  10-bit 2-to-1 multiplexer                             : 5
@@ -551,7 +550,7 @@ Macro Statistics
  2-bit 2-to-1 multiplexer                              : 43
  20-bit 2-to-1 multiplexer                             : 6
  3-bit 2-to-1 multiplexer                              : 5
- 4-bit 2-to-1 multiplexer                              : 82
+ 4-bit 2-to-1 multiplexer                              : 84
  5-bit 2-to-1 multiplexer                              : 5
  6-bit 2-to-1 multiplexer                              : 5
  7-bit 2-to-1 multiplexer                              : 8
@@ -632,19 +631,24 @@ Optimizing unit <game_CU_12> ...
 Optimizing unit <alu_6> ...
 
 Optimizing unit <adder_15> ...
-WARNING:Xst:1293 - FF/Latch <beta/game_controlunit/M_end_digit_dff_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 WARNING:Xst:2677 - Node <beta/game_alu/adder/Mmult_n0022> of sequential type is unconnected in block <mojo_top_0>.
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 31.
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 32.
+FlipFlop beta/game_controlunit/M_state_q_FSM_FFd11 has been replicated 1 time(s)
 FlipFlop beta/game_controlunit/M_state_q_FSM_FFd12 has been replicated 1 time(s)
 FlipFlop beta/game_controlunit/M_state_q_FSM_FFd13 has been replicated 1 time(s)
 FlipFlop beta/game_controlunit/M_state_q_FSM_FFd14 has been replicated 1 time(s)
 FlipFlop beta/game_controlunit/M_state_q_FSM_FFd15 has been replicated 1 time(s)
 FlipFlop beta/game_controlunit/M_state_q_FSM_FFd16 has been replicated 1 time(s)
-FlipFlop beta/game_controlunit/M_state_q_FSM_FFd4 has been replicated 2 time(s)
+FlipFlop beta/game_controlunit/M_state_q_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop beta/game_controlunit/M_state_q_FSM_FFd4 has been replicated 1 time(s)
+FlipFlop beta/game_controlunit/M_state_q_FSM_FFd6 has been replicated 1 time(s)
+FlipFlop beta/game_controlunit/M_state_q_FSM_FFd8 has been replicated 1 time(s)
 FlipFlop beta/game_controlunit/M_state_q_FSM_FFd9 has been replicated 1 time(s)
+FlipFlop beta/ran/M_w_q_0 has been replicated 1 time(s)
+FlipFlop beta/ran/M_w_q_1 has been replicated 1 time(s)
 FlipFlop beta/ran/M_w_q_2 has been replicated 1 time(s)
 FlipFlop beta/ran/M_w_q_3 has been replicated 2 time(s)
 
@@ -666,8 +670,8 @@ Unit <mojo_top_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 792
- Flip-Flops                                            : 792
+# Registers                                            : 798
+ Flip-Flops                                            : 798
 # Shift Registers                                      : 8
  2-bit shift register                                  : 8
 
@@ -692,24 +696,24 @@ Top Level Output File Name         : mojo_top_0.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2518
-#      GND                         : 22
+# BELS                             : 2617
+#      GND                         : 23
 #      INV                         : 45
-#      LUT1                        : 250
-#      LUT2                        : 99
+#      LUT1                        : 251
+#      LUT2                        : 103
 #      LUT3                        : 98
 #      LUT4                        : 99
-#      LUT5                        : 401
-#      LUT6                        : 730
-#      MUXCY                       : 345
-#      MUXF7                       : 51
-#      VCC                         : 21
+#      LUT5                        : 408
+#      LUT6                        : 801
+#      MUXCY                       : 347
+#      MUXF7                       : 63
+#      VCC                         : 22
 #      XORCY                       : 357
-# FlipFlops/Latches                : 800
-#      FD                          : 63
+# FlipFlops/Latches                : 806
+#      FD                          : 65
 #      FDE                         : 8
-#      FDR                         : 284
-#      FDRE                        : 440
+#      FDR                         : 287
+#      FDRE                        : 441
 #      FDS                         : 5
 # Shift Registers                  : 8
 #      SRLC16E                     : 8
@@ -727,17 +731,17 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             800  out of  11440     6%  
- Number of Slice LUTs:                 1730  out of   5720    30%  
-    Number used as Logic:              1722  out of   5720    30%  
+ Number of Slice Registers:             806  out of  11440     7%  
+ Number of Slice LUTs:                 1813  out of   5720    31%  
+    Number used as Logic:              1805  out of   5720    31%  
     Number used as Memory:                8  out of   1440     0%  
        Number used as SRL:                8
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1980
-   Number with an unused Flip Flop:    1180  out of   1980    59%  
-   Number with an unused LUT:           250  out of   1980    12%  
-   Number of fully used LUT-FF pairs:   550  out of   1980    27%  
+ Number of LUT Flip Flop pairs used:   2070
+   Number with an unused Flip Flop:    1264  out of   2070    61%  
+   Number with an unused LUT:           257  out of   2070    12%  
+   Number of fully used LUT-FF pairs:   549  out of   2070    26%  
    Number of unique control sets:        45
 
 IO Utilization: 
@@ -768,7 +772,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 808   |
+clk                                | BUFGP                  | 814   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -779,7 +783,7 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 37.159ns (Maximum Frequency: 26.911MHz)
+   Minimum period: 36.674ns (Maximum Frequency: 27.267MHz)
    Minimum input arrival time before clock: 3.526ns
    Maximum output required time after clock: 10.480ns
    Maximum combinational path delay: No path found
@@ -790,16 +794,16 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 37.159ns (frequency: 26.911MHz)
-  Total number of paths / destination ports: 9023378610 / 1964
+  Clock period: 36.674ns (frequency: 27.267MHz)
+  Total number of paths / destination ports: 10525739282 / 1975
 -------------------------------------------------------------------------
-Delay:               37.159ns (Levels of Logic = 33)
+Delay:               36.674ns (Levels of Logic = 36)
   Source:            beta/button_cond_gen_0[3].button_cond/M_ctr_q_9 (FF)
-  Destination:       beta/game_regfiles/M_r_q_112 (FF)
+  Destination:       beta/game_regfiles/M_r_q_127 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: beta/button_cond_gen_0[3].button_cond/M_ctr_q_9 to beta/game_regfiles/M_r_q_112
+  Data Path: beta/button_cond_gen_0[3].button_cond/M_ctr_q_9 to beta/game_regfiles/M_r_q_127
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -807,51 +811,54 @@ Delay:               37.159ns (Levels of Logic = 33)
      LUT6:I0->O            3   0.254   0.994  out3 (out2)
      end scope: 'beta/button_cond_gen_0[3].button_cond:out2'
      begin scope: 'beta/edge_detector_gen_0[3].edge_detector:out2'
-     LUT6:I3->O           19   0.235   1.260  out1 (out)
+     LUT6:I3->O           17   0.235   1.209  out1 (out)
      end scope: 'beta/edge_detector_gen_0[3].edge_detector:out'
      begin scope: 'beta/game_controlunit:button<3>'
-     MUXF7:S->O            2   0.185   0.726  M_state_q_read_address_a<1>1_SW1 (N77)
-     LUT6:I5->O           57   0.254   1.875  M_state_q_read_address_a<1>2 (read_address_a<1>)
+     LUT6:I5->O            1   0.254   0.000  M_state_q_read_address_a<1>2_SW1_F (N569)
+     MUXF7:I0->O           6   0.163   0.876  M_state_q_read_address_a<1>2_SW1 (N105)
+     LUT6:I5->O           56   0.254   2.323  M_state_q_read_address_a<1>3 (read_address_a<1>)
      end scope: 'beta/game_controlunit:read_address_a<1>'
      begin scope: 'beta/game_regfiles:read_address_a<1>'
-     LUT4:I3->O            1   0.254   0.958  Mmux_ra_data93 (Mmux_ra_data92)
-     LUT6:I2->O            1   0.254   0.682  Mmux_ra_data95 (Mmux_ra_data94)
-     LUT4:I3->O          115   0.254   2.363  Mmux_ra_data96 (ra_data<2>)
-     end scope: 'beta/game_regfiles:ra_data<2>'
-     begin scope: 'beta/game_controlunit:ra_data<2>'
-     LUT5:I3->O           66   0.250   2.400  M_state_q_read_address_b<2>1 (read_address_b<2>)
-     end scope: 'beta/game_controlunit:read_address_b<2>'
-     begin scope: 'beta/game_regfiles:read_address_b<2>'
-     LUT6:I0->O           21   0.254   1.418  Mmux_ra_data18 (Mmux_ra_data18)
-     LUT6:I4->O           27   0.250   1.544  Mmux_ra_data89 (ra_data<1>)
-     end scope: 'beta/game_regfiles:ra_data<1>'
-     begin scope: 'beta/game_controlunit:ra_data<1>'
-     LUT6:I4->O           66   0.250   2.173  M_state_q_read_address_b<1>1 (read_address_b<1>)
-     end scope: 'beta/game_controlunit:read_address_b<1>'
-     begin scope: 'beta/game_regfiles:read_address_b<1>'
-     LUT4:I1->O           22   0.235   1.789  Mmux_ra_data171 (Mmux_ra_data17)
-     LUT6:I0->O           27   0.254   1.544  Mmux_ra_data110 (ra_data<0>)
+     LUT6:I0->O            1   0.254   0.000  Mmux_ra_data105_G (N718)
+     MUXF7:I1->O           2   0.175   1.002  Mmux_ra_data105 (Mmux_ra_data104)
+     LUT6:I2->O            1   0.254   0.910  Mmux_ra_data109_1 (Mmux_ra_data109)
+     end scope: 'beta/game_regfiles:Mmux_ra_data109'
+     begin scope: 'beta/game_controlunit:Mmux_ra_data109'
+     LUT6:I3->O           30   0.235   1.942  M_state_q_read_address_b<3>1 (read_address_b<3>)
+     end scope: 'beta/game_controlunit:read_address_b<3>'
+     begin scope: 'beta/game_regfiles:read_address_b<3>'
+     LUT6:I0->O           21   0.254   1.310  Mmux_ra_data18 (Mmux_ra_data18)
+     LUT2:I1->O            1   0.254   0.682  Mmux_ra_data11 (Mmux_ra_data1)
+     LUT6:I5->O           25   0.254   1.631  Mmux_ra_data110 (ra_data<0>)
      end scope: 'beta/game_regfiles:ra_data<0>'
      begin scope: 'beta/game_controlunit:ra_data<0>'
-     LUT6:I4->O           61   0.250   2.014  M_state_q_read_address_b<0> (read_address_b<0>)
+     LUT6:I3->O           70   0.235   2.252  M_state_q_read_address_b<0> (read_address_b<0>)
      end scope: 'beta/game_controlunit:read_address_b<0>'
      begin scope: 'beta/game_regfiles:read_address_b<0>'
-     LUT5:I3->O            1   0.250   1.112  Mmux_rb_data122 (Mmux_rb_data121)
-     LUT6:I1->O            5   0.254   1.296  Mmux_rb_data125 (rb_data<5>)
-     end scope: 'beta/game_regfiles:rb_data<5>'
-     begin scope: 'beta/game_controlunit:rb_data<5>'
-     LUT6:I0->O            3   0.254   0.874  n0554<15>11_1 (n0554<15>111)
-     LUT6:I4->O           11   0.250   1.147  n0598<15>1 (n0598)
-     LUT6:I4->O           17   0.250   1.209  GND_17_o_GND_17_o_mux_855_OUT<0>2 (GND_17_o_GND_17_o_mux_855_OUT<0>2)
-     LUT6:I5->O           16   0.254   1.182  M_state_q_wdsel<1>1 (wdsel<0>)
-     end scope: 'beta/game_controlunit:wdsel<0>'
-     LUT6:I5->O           15   0.254   1.383  Mmux_M_game_regfiles_wdata124 (M_game_regfiles_wdata<0>)
-     begin scope: 'beta/game_regfiles:wdata<0>'
-     LUT5:I2->O            1   0.235   0.000  Mmux_M_r_d61 (M_r_d<0>)
-     FDR:D                     0.074          M_r_q_0
+     LUT4:I0->O           22   0.254   1.789  Mmux_ra_data171 (Mmux_ra_data17)
+     LUT6:I0->O           24   0.254   1.488  Mmux_ra_data89 (ra_data<1>)
+     end scope: 'beta/game_regfiles:ra_data<1>'
+     begin scope: 'beta/game_controlunit:ra_data<1>'
+     LUT4:I2->O           66   0.250   2.400  M_state_q_read_address_b<1>1 (read_address_b<1>)
+     end scope: 'beta/game_controlunit:read_address_b<1>'
+     begin scope: 'beta/game_regfiles:read_address_b<1>'
+     LUT6:I0->O           10   0.254   1.438  Mmux_rb_data93 (Mmux_rb_data92)
+     LUT6:I1->O           36   0.254   1.587  Mmux_rb_data95 (rb_data<2>)
+     end scope: 'beta/game_regfiles:rb_data<2>'
+     begin scope: 'beta/game_controlunit:rb_data<2>'
+     LUT6:I5->O            1   0.254   0.682  GND_17_o_GND_17_o_mux_855_OUT<0>2_SW1 (N131)
+     LUT6:I5->O           12   0.254   1.069  GND_17_o_GND_17_o_mux_855_OUT<0>2 (GND_17_o_GND_17_o_mux_855_OUT<0>2)
+     LUT6:I5->O            1   0.254   0.000  GND_17_o_GND_17_o_mux_855_OUT<0>4_SW7_G (N612)
+     MUXF7:I1->O           2   0.175   0.726  GND_17_o_GND_17_o_mux_855_OUT<0>4_SW7 (N409)
+     LUT6:I5->O           15   0.254   1.263  M_state_q_we_1 (M_state_q_we)
+     end scope: 'beta/game_controlunit:M_state_q_we'
+     begin scope: 'beta/game_regfiles:M_state_q_we'
+     LUT5:I3->O           16   0.250   1.290  Mmux_M_r_d21611 (Mmux_M_r_d2161)
+     LUT5:I3->O            1   0.250   0.000  Mmux_M_r_d2941 (M_r_d<28>)
+     FDR:D                     0.074          M_r_q_28
     ----------------------------------------
-    Total                     37.159ns (6.033ns logic, 31.126ns route)
-                                       (16.2% logic, 83.8% route)
+    Total                     36.674ns (6.631ns logic, 30.043ns route)
+                                       (18.1% logic, 81.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -890,7 +897,7 @@ Offset:              10.480ns (Levels of Logic = 7)
      FDRE:C->Q             3   0.525   1.221  M_s_seg_display_dff_q_58 (M_s_seg_display_dff_q_58)
      end scope: 'beta/game_controlunit:s_seg_display<58>'
      end scope: 'beta:s_seg_display<58>'
-     LUT6:I0->O            1   0.254   0.682  display_seg<3>28_SW0 (N553)
+     LUT6:I0->O            1   0.254   0.682  display_seg<3>28_SW0 (N693)
      LUT6:I5->O            1   0.254   0.958  display_seg<3>28 (display_seg<3>28)
      LUT6:I2->O            1   0.254   0.910  display_seg<3>215 (display_seg<3>215)
      LUT5:I2->O            7   0.235   1.340  display_seg<3>229 (display_seg<3>2)
@@ -910,20 +917,20 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   37.159|         |         |         |
+clk            |   36.674|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 149.00 secs
-Total CPU time to Xst completion: 148.87 secs
+Total REAL time to Xst completion: 154.00 secs
+Total CPU time to Xst completion: 154.22 secs
  
 --> 
 
-Total memory usage is 387908 kilobytes
+Total memory usage is 457092 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   37 (   0 filtered)
+Number of warnings :   36 (   0 filtered)
 Number of infos    :    7 (   0 filtered)
 

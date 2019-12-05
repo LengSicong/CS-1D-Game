@@ -12,8 +12,8 @@
     <src top="true">mojo_top.luc</src>
     <src>shifter.luc</src>
     <src>seven_seg.luc</src>
-    <src>Game_fsm.luc</src>
     <src>adder.luc</src>
+    <src>Game_fsm.luc</src>
     <ucf>Custom.ucf</ucf>
     <ucf lib="true">mojo.ucf</ucf>
     <component>pn_gen.luc</component>

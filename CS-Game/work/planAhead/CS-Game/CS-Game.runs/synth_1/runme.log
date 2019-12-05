@@ -297,15 +297,15 @@ INFO:Xst:1799 - State 00110 is never reached in FSM <M_state_q>.
     Found 20-bit subtractor for signal <GND_17_o_M_numIncre_q[19]_sub_500_OUT> created at line 195.
     Found 20-bit subtractor for signal <M_numIncre_q[19]_GND_17_o_sub_669_OUT> created at line 216.
     Found 4-bit subtractor for signal <M_end_digit_dff_q[3]_GND_17_o_sub_1165_OUT> created at line 352.
-    Found 20-bit adder for signal <n1318> created at line 157.
-    Found 8-bit adder for signal <n1338[7:0]> created at line 210.
-    Found 20-bit adder for signal <n1482> created at line 215.
+    Found 20-bit adder for signal <n1319> created at line 157.
+    Found 8-bit adder for signal <n1339[7:0]> created at line 210.
+    Found 20-bit adder for signal <n1483> created at line 215.
     Found 30-bit adder for signal <M_little_timer_q[29]_GND_17_o_add_865_OUT> created at line 319.
     Found 20-bit adder for signal <M_numIncre_q[19]_GND_17_o_add_868_OUT> created at line 323.
-    Found 20-bit adder for signal <n1652> created at line 337.
-    Found 20-bit adder for signal <n1795> created at line 338.
+    Found 20-bit adder for signal <n1653> created at line 337.
+    Found 20-bit adder for signal <n1796> created at line 338.
     Found 16-bit subtractor for signal <GND_17_o_GND_17_o_sub_501_OUT<15:0>> created at line 195.
-    Found 255-bit shifter logical right for signal <n1339> created at line 210
+    Found 255-bit shifter logical right for signal <n1340> created at line 210
     Found 4-bit comparator greater for signal <n0005> created at line 112
     Found 4-bit comparator greater for signal <n0007> created at line 112
     Found 4-bit comparator greater for signal <n0017> created at line 122
@@ -315,7 +315,7 @@ INFO:Xst:1799 - State 00110 is never reached in FSM <M_state_q>.
 	inferred  11 Adder/Subtractor(s).
 	inferred 200 D-type flip-flop(s).
 	inferred   5 Comparator(s).
-	inferred 1131 Multiplexer(s).
+	inferred 1132 Multiplexer(s).
 	inferred   1 Combinational logic shifter(s).
 	inferred   1 Finite State Machine(s).
 Unit <game_CU_12> synthesized.
@@ -383,7 +383,7 @@ Macro Statistics
  16-bit comparator lessequal                           : 1
  4-bit comparator greater                              : 5
  4-bit comparator lessequal                            : 3
-# Multiplexers                                         : 1299
+# Multiplexers                                         : 1300
  1-bit 2-to-1 multiplexer                              : 561
  10-bit 2-to-1 multiplexer                             : 5
  11-bit 2-to-1 multiplexer                             : 5
@@ -400,7 +400,7 @@ Macro Statistics
  20-bit 2-to-1 multiplexer                             : 6
  3-bit 2-to-1 multiplexer                              : 5
  30-bit 2-to-1 multiplexer                             : 1
- 4-bit 2-to-1 multiplexer                              : 83
+ 4-bit 2-to-1 multiplexer                              : 84
  5-bit 2-to-1 multiplexer                              : 5
  6-bit 2-to-1 multiplexer                              : 5
  7-bit 2-to-1 multiplexer                              : 8
@@ -442,7 +442,6 @@ The following registers are absorbed into counter <M_ctr_q>: 1 register on signa
 Unit <counter_20> synthesized (advanced).
 
 Synthesizing (advanced) Unit <game_CU_12>.
-The following registers are absorbed into counter <M_end_digit_dff_q>: 1 register on signal <M_end_digit_dff_q>.
 The following registers are absorbed into counter <M_little_timer_q>: 1 register on signal <M_little_timer_q>.
 Unit <game_CU_12> synthesized (advanced).
 
@@ -468,29 +467,29 @@ Macro Statistics
  32x7-bit single-port distributed Read Only RAM        : 3
 # Multipliers                                          : 1
  16x16-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 15
+# Adders/Subtractors                                   : 16
  16-bit adder                                          : 2
  16-bit addsub                                         : 1
  16-bit subtractor                                     : 3
  20-bit adder                                          : 1
  20-bit subtractor                                     : 1
+ 4-bit subtractor                                      : 1
  7-bit adder                                           : 3
  8-bit adder                                           : 4
-# Counters                                             : 12
+# Counters                                             : 11
  19-bit up counter                                     : 1
  20-bit up counter                                     : 8
  30-bit up counter                                     : 1
  33-bit up counter                                     : 1
- 4-bit down counter                                    : 1
-# Registers                                            : 548
- Flip-Flops                                            : 548
+# Registers                                            : 552
+ Flip-Flops                                            : 552
 # Comparators                                          : 12
  16-bit comparator equal                               : 1
  16-bit comparator greater                             : 2
  16-bit comparator lessequal                           : 1
  4-bit comparator greater                              : 5
  4-bit comparator lessequal                            : 3
-# Multiplexers                                         : 1341
+# Multiplexers                                         : 1343
  1-bit 2-to-1 multiplexer                              : 577
  1-bit 8-to-1 multiplexer                              : 32
  10-bit 2-to-1 multiplexer                             : 5
@@ -505,7 +504,7 @@ Macro Statistics
  2-bit 2-to-1 multiplexer                              : 43
  20-bit 2-to-1 multiplexer                             : 6
  3-bit 2-to-1 multiplexer                              : 5
- 4-bit 2-to-1 multiplexer                              : 82
+ 4-bit 2-to-1 multiplexer                              : 84
  5-bit 2-to-1 multiplexer                              : 5
  6-bit 2-to-1 multiplexer                              : 5
  7-bit 2-to-1 multiplexer                              : 8
@@ -586,19 +585,24 @@ Optimizing unit <game_CU_12> ...
 Optimizing unit <alu_6> ...
 
 Optimizing unit <adder_15> ...
-WARNING:Xst:1293 - FF/Latch <beta/game_controlunit/M_end_digit_dff_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 WARNING:Xst:2677 - Node <beta/game_alu/adder/Mmult_n0022> of sequential type is unconnected in block <mojo_top_0>.
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 31.
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 32.
+FlipFlop beta/game_controlunit/M_state_q_FSM_FFd11 has been replicated 1 time(s)
 FlipFlop beta/game_controlunit/M_state_q_FSM_FFd12 has been replicated 1 time(s)
 FlipFlop beta/game_controlunit/M_state_q_FSM_FFd13 has been replicated 1 time(s)
 FlipFlop beta/game_controlunit/M_state_q_FSM_FFd14 has been replicated 1 time(s)
 FlipFlop beta/game_controlunit/M_state_q_FSM_FFd15 has been replicated 1 time(s)
 FlipFlop beta/game_controlunit/M_state_q_FSM_FFd16 has been replicated 1 time(s)
-FlipFlop beta/game_controlunit/M_state_q_FSM_FFd4 has been replicated 2 time(s)
+FlipFlop beta/game_controlunit/M_state_q_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop beta/game_controlunit/M_state_q_FSM_FFd4 has been replicated 1 time(s)
+FlipFlop beta/game_controlunit/M_state_q_FSM_FFd6 has been replicated 1 time(s)
+FlipFlop beta/game_controlunit/M_state_q_FSM_FFd8 has been replicated 1 time(s)
 FlipFlop beta/game_controlunit/M_state_q_FSM_FFd9 has been replicated 1 time(s)
+FlipFlop beta/ran/M_w_q_0 has been replicated 1 time(s)
+FlipFlop beta/ran/M_w_q_1 has been replicated 1 time(s)
 FlipFlop beta/ran/M_w_q_2 has been replicated 1 time(s)
 FlipFlop beta/ran/M_w_q_3 has been replicated 2 time(s)
 
@@ -620,8 +624,8 @@ Unit <mojo_top_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 792
- Flip-Flops                                            : 792
+# Registers                                            : 798
+ Flip-Flops                                            : 798
 # Shift Registers                                      : 8
  2-bit shift register                                  : 8
 
@@ -647,7 +651,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 808   |
+clk                                | BUFGP                  | 814   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -658,7 +662,7 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 37.159ns (Maximum Frequency: 26.911MHz)
+   Minimum period: 36.674ns (Maximum Frequency: 27.267MHz)
    Minimum input arrival time before clock: 3.526ns
    Maximum output required time after clock: 10.480ns
    Maximum combinational path delay: No path found
