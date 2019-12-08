@@ -256,8 +256,8 @@ Synthesizing Unit <regfiles_11>.
     Found 8-bit adder for signal <n0410> created at line 104.
     Found 255-bit shifter logical right for signal <n0407> created at line 76
     Found 255-bit shifter logical right for signal <n0411> created at line 104
-    Found 16-bit 8-to-1 multiplexer for signal <_n0601> created at line 107.
-    Found 16-bit 8-to-1 multiplexer for signal <_n0636> created at line 79.
+    Found 16-bit 8-to-1 multiplexer for signal <_n0600> created at line 79.
+    Found 16-bit 8-to-1 multiplexer for signal <_n0636> created at line 107.
     Found 4-bit comparator greater for signal <n0001> created at line 46
     Found 4-bit comparator lessequal for signal <n0180> created at line 75
     Found 4-bit comparator lessequal for signal <n0195> created at line 103
@@ -296,23 +296,24 @@ INFO:Xst:1799 - State 00110 is never reached in FSM <M_state_q>.
     -----------------------------------------------------------------------
     Found 20-bit subtractor for signal <GND_17_o_M_numIncre_q[19]_sub_500_OUT> created at line 195.
     Found 20-bit subtractor for signal <M_numIncre_q[19]_GND_17_o_sub_669_OUT> created at line 216.
-    Found 4-bit subtractor for signal <M_end_digit_dff_q[3]_GND_17_o_sub_1165_OUT> created at line 352.
-    Found 20-bit adder for signal <n1319> created at line 157.
-    Found 8-bit adder for signal <n1339[7:0]> created at line 210.
-    Found 20-bit adder for signal <n1483> created at line 215.
+    Found 4-bit subtractor for signal <M_end_digit_dff_q[3]_GND_17_o_sub_1166_OUT> created at line 352.
+    Found 5-bit subtractor for signal <GND_17_o_GND_17_o_sub_1170_OUT> created at line 362.
+    Found 20-bit adder for signal <n1320> created at line 157.
+    Found 8-bit adder for signal <n1340[7:0]> created at line 210.
+    Found 20-bit adder for signal <n1484> created at line 215.
     Found 30-bit adder for signal <M_little_timer_q[29]_GND_17_o_add_865_OUT> created at line 319.
     Found 20-bit adder for signal <M_numIncre_q[19]_GND_17_o_add_868_OUT> created at line 323.
-    Found 20-bit adder for signal <n1653> created at line 337.
-    Found 20-bit adder for signal <n1796> created at line 338.
+    Found 20-bit adder for signal <n1654> created at line 337.
+    Found 20-bit adder for signal <n1797> created at line 338.
     Found 16-bit subtractor for signal <GND_17_o_GND_17_o_sub_501_OUT<15:0>> created at line 195.
-    Found 255-bit shifter logical right for signal <n1340> created at line 210
+    Found 255-bit shifter logical right for signal <n1341> created at line 210
     Found 4-bit comparator greater for signal <n0005> created at line 112
     Found 4-bit comparator greater for signal <n0007> created at line 112
     Found 4-bit comparator greater for signal <n0017> created at line 122
     Found 4-bit comparator greater for signal <n0048> created at line 207
-    Found 4-bit comparator lessequal for signal <GND_17_o_M_end_digit_dff_q[3]_LessThan_1164_o> created at line 351
+    Found 4-bit comparator lessequal for signal <GND_17_o_M_end_digit_dff_q[3]_LessThan_1165_o> created at line 351
     Summary:
-	inferred  11 Adder/Subtractor(s).
+	inferred  12 Adder/Subtractor(s).
 	inferred 200 D-type flip-flop(s).
 	inferred   5 Comparator(s).
 	inferred 1132 Multiplexer(s).
@@ -355,7 +356,7 @@ Macro Statistics
  32x7-bit single-port Read Only RAM                    : 3
 # Multipliers                                          : 1
  16x16-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 27
+# Adders/Subtractors                                   : 28
  16-bit addsub                                         : 1
  16-bit subtractor                                     : 2
  19-bit adder                                          : 1
@@ -364,6 +365,7 @@ Macro Statistics
  30-bit adder                                          : 1
  33-bit adder                                          : 1
  4-bit subtractor                                      : 1
+ 5-bit subtractor                                      : 1
  7-bit adder                                           : 1
  8-bit adder                                           : 4
 # Registers                                            : 46
@@ -467,13 +469,14 @@ Macro Statistics
  32x7-bit single-port distributed Read Only RAM        : 3
 # Multipliers                                          : 1
  16x16-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 16
+# Adders/Subtractors                                   : 17
  16-bit adder                                          : 2
  16-bit addsub                                         : 1
  16-bit subtractor                                     : 3
  20-bit adder                                          : 1
  20-bit subtractor                                     : 1
  4-bit subtractor                                      : 1
+ 5-bit subtractor                                      : 1
  7-bit adder                                           : 3
  8-bit adder                                           : 4
 # Counters                                             : 11
@@ -594,15 +597,14 @@ FlipFlop beta/game_controlunit/M_state_q_FSM_FFd11 has been replicated 1 time(s)
 FlipFlop beta/game_controlunit/M_state_q_FSM_FFd12 has been replicated 1 time(s)
 FlipFlop beta/game_controlunit/M_state_q_FSM_FFd13 has been replicated 1 time(s)
 FlipFlop beta/game_controlunit/M_state_q_FSM_FFd14 has been replicated 1 time(s)
-FlipFlop beta/game_controlunit/M_state_q_FSM_FFd15 has been replicated 1 time(s)
-FlipFlop beta/game_controlunit/M_state_q_FSM_FFd16 has been replicated 1 time(s)
+FlipFlop beta/game_controlunit/M_state_q_FSM_FFd15 has been replicated 2 time(s)
+FlipFlop beta/game_controlunit/M_state_q_FSM_FFd16 has been replicated 2 time(s)
 FlipFlop beta/game_controlunit/M_state_q_FSM_FFd2 has been replicated 1 time(s)
-FlipFlop beta/game_controlunit/M_state_q_FSM_FFd4 has been replicated 1 time(s)
-FlipFlop beta/game_controlunit/M_state_q_FSM_FFd6 has been replicated 1 time(s)
+FlipFlop beta/game_controlunit/M_state_q_FSM_FFd4 has been replicated 2 time(s)
 FlipFlop beta/game_controlunit/M_state_q_FSM_FFd8 has been replicated 1 time(s)
 FlipFlop beta/game_controlunit/M_state_q_FSM_FFd9 has been replicated 1 time(s)
 FlipFlop beta/ran/M_w_q_0 has been replicated 1 time(s)
-FlipFlop beta/ran/M_w_q_1 has been replicated 1 time(s)
+FlipFlop beta/ran/M_w_q_1 has been replicated 2 time(s)
 FlipFlop beta/ran/M_w_q_2 has been replicated 1 time(s)
 FlipFlop beta/ran/M_w_q_3 has been replicated 2 time(s)
 
@@ -624,8 +626,8 @@ Unit <mojo_top_0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 798
- Flip-Flops                                            : 798
+# Registers                                            : 801
+ Flip-Flops                                            : 801
 # Shift Registers                                      : 8
  2-bit shift register                                  : 8
 
@@ -651,7 +653,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 814   |
+clk                                | BUFGP                  | 817   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -662,7 +664,7 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 36.674ns (Maximum Frequency: 27.267MHz)
+   Minimum period: 37.237ns (Maximum Frequency: 26.855MHz)
    Minimum input arrival time before clock: 3.526ns
    Maximum output required time after clock: 10.480ns
    Maximum combinational path delay: No path found

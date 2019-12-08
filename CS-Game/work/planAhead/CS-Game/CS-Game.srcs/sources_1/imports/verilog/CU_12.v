@@ -343,8 +343,8 @@ module game_CU_12 (
         M_s_seg_display_dff_d[64+15-:16] = 4'hb;
         M_s_seg_display_dff_d[80+15-:16] = 4'hc;
         M_s_seg_display_dff_d[96+15-:16] = 4'hc;
-        M_s_seg_display_dff_d[0+15-:16] = 5'h14;
-        M_s_seg_display_dff_d[16+15-:16] = 5'h14;
+        M_s_seg_display_dff_d[0+15-:16] = 4'h8 - M_end_digit_dff_q;
+        M_s_seg_display_dff_d[16+15-:16] = 4'hf;
         M_s_seg_display_dff_d[32+15-:16] = 5'h14;
         M_s_seg_display_dff_d[112+15-:16] = 5'h14;
         if (start == 1'h1) begin
@@ -359,8 +359,8 @@ module game_CU_12 (
         M_s_seg_display_dff_d[64+15-:16] = 4'hb;
         M_s_seg_display_dff_d[80+15-:16] = 4'he;
         M_s_seg_display_dff_d[96+15-:16] = 4'hf;
-        M_s_seg_display_dff_d[0+15-:16] = 5'h14;
-        M_s_seg_display_dff_d[16+15-:16] = 5'h14;
+        M_s_seg_display_dff_d[0+15-:16] = 4'h8 - M_end_digit_dff_q;
+        M_s_seg_display_dff_d[16+15-:16] = 4'hf;
         M_s_seg_display_dff_d[32+15-:16] = 5'h14;
         M_s_seg_display_dff_d[112+15-:16] = 5'h14;
         if (start == 1'h1) begin

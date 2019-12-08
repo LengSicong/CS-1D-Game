@@ -216,10 +216,10 @@ module game_CU (
           state.d = state.LOSE;
         
       state.GAME12:
-        read_address_a = b1001;
-        read_address_b = ra_data;
-        write_address =  b1101;
-        cu_output_data = rb_data;
+        read_address_a = b1001; // read the first chosen card index from ra port
+        read_address_b = ra_data; // send the index to read address b
+        write_address =  b1101; // write the number(content) of first chosen card into the regFile
+        cu_output_data = rb_data; // output the number from read port b
         we = 1;
         wdsel = b11;
         state.d = state.GAME21;
@@ -315,8 +315,8 @@ module game_CU (
         s_seg_display_dff.d[4] = 11;
         s_seg_display_dff.d[5] = 12;
         s_seg_display_dff.d[6] = 12;
-        s_seg_display_dff.d[0] = 20;
-        s_seg_display_dff.d[1] = 20;
+        s_seg_display_dff.d[0] = 8 - end_digit_dff.q;
+        s_seg_display_dff.d[1] = 15;
         s_seg_display_dff.d[2] = 20;
         s_seg_display_dff.d[7] = 20;
         if ( start == b1){
@@ -331,8 +331,8 @@ module game_CU (
         s_seg_display_dff.d[4] = 11;
         s_seg_display_dff.d[5] = 14;
         s_seg_display_dff.d[6] = 15;            
-        s_seg_display_dff.d[0] = 20;
-        s_seg_display_dff.d[1] = 20;
+        s_seg_display_dff.d[0] = 8 - end_digit_dff.q;
+        s_seg_display_dff.d[1] = 15;
         s_seg_display_dff.d[2] = 20;
         s_seg_display_dff.d[7] = 20;
         if ( start == b1){
